@@ -1,0 +1,28 @@
+# Dependency update proposals only. All PRs require human review and CI.
+version: 2
+updates:
+  # Application lives in a nested directory with its own npm lockfile.
+  - package-ecosystem: "npm"
+    directory: "/alif-growth-media"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "03:00"
+      timezone: "Asia/Kolkata"
+    open-pull-requests-limit: 5
+    groups:
+      dev-tooling:
+        dependency-type: "development"
+        update-types:
+          - "minor"
+          - "patch"
+
+  # Tracks GitHub Actions when workflows land on the default branch.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "03:00"
+      timezone: "Asia/Kolkata"
+    open-pull-requests-limit: 3
