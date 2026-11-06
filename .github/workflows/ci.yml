@@ -53,5 +53,5 @@ jobs:
         run: |
           npm run build
           test -d dist
-          test -d .netlify/v1/functions
-          test -f .netlify/v1/config.json
+          test -s .netlify/functions-internal/server/main.mjs
+          test -f .netlify/functions-internal/nitro.json
