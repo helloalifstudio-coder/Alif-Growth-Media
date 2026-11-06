@@ -58,10 +58,13 @@ secret-management boundary.
 The app uses `@lovable.dev/vite-tanstack-config` to register TanStack Start
 and Nitro together. The app's `vite.config.ts` chooses the `netlify` Nitro
 preset when `NETLIFY=true` and the `vercel` preset in Vercel. Keep the
-preset-specific output intact. Nitro's Netlify integration emits server
-functions via the **Netlify Frameworks API** under `.netlify/v1/functions`
-and the build publish directory is `dist`. This configuration is consistent
-with the official [Nitro Netlify integration](https://nitro.build/deploy/providers/netlify).
+preset-specific output intact. The pinned Nitro version used by this
+repository was inspected in GitHub Actions: it generates
+`.netlify/functions-internal/server/main.mjs` and
+`.netlify/functions-internal/nitro.json`, with static files in `dist`.
+Some newer Nitro documentation refers to Frameworks API v1 output;
+our CI verifies the paths actually emitted by the pinned build.
+See the official [Nitro Netlify integration](https://nitro.build/deploy/providers/netlify).
 Do not bolt on a second `tanstackStart()` or `nitro()` plugin; Lovable already
 registers both. The official Netlify TanStack plugin is a *different*
 integration path and must be evaluated for compatibility before changing to it.
