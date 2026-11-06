@@ -1,5 +1,16 @@
 import React from "react";
-import { Check, Edit3, MessageCircle, Send, Sparkles, TrendingUp, UserCheck, ShoppingBag, BarChart3, ArrowUpRight } from "lucide-react";
+import {
+  Check,
+  Edit3,
+  MessageCircle,
+  Send,
+  Sparkles,
+  TrendingUp,
+  UserCheck,
+  ShoppingBag,
+  BarChart3,
+  ArrowUpRight,
+} from "lucide-react";
 
 interface PrototypeIllustrationProps {
   type: string;
@@ -30,8 +41,12 @@ export const PrototypeIllustration: React.FC<PrototypeIllustrationProps> = ({ ty
             <div className="absolute -top-2.5 right-2 bg-primary text-primary-foreground text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
               <Edit3 className="w-2.5 h-2.5" /> 1-Click Edit
             </div>
-            <p className="text-xs font-bold text-foreground">"Special Weekend Offers — Flat 25% Off"</p>
-            <p className="text-[10px] text-muted-foreground mt-0.5">Click to edit text, photos & prices directly from mobile</p>
+            <p className="text-xs font-bold text-foreground">
+              "Special Weekend Offers — Flat 25% Off"
+            </p>
+            <p className="text-[10px] text-muted-foreground mt-0.5">
+              Click to edit text, photos & prices directly from mobile
+            </p>
           </div>
 
           {/* Footer Action */}
@@ -57,7 +72,9 @@ export const PrototypeIllustration: React.FC<PrototypeIllustrationProps> = ({ ty
               </div>
               <div className="leading-tight">
                 <p className="text-xs font-bold text-foreground">WhatsApp Business Inbox</p>
-                <p className="text-[9px] text-emerald-500 font-medium">● 3 New Leads Just Arrived</p>
+                <p className="text-[9px] text-emerald-500 font-medium">
+                  ● 3 New Leads Just Arrived
+                </p>
               </div>
             </div>
             <span className="text-[9px] font-semibold text-emerald-500 bg-emerald-500/10 px-2 py-0.5 rounded-full">
@@ -68,7 +85,9 @@ export const PrototypeIllustration: React.FC<PrototypeIllustrationProps> = ({ ty
           {/* Chat bubbles */}
           <div className="space-y-1.5 my-auto">
             <div className="bg-muted/70 rounded-lg p-2 max-w-[85%] text-[10px] leading-tight text-foreground/90">
-              <span className="font-semibold block text-[9px] text-muted-foreground">Customer (Google Search):</span>
+              <span className="font-semibold block text-[9px] text-muted-foreground">
+                Customer (Google Search):
+              </span>
               "Hi, what are your store timings and current catalog?"
             </div>
             <div className="bg-emerald-600/15 border border-emerald-500/30 rounded-lg p-2 ml-auto max-w-[85%] text-[10px] leading-tight text-emerald-300">
@@ -141,7 +160,9 @@ export const PrototypeIllustration: React.FC<PrototypeIllustrationProps> = ({ ty
             <div className="flex justify-between items-center">
               <div>
                 <p className="text-xs font-bold text-foreground">K. Vikram Reddy</p>
-                <p className="text-[10px] text-muted-foreground">Annual Membership · Regular Attendee</p>
+                <p className="text-[10px] text-muted-foreground">
+                  Annual Membership · Regular Attendee
+                </p>
               </div>
               <span className="text-xs font-bold text-primary font-display">₹15,000/yr</span>
             </div>
@@ -178,7 +199,9 @@ export const PrototypeIllustration: React.FC<PrototypeIllustrationProps> = ({ ty
               📦
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-xs font-semibold text-foreground truncate">Weekly Household Grocery Box</p>
+              <p className="text-xs font-semibold text-foreground truncate">
+                Weekly Household Grocery Box
+              </p>
               <p className="text-[10px] text-muted-foreground">In Stock · 18 packs left</p>
             </div>
             <span className="text-xs font-bold text-primary">₹890</span>
@@ -238,9 +261,15 @@ export const PrototypeIllustration: React.FC<PrototypeIllustrationProps> = ({ ty
 
           {/* Gallery mock */}
           <div className="grid grid-cols-3 gap-1.5 my-auto">
-            <div className="h-16 rounded bg-muted/80 flex items-center justify-center text-xs">🚪</div>
-            <div className="h-16 rounded bg-muted/80 flex items-center justify-center text-xs">🛋️</div>
-            <div className="h-16 rounded bg-muted/80 flex items-center justify-center text-xs">✨</div>
+            <div className="h-16 rounded bg-muted/80 flex items-center justify-center text-xs">
+              🚪
+            </div>
+            <div className="h-16 rounded bg-muted/80 flex items-center justify-center text-xs">
+              🛋️
+            </div>
+            <div className="h-16 rounded bg-muted/80 flex items-center justify-center text-xs">
+              ✨
+            </div>
           </div>
 
           <div className="pt-2 border-t border-border/50 flex items-center justify-between text-[10px]">

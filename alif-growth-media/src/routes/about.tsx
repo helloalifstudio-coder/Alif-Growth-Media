@@ -106,9 +106,13 @@ function AboutPage() {
           {ideology.map((v) => (
             <StaggerItem key={v.n} lift className="h-full">
               <article className="surface-card h-full p-5 transition-[box-shadow,border-color] duration-300 hover:border-gold/40 hover:shadow-[var(--shadow-lift)] sm:p-7">
-                <span className="font-display text-sm font-semibold tracking-[0.2em] text-gold">{v.n}</span>
+                <span className="font-display text-sm font-semibold tracking-[0.2em] text-gold">
+                  {v.n}
+                </span>
                 <h3 className="mt-3 text-balance text-base font-semibold sm:text-lg">{v.t}</h3>
-                <p className="mt-2 text-pretty text-sm leading-relaxed text-muted-foreground">{v.b}</p>
+                <p className="mt-2 text-pretty text-sm leading-relaxed text-muted-foreground">
+                  {v.b}
+                </p>
               </article>
             </StaggerItem>
           ))}
@@ -131,7 +135,9 @@ function AboutPage() {
                 <span className="mt-2 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
                   {e.label}
                 </span>
-                <p className="mt-3 flex-1 text-pretty text-sm leading-relaxed text-muted-foreground">{e.body}</p>
+                <p className="mt-3 flex-1 text-pretty text-sm leading-relaxed text-muted-foreground">
+                  {e.body}
+                </p>
                 <a
                   href={e.href}
                   target="_blank"
@@ -147,11 +153,7 @@ function AboutPage() {
       </Section>
 
       {/* Journey */}
-      <Section
-        eyebrow="How we got here"
-        title="From one reply flow to a growth system"
-        tone="deep"
-      >
+      <Section eyebrow="How we got here" title="From one reply flow to a growth system" tone="deep">
         <Stagger className="mt-10 grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4">
           {milestones.map((m) => (
             <StaggerItem
@@ -159,7 +161,9 @@ function AboutPage() {
               lift
               className="h-full rounded-[var(--radius)] border border-primary-foreground/15 bg-primary-foreground/5 p-5 sm:p-6"
             >
-              <span className="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-gold">{m.y}</span>
+              <span className="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-gold">
+                {m.y}
+              </span>
               <h3 className="mt-3 text-base font-semibold sm:text-lg">{m.t}</h3>
               <p className="mt-2 text-sm leading-relaxed text-primary-foreground/75">{m.b}</p>
             </StaggerItem>
@@ -177,18 +181,22 @@ function AboutPage() {
             <div className="flex-1 text-center md:text-left">
               <h3 className="text-xl font-semibold sm:text-2xl">{founder.name}</h3>
               <p className="text-sm font-medium text-gold">{founder.role}</p>
-              <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">{founder.bio}</p>
+              <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
+                {founder.bio}
+              </p>
               <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">
-                He started Alif Growth Media after watching too many well-run local businesses lose customers to
-                competitors who were simply easier to find and quicker to answer. His working rule is simple: if a
-                recommendation cannot be explained to an owner in one sentence, it is not ready to be sold.
+                He started Alif Growth Media after watching too many well-run local businesses lose
+                customers to competitors who were simply easier to find and quicker to answer. His
+                working rule is simple: if a recommendation cannot be explained to an owner in one
+                sentence, it is not ready to be sold.
               </p>
               <div className="mt-6 flex flex-wrap justify-center gap-x-5 gap-y-2 md:justify-start">
                 <a
                   href={`mailto:${founder.email}`}
                   className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-primary hover:underline"
                 >
-                  <Mail className="h-4 w-4 shrink-0" /> <span className="break-all">{founder.email}</span>
+                  <Mail className="h-4 w-4 shrink-0" />{" "}
+                  <span className="break-all">{founder.email}</span>
                 </a>
                 <a
                   href={`tel:${founder.phone.replace(/\s/g, "")}`}
@@ -239,7 +247,9 @@ function AboutPage() {
               lift
               className="h-full rounded-[var(--radius)] border border-primary-foreground/15 bg-primary-foreground/5 p-6 sm:p-7"
             >
-              <span className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">{p.k}</span>
+              <span className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">
+                {p.k}
+              </span>
               <h3 className="mt-3 text-xl font-semibold">{p.t}</h3>
               <p className="mt-3 text-sm leading-relaxed text-primary-foreground/75">{p.b}</p>
             </StaggerItem>

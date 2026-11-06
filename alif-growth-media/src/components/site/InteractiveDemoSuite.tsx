@@ -15,7 +15,7 @@ import {
   UserCheck,
   ShieldCheck,
   Layers,
-  ArrowRight
+  ArrowRight,
 } from "lucide-react";
 import { company, getPrototypeWhatsappUrl } from "@/content/site";
 import { EASE } from "@/components/motion/primitives";
@@ -36,7 +36,11 @@ const TOOLS: DemoTool[] = [
     tagline: "Edit your live website in seconds without touching code",
     category: "Website Builder",
     liveUrl: "https://safar-studio-snm.vercel.app",
-    highlights: ["In-place headline & price editing", "Zero-downtime 1-click publishing", "Mobile & tablet friendly"],
+    highlights: [
+      "In-place headline & price editing",
+      "Zero-downtime 1-click publishing",
+      "Mobile & tablet friendly",
+    ],
   },
   {
     id: "whatsapp-crm",
@@ -44,7 +48,11 @@ const TOOLS: DemoTool[] = [
     tagline: "Turn incoming chat messages into organized customer orders",
     category: "Customer Hub",
     liveUrl: "https://safar-crm-theta.vercel.app",
-    highlights: ["Automatic instant customer replies", "Unified team chat pipeline", "Direct product catalogue shares"],
+    highlights: [
+      "Automatic instant customer replies",
+      "Unified team chat pipeline",
+      "Direct product catalogue shares",
+    ],
   },
   {
     id: "invoicing",
@@ -52,7 +60,11 @@ const TOOLS: DemoTool[] = [
     tagline: "Send digital PDF bills on WhatsApp and track daily collections",
     category: "Cashflow & Bills",
     liveUrl: "https://invofy-kappa.vercel.app",
-    highlights: ["1-Tap PDF bill to customer WhatsApp", "Daily Cash vs. UPI ledger", "Customer dues & payment history"],
+    highlights: [
+      "1-Tap PDF bill to customer WhatsApp",
+      "Daily Cash vs. UPI ledger",
+      "Customer dues & payment history",
+    ],
   },
   {
     id: "membership",
@@ -60,7 +72,11 @@ const TOOLS: DemoTool[] = [
     tagline: "Track recurring fees, active passes & send renewal reminders",
     category: "Memberships & Dues",
     liveUrl: "https://e-repcount-gym-payment-manager.vercel.app",
-    highlights: ["Automatic WhatsApp renewal alerts", "Member attendance & plan expiry", "Zero paper register errors"],
+    highlights: [
+      "Automatic WhatsApp renewal alerts",
+      "Member attendance & plan expiry",
+      "Zero paper register errors",
+    ],
   },
 ];
 
@@ -68,14 +84,26 @@ export function InteractiveDemoSuite() {
   const [activeTab, setActiveTab] = useState<DemoTool["id"]>("visual-cms");
 
   // State for interactive Visual CMS simulator
-  const [headlineText, setHeadlineText] = useState("Festival Season Special — Flat 25% Off Across Store");
+  const [headlineText, setHeadlineText] = useState(
+    "Festival Season Special — Flat 25% Off Across Store",
+  );
   const [isEditingHeadline, setIsEditingHeadline] = useState(false);
   const [isPublished, setIsPublished] = useState(true);
 
   // State for interactive WhatsApp simulator
-  const [chatMessages, setChatMessages] = useState<Array<{ sender: "customer" | "system"; text: string; time: string }>>([
-    { sender: "customer", text: "Hi! Are you open today and what are your current offers?", time: "10:14 AM" },
-    { sender: "system", text: "Hello! 👋 Welcome to our store. We are open until 9:00 PM today. Here is our new catalog with 25% festive offers!", time: "10:14 AM" },
+  const [chatMessages, setChatMessages] = useState<
+    Array<{ sender: "customer" | "system"; text: string; time: string }>
+  >([
+    {
+      sender: "customer",
+      text: "Hi! Are you open today and what are your current offers?",
+      time: "10:14 AM",
+    },
+    {
+      sender: "system",
+      text: "Hello! 👋 Welcome to our store. We are open until 9:00 PM today. Here is our new catalog with 25% festive offers!",
+      time: "10:14 AM",
+    },
   ]);
   const [inputMsg, setInputMsg] = useState("");
 
@@ -99,10 +127,7 @@ export function InteractiveDemoSuite() {
     if (!inputMsg.trim()) return;
     const userText = inputMsg;
     setInputMsg("");
-    setChatMessages((prev) => [
-      ...prev,
-      { sender: "customer", text: userText, time: "Just now" },
-    ]);
+    setChatMessages((prev) => [...prev, { sender: "customer", text: userText, time: "Just now" }]);
     setTimeout(() => {
       setChatMessages((prev) => [
         ...prev,
@@ -127,7 +152,8 @@ export function InteractiveDemoSuite() {
             Test Drive Our 4 Core Business Systems
           </h3>
           <p className="text-sm sm:text-base text-muted-foreground mt-1 max-w-2xl">
-            Switch between the tools below to interact with real working prototypes in Alif's emerald & gold theme.
+            Switch between the tools below to interact with real working prototypes in Alif's
+            emerald & gold theme.
           </p>
         </div>
 
@@ -168,10 +194,14 @@ export function InteractiveDemoSuite() {
                   : "border-border/60 bg-secondary/30 hover:bg-secondary/60 text-muted-foreground"
               }`}
             >
-              <span className={`text-[10px] uppercase font-bold tracking-wider ${isActive ? "text-gold" : "text-muted-foreground"}`}>
+              <span
+                className={`text-[10px] uppercase font-bold tracking-wider ${isActive ? "text-gold" : "text-muted-foreground"}`}
+              >
                 {tool.category}
               </span>
-              <span className={`text-sm font-bold mt-1 line-clamp-1 ${isActive ? "text-foreground" : "text-muted-foreground"}`}>
+              <span
+                className={`text-sm font-bold mt-1 line-clamp-1 ${isActive ? "text-foreground" : "text-muted-foreground"}`}
+              >
                 {tool.name}
               </span>
             </button>
@@ -202,7 +232,9 @@ export function InteractiveDemoSuite() {
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className={`inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-0.5 rounded-full ${isPublished ? "bg-emerald-500/10 text-emerald-500" : "bg-amber-500/10 text-amber-500"}`}>
+                  <span
+                    className={`inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-0.5 rounded-full ${isPublished ? "bg-emerald-500/10 text-emerald-500" : "bg-amber-500/10 text-amber-500"}`}
+                  >
                     <Check className="w-3 h-3" /> {isPublished ? "Published Live" : "Unsaved Edits"}
                   </span>
                   <button
@@ -251,13 +283,15 @@ export function InteractiveDemoSuite() {
                       "{headlineText}"
                     </h4>
                     <span className="text-[11px] text-muted-foreground flex items-center justify-center gap-1 mt-1 opacity-80 group-hover:opacity-100">
-                      <Edit3 className="w-3 h-3 text-gold" /> Tap anywhere on text to change instantly
+                      <Edit3 className="w-3 h-3 text-gold" /> Tap anywhere on text to change
+                      instantly
                     </span>
                   </div>
                 )}
 
                 <p className="text-xs text-muted-foreground max-w-md mx-auto">
-                  Experience true owner independence: update festival sales, holiday hours, and new arrivals on the fly without hiring developers.
+                  Experience true owner independence: update festival sales, holiday hours, and new
+                  arrivals on the fly without hiring developers.
                 </p>
               </div>
             </motion.div>
@@ -281,7 +315,9 @@ export function InteractiveDemoSuite() {
                   </div>
                   <div>
                     <h4 className="text-sm font-bold text-foreground">Alif WhatsApp Lead Hub</h4>
-                    <p className="text-[10px] text-emerald-400 font-semibold">● Live Automated Responder Active</p>
+                    <p className="text-[10px] text-emerald-400 font-semibold">
+                      ● Live Automated Responder Active
+                    </p>
                   </div>
                 </div>
                 <span className="text-xs text-muted-foreground bg-secondary/80 px-2.5 py-1 rounded-lg">
@@ -345,7 +381,9 @@ export function InteractiveDemoSuite() {
               <div className="surface-card rounded-2xl border border-border p-5 space-y-4 shadow-md">
                 <div className="flex items-center justify-between border-b border-border/70 pb-3">
                   <div>
-                    <span className="text-[10px] uppercase font-bold tracking-widest text-gold">Alif Digital Invoice</span>
+                    <span className="text-[10px] uppercase font-bold tracking-widest text-gold">
+                      Alif Digital Invoice
+                    </span>
                     <h4 className="text-base font-bold text-foreground">Invoice #AGM-2026-084</h4>
                   </div>
                   <span className="text-xs font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full">
@@ -355,7 +393,9 @@ export function InteractiveDemoSuite() {
 
                 <div className="grid grid-cols-2 gap-3 text-xs">
                   <div>
-                    <label className="text-[10px] text-muted-foreground block mb-1">Customer Name</label>
+                    <label className="text-[10px] text-muted-foreground block mb-1">
+                      Customer Name
+                    </label>
                     <input
                       type="text"
                       value={invoiceCustomer}
@@ -367,7 +407,9 @@ export function InteractiveDemoSuite() {
                     />
                   </div>
                   <div>
-                    <label className="text-[10px] text-muted-foreground block mb-1">Total Bill (₹)</label>
+                    <label className="text-[10px] text-muted-foreground block mb-1">
+                      Total Bill (₹)
+                    </label>
                     <input
                       type="number"
                       value={invoiceAmount}
@@ -383,7 +425,9 @@ export function InteractiveDemoSuite() {
                 <div className="pt-2 border-t border-border/70 flex items-center justify-between">
                   <div>
                     <span className="text-[10px] text-muted-foreground block">Payment Mode:</span>
-                    <span className="text-xs font-bold text-primary">UPI / Google Pay (Verified)</span>
+                    <span className="text-xs font-bold text-primary">
+                      UPI / Google Pay (Verified)
+                    </span>
                   </div>
                   <button
                     onClick={() => setInvoiceSent(true)}
@@ -401,7 +445,9 @@ export function InteractiveDemoSuite() {
                     className="bg-emerald-500/15 border border-emerald-500/30 p-2.5 rounded-xl text-xs text-emerald-300 flex items-center gap-2"
                   >
                     <Check className="w-4 h-4 text-emerald-400 shrink-0" />
-                    <span>Receipt successfully generated & dispatched to {invoiceCustomer}'s WhatsApp!</span>
+                    <span>
+                      Receipt successfully generated & dispatched to {invoiceCustomer}'s WhatsApp!
+                    </span>
                   </motion.div>
                 )}
               </div>
@@ -419,7 +465,9 @@ export function InteractiveDemoSuite() {
               className="space-y-4 max-w-2xl mx-auto"
             >
               <div className="flex items-center justify-between pb-2 border-b border-border/60">
-                <span className="text-xs font-bold text-foreground">Member Roster & Monthly Fee Status</span>
+                <span className="text-xs font-bold text-foreground">
+                  Member Roster & Monthly Fee Status
+                </span>
                 <span className="text-[11px] text-muted-foreground">3 Members Tracked</span>
               </div>
 
@@ -440,8 +488,8 @@ export function InteractiveDemoSuite() {
                           m.daysLeft === 0
                             ? "bg-red-500/10 text-red-400"
                             : m.daysLeft <= 3
-                            ? "bg-amber-500/10 text-amber-400"
-                            : "bg-emerald-500/10 text-emerald-400"
+                              ? "bg-amber-500/10 text-amber-400"
+                              : "bg-emerald-500/10 text-emerald-400"
                         }`}
                       >
                         {m.daysLeft === 0 ? "Fee Overdue" : `Renews in ${m.daysLeft} days`}
@@ -453,7 +501,9 @@ export function InteractiveDemoSuite() {
                           className="text-[10px] font-semibold text-primary hover:underline flex items-center gap-1 justify-end ml-auto"
                         >
                           <MessageCircle className="w-2.5 h-2.5" />
-                          <span>{reminderSentFor === m.name ? "Reminder Sent!" : "1-Tap Reminder"}</span>
+                          <span>
+                            {reminderSentFor === m.name ? "Reminder Sent!" : "1-Tap Reminder"}
+                          </span>
                         </button>
                       </div>
                     </div>
@@ -468,12 +518,17 @@ export function InteractiveDemoSuite() {
         <div className="mt-6 pt-4 border-t border-border/70 flex flex-wrap items-center justify-between gap-3 text-xs text-muted-foreground">
           <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
             {activeTool.highlights.map((h) => (
-              <span key={h} className="inline-flex items-center gap-1.5 text-foreground/80 font-medium">
+              <span
+                key={h}
+                className="inline-flex items-center gap-1.5 text-foreground/80 font-medium"
+              >
                 <Check className="w-3.5 h-3.5 text-gold shrink-0" /> {h}
               </span>
             ))}
           </div>
-          <span className="text-[11px] font-semibold text-primary">All Tools Branded in Your Business Name</span>
+          <span className="text-[11px] font-semibold text-primary">
+            All Tools Branded in Your Business Name
+          </span>
         </div>
       </div>
     </div>

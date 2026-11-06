@@ -16,7 +16,9 @@ export const Route = createFileRoute("/work/$slug")({
   },
   head: ({ loaderData }) => {
     const study = loaderData?.study;
-    const title = study ? `${study.name} Case Study | Alif Growth Media` : "Case Study | Alif Growth Media";
+    const title = study
+      ? `${study.name} Case Study | Alif Growth Media`
+      : "Case Study | Alif Growth Media";
     const description = study
       ? `How Alif Growth Media helped ${study.name} strengthen their digital presence, customer communication and growth.`
       : "Alif Growth Media case study.";
@@ -30,9 +32,9 @@ export const Route = createFileRoute("/work/$slug")({
         { property: "og:type", content: "article" },
         { property: "og:url", content: canonical },
         { property: "og:image", content: "https://alif-growth-media.vercel.app/og-image.jpg" },
-      { property: "og:locale", content: "en_IN" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: "https://alif-growth-media.vercel.app/og-image.jpg" },
+        { property: "og:locale", content: "en_IN" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:image", content: "https://alif-growth-media.vercel.app/og-image.jpg" },
       ],
       links: [{ rel: "canonical", href: canonical }],
       scripts: study
@@ -63,8 +65,18 @@ export const Route = createFileRoute("/work/$slug")({
                 "@context": "https://schema.org",
                 "@type": "BreadcrumbList",
                 itemListElement: [
-                  { "@type": "ListItem", position: 1, name: "Home", item: "https://alif-growth-media.vercel.app/" },
-                  { "@type": "ListItem", position: 2, name: "Work", item: "https://alif-growth-media.vercel.app/work" },
+                  {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Home",
+                    item: "https://alif-growth-media.vercel.app/",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: "Work",
+                    item: "https://alif-growth-media.vercel.app/work",
+                  },
                   { "@type": "ListItem", position: 3, name: study.name, item: canonical },
                 ],
               }),
@@ -98,7 +110,10 @@ function CaseStudyPage() {
           </Link>
 
           <div className="mt-8 grid gap-10 md:grid-cols-[0.35fr_0.65fr]">
-            <Reveal direction="right" className="surface-card flex flex-col items-start gap-6 self-start p-7">
+            <Reveal
+              direction="right"
+              className="surface-card flex flex-col items-start gap-6 self-start p-7"
+            >
               <img
                 src={study.logo}
                 alt={`${study.name} logo`}
@@ -106,15 +121,21 @@ function CaseStudyPage() {
                 className="h-24 w-auto object-contain"
               />
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">Industry</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                  Industry
+                </p>
                 <p className="mt-1 font-medium">{study.industry}</p>
               </div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">Location</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                  Location
+                </p>
                 <p className="mt-1 font-medium">{study.location}</p>
               </div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">Scope</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                  Scope
+                </p>
                 <p className="mt-1 font-medium">{study.scope}</p>
               </div>
               <a
@@ -189,23 +210,25 @@ function CaseStudyPage() {
           <Stagger className="mt-10 grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
             {otherStudies.map((c) => (
               <StaggerItem key={c.slug} lift className="h-full">
-              <Link
-                to="/work/$slug"
-                params={{ slug: c.slug }}
-                className="surface-card group flex h-full flex-col p-7 transition-shadow hover:shadow-[var(--shadow-lift)]"
-              >
-                <div className="mb-6 flex h-20 items-center">
-                  <img
-                    src={c.logo}
-                    alt={`${c.name} logo`}
-                    loading="lazy"
-                    className="h-16 w-auto object-contain opacity-90 transition-opacity group-hover:opacity-100"
-                  />
-                </div>
-                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">{c.industry}</span>
-                <h3 className="mt-3 text-xl font-semibold">{c.name}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.desc}</p>
-              </Link>
+                <Link
+                  to="/work/$slug"
+                  params={{ slug: c.slug }}
+                  className="surface-card group flex h-full flex-col p-7 transition-shadow hover:shadow-[var(--shadow-lift)]"
+                >
+                  <div className="mb-6 flex h-20 items-center">
+                    <img
+                      src={c.logo}
+                      alt={`${c.name} logo`}
+                      loading="lazy"
+                      className="h-16 w-auto object-contain opacity-90 transition-opacity group-hover:opacity-100"
+                    />
+                  </div>
+                  <span className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+                    {c.industry}
+                  </span>
+                  <h3 className="mt-3 text-xl font-semibold">{c.name}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.desc}</p>
+                </Link>
               </StaggerItem>
             ))}
           </Stagger>

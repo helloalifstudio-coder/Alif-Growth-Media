@@ -36,8 +36,12 @@ export function CtaBand({
             <ShieldCheck className="w-3.5 h-3.5 text-gold" />
             <span>Success-First Partnership Guarantee</span>
           </div>
-          <h2 className="text-balance text-[clamp(1.5rem,4.6vw,2.2rem)] font-bold leading-tight">{title}</h2>
-          <p className="mt-3 text-sm leading-relaxed text-primary-foreground/80 md:text-base">{body}</p>
+          <h2 className="text-balance text-[clamp(1.5rem,4.6vw,2.2rem)] font-bold leading-tight">
+            {title}
+          </h2>
+          <p className="mt-3 text-sm leading-relaxed text-primary-foreground/80 md:text-base">
+            {body}
+          </p>
 
           <div className="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs text-primary-foreground/90">
             <div className="flex items-center gap-2">
@@ -55,7 +59,11 @@ export function CtaBand({
           </div>
         </Reveal>
 
-        <Reveal delay={0.12} direction="left" className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap">
+        <Reveal
+          delay={0.12}
+          direction="left"
+          className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap"
+        >
           <HoverLift className="w-full sm:w-auto">
             <Link
               to="/contact"

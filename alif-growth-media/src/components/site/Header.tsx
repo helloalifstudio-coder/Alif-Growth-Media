@@ -90,7 +90,8 @@ export function Header() {
             }`}
           />
           <span className="truncate font-display text-sm font-semibold tracking-tight sm:text-base">
-            <span className="text-gold">Alif</span> <span className="text-primary">Growth Media</span>
+            <span className="text-gold">Alif</span>{" "}
+            <span className="text-primary">Growth Media</span>
           </span>
         </Link>
 

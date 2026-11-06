@@ -86,7 +86,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: rootTitle },
       { name: "description", content: rootDescription },
       { name: "author", content: company.name },
-      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
+      {
+        name: "robots",
+        content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      },
       { name: "theme-color", content: "#0d7c6a" },
       { name: "apple-mobile-web-app-title", content: "Alif" },
       { name: "apple-mobile-web-app-capable", content: "yes" },
@@ -103,7 +106,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:locale", content: "en_IN" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: `${company.name} — digital growth systems for local businesses` },
+      {
+        property: "og:image:alt",
+        content: `${company.name} — digital growth systems for local businesses`,
+      },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@alifgrowthmedia" },
       { name: "twitter:creator", content: "@alifgrowthmedia" },

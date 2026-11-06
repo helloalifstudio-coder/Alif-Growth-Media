@@ -31,8 +31,8 @@ export function SiteFooter() {
             </h3>
           </div>
           <p className="mt-3 max-w-md text-sm leading-relaxed text-primary-foreground/70">
-            A digital growth systems studio based in Warangal, Telangana — helping local businesses build trust,
-            improve communication, and grow with clarity.
+            A digital growth systems studio based in Warangal, Telangana — helping local businesses
+            build trust, improve communication, and grow with clarity.
           </p>
         </div>
         <div>
@@ -40,21 +40,32 @@ export function SiteFooter() {
           <ul className="mt-3 space-y-0.5 text-sm text-primary-foreground/75 sm:mt-4 sm:space-y-2">
             {navLinks.map((l) => (
               <li key={l.to}>
-                <Link className="inline-flex min-h-11 items-center hover:text-primary-foreground sm:min-h-0" to={l.to}>
+                <Link
+                  className="inline-flex min-h-11 items-center hover:text-primary-foreground sm:min-h-0"
+                  to={l.to}
+                >
                   {l.label}
                 </Link>
               </li>
             ))}
           </ul>
-          <h3 className="mt-6 text-sm font-semibold uppercase tracking-[0.18em] text-gold">Legal</h3>
+          <h3 className="mt-6 text-sm font-semibold uppercase tracking-[0.18em] text-gold">
+            Legal
+          </h3>
           <ul className="mt-3 space-y-0.5 text-sm text-primary-foreground/75 sm:mt-4 sm:space-y-2">
             <li>
-              <Link className="inline-flex min-h-11 items-center hover:text-primary-foreground sm:min-h-0" to="/privacy">
+              <Link
+                className="inline-flex min-h-11 items-center hover:text-primary-foreground sm:min-h-0"
+                to="/privacy"
+              >
                 Privacy Policy
               </Link>
             </li>
             <li>
-              <Link className="inline-flex min-h-11 items-center hover:text-primary-foreground sm:min-h-0" to="/terms">
+              <Link
+                className="inline-flex min-h-11 items-center hover:text-primary-foreground sm:min-h-0"
+                to="/terms"
+              >
                 Terms of Service
               </Link>
             </li>
@@ -65,7 +76,11 @@ export function SiteFooter() {
           <ul className="mt-3 space-y-0.5 text-sm text-primary-foreground/75 sm:mt-4 sm:space-y-2">
             {services.map((s) => (
               <li key={s.slug}>
-                <Link className="inline-flex min-h-11 items-center hover:text-primary-foreground sm:min-h-0" to="/services" hash={s.slug}>
+                <Link
+                  className="inline-flex min-h-11 items-center hover:text-primary-foreground sm:min-h-0"
+                  to="/services"
+                  hash={s.slug}
+                >
                   {s.t}
                 </Link>
               </li>
@@ -76,12 +91,18 @@ export function SiteFooter() {
           <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">Contact</h3>
           <ul className="mt-3 space-y-0.5 text-sm text-primary-foreground/75 sm:mt-4 sm:space-y-2">
             <li>
-              <a className="inline-flex min-h-11 items-center hover:text-primary-foreground sm:min-h-0" href={`mailto:${company.email}`}>
+              <a
+                className="inline-flex min-h-11 items-center hover:text-primary-foreground sm:min-h-0"
+                href={`mailto:${company.email}`}
+              >
                 {company.email}
               </a>
             </li>
             <li>
-              <a className="inline-flex min-h-11 items-center hover:text-primary-foreground sm:min-h-0" href={company.phoneHref}>
+              <a
+                className="inline-flex min-h-11 items-center hover:text-primary-foreground sm:min-h-0"
+                href={company.phoneHref}
+              >
                 {company.phone}
               </a>
             </li>

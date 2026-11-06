@@ -9,6 +9,7 @@
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
     "format": "prettier --write .",
     "postbuild": "node -e \"const fs = require('fs'); if (fs.existsSync('.vercel/output/static') && !fs.existsSync('dist')) { fs.cpSync('.vercel/output/static', 'dist', { recursive: true }); }\""
   },

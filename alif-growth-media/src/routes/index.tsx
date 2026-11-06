@@ -21,7 +21,17 @@ import {
   StaggerItem,
   EASE,
 } from "@/components/motion/primitives";
-import { collaborations, company, pillars, problems, results, services, steps, prototypes, getPrototypeWhatsappUrl } from "@/content/site";
+import {
+  collaborations,
+  company,
+  pillars,
+  problems,
+  results,
+  services,
+  steps,
+  prototypes,
+  getPrototypeWhatsappUrl,
+} from "@/content/site";
 
 const title = "Alif Growth Media | Custom Business Software, Visual CMS & Operating Systems";
 const description =
@@ -54,7 +64,15 @@ export const Route = createFileRoute("/")({
           description,
           email: "hello.alifstudio@gmail.com",
           telephone: company.phoneE164,
-          areaServed: ["Telangana, India", "UAE", "Saudi Arabia", "Qatar", "Kuwait", "Bahrain", "Oman"],
+          areaServed: [
+            "Telangana, India",
+            "UAE",
+            "Saudi Arabia",
+            "Qatar",
+            "Kuwait",
+            "Bahrain",
+            "Oman",
+          ],
           address: {
             "@type": "PostalAddress",
             addressLocality: "Warangal",
@@ -111,7 +129,9 @@ function Index() {
               transition={{ duration: 0.6, delay: 0.5, ease: EASE }}
               className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:mt-6 sm:text-lg"
             >
-              We engineer scalable websites with live visual admin editors, custom WhatsApp CRMs, tailored invoicing, and live inventory—all controlled through a unified mobile dashboard. Never depend on external developers again.
+              We engineer scalable websites with live visual admin editors, custom WhatsApp CRMs,
+              tailored invoicing, and live inventory—all controlled through a unified mobile
+              dashboard. Never depend on external developers again.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -142,7 +162,12 @@ function Index() {
               transition={{ duration: 0.6, delay: 0.78 }}
               className="mt-7 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground"
             >
-              {["Live Visual CMS", "Custom WhatsApp CRM", "Mobile BI Dashboard", "Full Client Ownership"].map((p) => (
+              {[
+                "Live Visual CMS",
+                "Custom WhatsApp CRM",
+                "Mobile BI Dashboard",
+                "Full Client Ownership",
+              ].map((p) => (
                 <span key={p} className="inline-flex items-center gap-2">
                   <Check className="h-4 w-4 shrink-0 text-primary" /> {p}
                 </span>
@@ -178,8 +203,12 @@ function Index() {
               </h2>
               <ul className="mt-3 space-y-1.5 text-[0.82rem] leading-relaxed text-muted-foreground sm:space-y-2 sm:text-sm">
                 <li>Instant visual admin editor to update text, photos & prices without coding.</li>
-                <li>Custom WhatsApp CRM captures and auto-replies to every inbound customer lead.</li>
-                <li>One unified mobile dashboard reveals daily cash collections, web visits & stock.</li>
+                <li>
+                  Custom WhatsApp CRM captures and auto-replies to every inbound customer lead.
+                </li>
+                <li>
+                  One unified mobile dashboard reveals daily cash collections, web visits & stock.
+                </li>
               </ul>
             </motion.div>
           </motion.div>
@@ -250,14 +279,17 @@ function Index() {
                 Three pillars that turn your business into an automated machine
               </h2>
               <p className="mt-4 text-pretty text-[0.975rem] leading-relaxed text-primary-foreground/75 sm:text-base">
-                We engineer scalable web architecture, custom WhatsApp CRMs, and mobile executive dashboards so you can run your business smoothly without technical frustration.
+                We engineer scalable web architecture, custom WhatsApp CRMs, and mobile executive
+                dashboards so you can run your business smoothly without technical frustration.
               </p>
             </Reveal>
             <Stagger className="mt-10 grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
               {pillars.map((p) => (
                 <StaggerItem key={p.k} lift>
                   <div className="h-full rounded-[var(--radius)] border border-primary-foreground/15 bg-primary-foreground/5 p-6 transition-colors hover:border-gold/40 sm:p-7">
-                    <span className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">{p.k}</span>
+                    <span className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">
+                      {p.k}
+                    </span>
                     <h3 className="mt-3 text-xl font-semibold">{p.t}</h3>
                     <p className="mt-3 text-sm leading-relaxed text-primary-foreground/75">{p.b}</p>
                   </div>
@@ -305,7 +337,8 @@ function Index() {
                 Test our working software before you customize
               </h2>
               <p className="mt-3 text-pretty text-sm sm:text-base leading-relaxed text-muted-foreground">
-                We don't just talk about software—we build it. Click "Quick View" to test any working tool live right now, or tap "Customize" to adapt it to your workflow.
+                We don't just talk about software—we build it. Click "Quick View" to test any
+                working tool live right now, or tap "Customize" to adapt it to your workflow.
               </p>
             </Reveal>
             <Reveal>
@@ -346,17 +379,13 @@ function Index() {
                     <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
                       {p.title}
                     </h3>
-                    <p className="mt-1 text-sm font-medium text-foreground/90">
-                      {p.tagline}
-                    </p>
+                    <p className="mt-1 text-sm font-medium text-foreground/90">{p.tagline}</p>
 
                     <div className="my-5">
                       <PrototypeIllustration type={p.illustrationType} />
                     </div>
 
-                    <p className="text-sm leading-relaxed text-muted-foreground">
-                      {p.summary}
-                    </p>
+                    <p className="text-sm leading-relaxed text-muted-foreground">{p.summary}</p>
 
                     <ul className="mt-4 space-y-2 border-t border-border/60 pt-4">
                       {p.bulletPoints.map((pt) => (
@@ -396,7 +425,10 @@ function Index() {
         </div>
       </section>
 
-      <Section eyebrow="How it works" title="Simple steps, clear support, no unnecessary complexity">
+      <Section
+        eyebrow="How it works"
+        title="Simple steps, clear support, no unnecessary complexity"
+      >
         <Stagger className="mt-10 grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4">
           {steps.map((s, i) => (
             <StaggerItem key={s.t}>
@@ -426,9 +458,13 @@ function Index() {
                 <div className="surface-card h-full p-6 sm:p-7">
                   <h3 className="text-lg font-semibold text-muted-foreground">Before</h3>
                   <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
-                    <li>Static website requiring developers or coding just to change prices or photos</li>
+                    <li>
+                      Static website requiring developers or coding just to change prices or photos
+                    </li>
                     <li>Missed WhatsApp leads and forgotten follow-ups during busy workdays</li>
-                    <li>Zero daily visibility into cash collected, web visitors, or stock levels</li>
+                    <li>
+                      Zero daily visibility into cash collected, web visitors, or stock levels
+                    </li>
                   </ul>
                 </div>
               </ScrollScene>
@@ -436,9 +472,13 @@ function Index() {
                 <div className="surface-card h-full border-primary/25 bg-secondary/40 p-6 sm:p-7">
                   <h3 className="text-lg font-semibold text-primary">After (Powered by Alif)</h3>
                   <ul className="mt-4 space-y-3 text-sm text-foreground/80">
-                    <li>Embedded Visual Admin: update your site and catalog in seconds without code</li>
+                    <li>
+                      Embedded Visual Admin: update your site and catalog in seconds without code
+                    </li>
                     <li>Automated WhatsApp CRM routing and instant digital brochure replies</li>
-                    <li>Single Mobile BI Dashboard: live cashflow, customer histories & lead tracking</li>
+                    <li>
+                      Single Mobile BI Dashboard: live cashflow, customer histories & lead tracking
+                    </li>
                   </ul>
                 </div>
               </ScrollScene>
@@ -466,7 +506,10 @@ function Index() {
               {results.map((r) => (
                 <StaggerItem key={r.t} lift>
                   <div className="surface-card h-full p-6 sm:p-7">
-                    <AnimatedStat value={r.s} className="font-display text-3xl font-semibold text-primary" />
+                    <AnimatedStat
+                      value={r.s}
+                      className="font-display text-3xl font-semibold text-primary"
+                    />
                     <h3 className="mt-3 text-base font-semibold">{r.t}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{r.b}</p>
                   </div>

@@ -20,18 +20,18 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <FloatingActions />
       <main className="flex-1">
         <AnimatePresence mode="wait" initial={false}>
-            {/* Opacity-only transition keeps route changes on the compositor
+          {/* Opacity-only transition keeps route changes on the compositor
                 (no layout/paint work), which avoids the scroll stutter that a
                 translating wrapper caused on long pages. */}
-            <motion.div
-              key={pathname}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: reduced ? 0 : coarse ? 0.1 : 0.16, ease: "easeOut" }}
-            >
-              {children}
-            </motion.div>
+          <motion.div
+            key={pathname}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: reduced ? 0 : coarse ? 0.1 : 0.16, ease: "easeOut" }}
+          >
+            {children}
+          </motion.div>
         </AnimatePresence>
       </main>
       <SiteFooter />

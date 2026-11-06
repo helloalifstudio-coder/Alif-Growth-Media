@@ -98,7 +98,12 @@ export const Route = createFileRoute("/contact")({
 
 const channels = [
   { icon: Phone, label: "Call us", value: company.phone, href: company.phoneHref },
-  { icon: MessageCircle, label: "WhatsApp", value: "Chat with the growth team", href: company.whatsapp },
+  {
+    icon: MessageCircle,
+    label: "WhatsApp",
+    value: "Chat with the growth team",
+    href: company.whatsapp,
+  },
   { icon: Mail, label: "Email", value: company.email, href: `mailto:${company.email}` },
   { icon: MapPin, label: "Studio", value: company.address },
 ];
@@ -117,7 +122,8 @@ function ContactPage() {
     const city = String(data.get("city") || "").trim();
 
     if (!name || name.length < 2) next.name = "Please enter your full name.";
-    if (!phone || !/^[+0-9\s\-]{7,20}$/.test(phone)) next.phone = "Please enter a valid phone number.";
+    if (!phone || !/^[+0-9\s-]{7,20}$/.test(phone))
+      next.phone = "Please enter a valid phone number.";
     if (!business || business.length < 2) next.business = "Please enter your business name.";
     if (!city || city === "") next.city = "Please select a city.";
 
@@ -145,7 +151,11 @@ function ContactPage() {
         `Message: ${data.get("text") || "N/A"}`,
       ].join("\n"),
     );
-    window.open(`https://wa.me/${company.whatsappPhone}?text=${text}`, "_blank", "noopener,noreferrer");
+    window.open(
+      `https://wa.me/${company.whatsappPhone}?text=${text}`,
+      "_blank",
+      "noopener,noreferrer",
+    );
     window.setTimeout(() => {
       navigate({ to: "/thank-you" });
     }, 400);
@@ -199,11 +209,7 @@ function ContactPage() {
             <p className="mt-2 text-sm text-muted-foreground">
               We reply within one working day, usually much sooner.
             </p>
-            <form
-              className="mt-6 space-y-4"
-              onSubmit={handleSubmit}
-              noValidate
-            >
+            <form className="mt-6 space-y-4" onSubmit={handleSubmit} noValidate>
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
                   <input
@@ -238,7 +244,9 @@ function ContactPage() {
                   aria-invalid={!!errors.business}
                   className="w-full rounded-xl border border-input bg-background px-4 py-3 text-base outline-none transition-colors placeholder:text-muted-foreground/70 focus:border-ring focus:ring-2 focus:ring-ring/40 sm:text-sm"
                 />
-                {errors.business && <p className="mt-1 text-xs text-destructive">{errors.business}</p>}
+                {errors.business && (
+                  <p className="mt-1 text-xs text-destructive">{errors.business}</p>
+                )}
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
@@ -296,11 +304,14 @@ function ContactPage() {
                 Request Free Growth Audit
               </motion.button>
               {status === "error" && (
-                <p className="text-sm text-destructive">Please fix the errors above and try again.</p>
+                <p className="text-sm text-destructive">
+                  Please fix the errors above and try again.
+                </p>
               )}
             </form>
             <p className="mt-4 text-xs text-muted-foreground">
-              Your details are used only to contact you about your growth audit. By submitting, you agree to our{" "}
+              Your details are used only to contact you about your growth audit. By submitting, you
+              agree to our{" "}
               <a href="/privacy" className="underline hover:text-foreground">
                 Privacy Policy
               </a>

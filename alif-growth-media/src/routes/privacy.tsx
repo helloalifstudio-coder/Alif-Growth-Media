@@ -41,7 +41,9 @@ function PrivacyPage() {
 
       <section className="bg-background/75 px-5 pb-16 sm:px-6 sm:pb-20 lg:px-8 md:pb-28">
         <div className="mx-auto max-w-3xl">
-          <p className="text-sm text-muted-foreground">Last updated: {privacyContent.lastUpdated}</p>
+          <p className="text-sm text-muted-foreground">
+            Last updated: {privacyContent.lastUpdated}
+          </p>
 
           <div className="mt-10 space-y-10">
             {privacyContent.sections.map((s) => (
@@ -56,7 +58,10 @@ function PrivacyPage() {
             <h2 className="text-lg font-semibold">Questions about your privacy?</h2>
             <p className="mt-2 text-muted-foreground">
               Contact us at{" "}
-              <a href={`mailto:${company.email}`} className="font-medium text-primary hover:underline">
+              <a
+                href={`mailto:${company.email}`}
+                className="font-medium text-primary hover:underline"
+              >
                 {company.email}
               </a>{" "}
               or call{" "}
