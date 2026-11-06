@@ -9,8 +9,7 @@ const RELEASE_MARKER = "[netlify-release]";
  * on Netlify. Day-to-day previews belong to Vercel.
  */
 function isApprovedRelease(message) {
-  return typeof message === "string" &&
-    /(?:^|\s)\[netlify-release\](?=\s|$)/.test(message);
+  return typeof message === "string" && /(?:^|\s)\[netlify-release\](?=\s|$)/.test(message);
 }
 
 function shouldBuild({ context, commitRef, readCommitMessage }) {
