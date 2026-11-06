@@ -11,3 +11,6 @@
 # Review this branch on Vercel; do not re-enable without explicit approval.
 [context.deploy-preview]
   ignore = "exit 0"
+
+[context.branch-deploy]
+  ignore = "exit 0"
