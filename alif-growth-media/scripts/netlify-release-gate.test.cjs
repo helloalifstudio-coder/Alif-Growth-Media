@@ -16,12 +16,19 @@ test("only an exact release marker authorizes a Netlify production build", () =>
 });
 
 test("production release commit permits a single opted-in build", () => {
-  assert.equal(shouldBuild({ context: "production", commitRef, readCommitMessage: readApproved }), true);
+  assert.equal(
+    shouldBuild({ context: "production", commitRef, readCommitMessage: readApproved }),
+    true,
+  );
 });
 
 test("regular production commits are skipped", () => {
   assert.equal(
-    shouldBuild({ context: "production", commitRef, readCommitMessage: () => "fix: button padding" }),
+    shouldBuild({
+      context: "production",
+      commitRef,
+      readCommitMessage: () => "fix: button padding",
+    }),
     false,
   );
 });
@@ -34,7 +41,10 @@ test("branch and pull request builds are skipped even with the marker", () => {
 
 test("missing or malformed commit ids cannot start a build", () => {
   for (const ref of [undefined, "", "not-a-commit", "f".repeat(39)]) {
-    assert.equal(shouldBuild({ context: "production", commitRef: ref, readCommitMessage: readApproved }), false);
+    assert.equal(
+      shouldBuild({ context: "production", commitRef: ref, readCommitMessage: readApproved }),
+      false,
+    );
   }
 });
 
@@ -43,7 +53,9 @@ test("git lookup failure fails closed", () => {
     shouldBuild({
       context: "production",
       commitRef,
-      readCommitMessage: () => { throw new Error("commit unavailable"); },
+      readCommitMessage: () => {
+        throw new Error("commit unavailable");
+      },
     }),
     false,
   );
