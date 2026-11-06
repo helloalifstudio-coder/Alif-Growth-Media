@@ -35,6 +35,8 @@ jobs:
       - name: Install locked dependencies
         id: install
         run: npm ci
+      - name: Test controlled Netlify release policy
+        run: node --test scripts/netlify-release-gate.test.cjs
       - name: Lint
         run: npm run lint
       - name: Typecheck
@@ -43,3 +45,13 @@ jobs:
       - name: Production build (no deployment)
         if: ${{ always() && steps.install.outcome == 'success' }}
         run: npm run build
+      - name: Verify Nitro Netlify server output (no deployment)
+        if: ${{ always() && steps.install.outcome == 'success' }}
+        env:
+          NETLIFY: "true"
+          NITRO_PRESET: "netlify"
+        run: |
+          npm run build
+          test -d dist
+          test -s .netlify/functions-internal/server/main.mjs
+          test -f .netlify/functions-internal/nitro.json

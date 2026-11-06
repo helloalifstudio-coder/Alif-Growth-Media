@@ -3,8 +3,8 @@
 # This is a server-rendered app, NOT a static site. When NETLIFY=true is set
 # (Netlify sets it automatically), Nitro builds with its Netlify preset:
 #   static assets  -> dist/
-#   SSR handler    -> .netlify/functions-internal/server/
-#   routing        -> dist/_redirects (catch-all to the server function)
+#   SSR handler    -> .netlify/functions-internal/server/main.mjs
+#   function meta  -> .netlify/functions-internal/nitro.json
 
 [build]
   command = "npm run build"
@@ -12,3 +12,16 @@
 
 [build.environment]
   NODE_VERSION = "22"
+
+# Netlify deploy previews are paused by owner request (2026-11-06).
+# Review this branch on Vercel; do not re-enable without explicit approval.
+[context.deploy-preview]
+  ignore = "exit 0"
+
+[context.branch-deploy]
+  ignore = "exit 0"
+
+# Only merge commits bearing [netlify-release] build on the production branch.
+# The first release is explicit; ordinary main commits do not trigger builds.
+[context.production]
+  ignore = "node ./scripts/netlify-release-gate.cjs"

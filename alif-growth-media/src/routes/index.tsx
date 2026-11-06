@@ -2,9 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Check, Quote, ExternalLink, MessageCircle, Sparkles } from "lucide-react";
 import { PrototypeIllustration } from "@/components/site/PrototypeIllustration";
 import { InteractiveDemoSuite } from "@/components/site/InteractiveDemoSuite";
+import { InteractiveAgencyHero } from "@/components/site/InteractiveAgencyHero";
 import { motion } from "motion/react";
 
-import heroArt from "@/assets/hero-abstract.jpg";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { CtaBand } from "@/components/site/CtaBand";
 import { Section, Card } from "@/components/site/Sections";
@@ -12,7 +12,6 @@ import {
   AnimatedStat,
   HoverLift,
   MaskedLines,
-  Parallax,
   Reveal,
   ScrollDrift,
   ScrollScene,
@@ -87,7 +86,7 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  const headline = "Empowering local businesses with custom".split(" ");
+  const headline = "Digital experiences designed to".split(" ");
   return (
     <SiteLayout>
       {/* Hero */}
@@ -100,7 +99,7 @@ function Index() {
               transition={{ duration: 0.5, ease: EASE }}
               className="inline-flex items-center gap-2 rounded-full border border-border bg-card/85 px-3.5 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-primary sm:px-4 sm:text-xs"
             >
-              Your Dedicated Embedded IT Partner · Telangana & Gulf
+              Digital craft meets business clarity · Telangana & beyond
             </motion.span>
             <h1 className="mt-5 text-[clamp(2.1rem,7.6vw,3.75rem)] font-semibold leading-[1.06] sm:mt-6">
               {headline.map((word, i) => (
@@ -120,7 +119,7 @@ function Index() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.1 + headline.length * 0.06, ease: EASE }}
               >
-                software & operating tools.
+                move people and businesses.
               </motion.span>
             </h1>
             <motion.p
@@ -144,7 +143,7 @@ function Index() {
                   to="/contact"
                   className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-lift)] sm:w-auto"
                 >
-                  Schedule a Tech Architecture Audit <ArrowRight className="h-4 w-4" />
+                  Start a project <ArrowRight className="h-4 w-4" />
                 </Link>
               </HoverLift>
               <HoverLift className="w-full sm:w-auto">
@@ -152,7 +151,7 @@ function Index() {
                   to="/services"
                   className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-border bg-card/85 px-7 py-3.5 text-sm font-semibold transition-colors hover:bg-muted sm:w-auto"
                 >
-                  Explore Software Suite
+                  Explore what we build
                 </Link>
               </HoverLift>
             </motion.div>
@@ -175,43 +174,9 @@ function Index() {
             </motion.div>
           </div>
 
-          <motion.div
-            className="relative mb-16 md:mb-0"
-            initial={{ opacity: 0, scale: 0.94 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.9, delay: 0.2, ease: EASE }}
-          >
-            <Parallax distance={26} scale={[1, 1.08]}>
-              <img
-                src={heroArt}
-                alt="Abstract emerald and gold artwork representing Alif Growth Media digital growth systems"
-                width={1200}
-                height={1200}
-                fetchPriority="high"
-                decoding="async"
-                className="aspect-square w-full rounded-[calc(var(--radius)+8px)] object-cover shadow-[var(--shadow-lift)]"
-              />
-            </Parallax>
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.7, ease: EASE }}
-              className="surface-card absolute -bottom-12 left-2 right-2 p-4 sm:-bottom-6 sm:left-4 sm:right-4 sm:p-5 md:-left-8 md:right-10"
-            >
-              <h2 className="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-primary sm:text-sm">
-                What changes for your business
-              </h2>
-              <ul className="mt-3 space-y-1.5 text-[0.82rem] leading-relaxed text-muted-foreground sm:space-y-2 sm:text-sm">
-                <li>Instant visual admin editor to update text, photos & prices without coding.</li>
-                <li>
-                  Custom WhatsApp CRM captures and auto-replies to every inbound customer lead.
-                </li>
-                <li>
-                  One unified mobile dashboard reveals daily cash collections, web visits & stock.
-                </li>
-              </ul>
-            </motion.div>
-          </motion.div>
+          <div className="relative mb-5 md:mb-0">
+            <InteractiveAgencyHero />
+          </div>
         </div>
       </section>
 
