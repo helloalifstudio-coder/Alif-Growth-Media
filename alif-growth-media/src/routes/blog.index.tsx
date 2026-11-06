@@ -45,30 +45,30 @@ function BlogIndexPage() {
           <Stagger className="grid gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
             {blogPosts.map((post) => (
               <StaggerItem key={post.slug} lift className="h-full">
-              <article className="surface-card group flex h-full flex-col overflow-hidden transition-shadow hover:shadow-[var(--shadow-lift)]">
-                <div className="h-48 bg-gradient-to-br from-primary/20 to-gold/20" />
-                <div className="flex flex-1 flex-col p-6">
-                  <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                    <Calendar className="h-3.5 w-3.5" />
-                    <span>{post.date}</span>
-                    <span>·</span>
-                    <span>{post.category}</span>
+                <article className="surface-card group flex h-full flex-col overflow-hidden transition-shadow hover:shadow-[var(--shadow-lift)]">
+                  <div className="h-48 bg-gradient-to-br from-primary/20 to-gold/20" />
+                  <div className="flex flex-1 flex-col p-6">
+                    <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                      <Calendar className="h-3.5 w-3.5" />
+                      <span>{post.date}</span>
+                      <span>·</span>
+                      <span>{post.category}</span>
+                    </div>
+                    <h2 className="mt-3 text-xl font-semibold leading-snug group-hover:text-primary">
+                      {post.title}
+                    </h2>
+                    <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
+                      {post.excerpt}
+                    </p>
+                    <Link
+                      to="/blog/$slug"
+                      params={{ slug: post.slug }}
+                      className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-all hover:gap-3"
+                    >
+                      Read article <ArrowRight className="h-4 w-4" />
+                    </Link>
                   </div>
-                  <h2 className="mt-3 text-xl font-semibold leading-snug group-hover:text-primary">
-                    {post.title}
-                  </h2>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
-                    {post.excerpt}
-                  </p>
-                  <Link
-                    to="/blog/$slug"
-                    params={{ slug: post.slug }}
-                    className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-all hover:gap-3"
-                  >
-                    Read article <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </div>
-              </article>
+                </article>
               </StaggerItem>
             ))}
           </Stagger>

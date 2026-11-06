@@ -5,9 +5,21 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 import { PageHero } from "@/components/site/PageHero";
 import { CtaBand } from "@/components/site/CtaBand";
 import { Section } from "@/components/site/Sections";
-import { AnimatedStat, Parallax, Stagger, StaggerItem, Reveal } from "@/components/motion/primitives";
+import {
+  AnimatedStat,
+  Parallax,
+  Stagger,
+  StaggerItem,
+  Reveal,
+} from "@/components/motion/primitives";
 import { PrototypeIllustration } from "@/components/site/PrototypeIllustration";
-import { collaborations, results, caseStudies, prototypes, getPrototypeWhatsappUrl } from "@/content/site";
+import {
+  collaborations,
+  results,
+  caseStudies,
+  prototypes,
+  getPrototypeWhatsappUrl,
+} from "@/content/site";
 
 const title = "Working Prototypes & Client Platforms | Alif Growth Media";
 const description =
@@ -54,7 +66,8 @@ function WorkPage() {
                 Ready-to-Deploy Software for Your Business
               </h2>
               <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-                No complex tech talk or waiting months. Click "Quick View" to test any working tool live, or tap "Customize for My Business" to adapt it to your workflow.
+                No complex tech talk or waiting months. Click "Quick View" to test any working tool
+                live, or tap "Customize for My Business" to adapt it to your workflow.
               </p>
             </div>
             <a
@@ -87,9 +100,7 @@ function WorkPage() {
                     <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
                       {p.title}
                     </h3>
-                    <p className="mt-1 text-sm font-medium text-foreground/90">
-                      {p.tagline}
-                    </p>
+                    <p className="mt-1 text-sm font-medium text-foreground/90">{p.tagline}</p>
 
                     {/* Professional Visual Illustration Mockup */}
                     <div className="my-5">
@@ -97,9 +108,7 @@ function WorkPage() {
                     </div>
 
                     {/* Plain English Summary */}
-                    <p className="text-sm leading-relaxed text-muted-foreground">
-                      {p.summary}
-                    </p>
+                    <p className="text-sm leading-relaxed text-muted-foreground">{p.summary}</p>
 
                     {/* Bullet Highlights */}
                     <ul className="mt-4 space-y-2 border-t border-border/60 pt-4">
@@ -152,7 +161,8 @@ function WorkPage() {
               Brand Partners Operating on Our Systems
             </h2>
             <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-              Real businesses actively using custom platforms engineered and maintained by Alif Growth Media.
+              Real businesses actively using custom platforms engineered and maintained by Alif
+              Growth Media.
             </p>
           </Reveal>
 
@@ -161,17 +171,24 @@ function WorkPage() {
               <StaggerItem key={c.name} lift className="h-full">
                 <div className="surface-card group flex h-full flex-col justify-between p-6 sm:p-7 rounded-2xl transition-shadow hover:shadow-[var(--shadow-lift)]">
                   <div>
-                    <Parallax distance={10} className={`mb-6 flex items-center ${i === 1 ? "h-28 sm:h-36" : "h-16 sm:h-20"}`}>
+                    <Parallax
+                      distance={10}
+                      className={`mb-6 flex items-center ${i === 1 ? "h-28 sm:h-36" : "h-16 sm:h-20"}`}
+                    >
                       <img
                         src={c.logo}
                         alt={`${c.name} logo`}
                         loading="lazy"
                         className={`w-auto object-contain object-left transition-transform duration-500 group-hover:scale-[1.04] ${
-                          i === 1 ? "max-h-28 sm:max-h-36 max-w-[90%]" : "max-h-16 sm:max-h-20 max-w-[85%]"
+                          i === 1
+                            ? "max-h-28 sm:max-h-36 max-w-[90%]"
+                            : "max-h-16 sm:max-h-20 max-w-[85%]"
                         }`}
                       />
                     </Parallax>
-                    <span className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">{c.industry}</span>
+                    <span className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+                      {c.industry}
+                    </span>
                     <h3 className="mt-2 text-xl font-bold">{c.name}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.desc}</p>
                     <p className="mt-4 text-xs font-medium text-foreground/80">{c.scope}</p>
@@ -182,7 +199,8 @@ function WorkPage() {
                       params={{ slug: caseStudies[i].slug }}
                       className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary transition-all hover:gap-2.5"
                     >
-                      Read Case Study <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                      Read Case Study{" "}
+                      <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
                     </Link>
                     <a
                       href={c.href}
@@ -211,7 +229,10 @@ function WorkPage() {
           {results.map((r) => (
             <StaggerItem key={r.t} lift>
               <div className="surface-card h-full p-6 sm:p-7 rounded-2xl">
-                <AnimatedStat value={r.s} className="font-display text-3xl font-semibold text-primary" />
+                <AnimatedStat
+                  value={r.s}
+                  className="font-display text-3xl font-semibold text-primary"
+                />
                 <h3 className="mt-3 text-base font-semibold">{r.t}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{r.b}</p>
               </div>

@@ -10,10 +10,12 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 const isNetlify = process.env.NETLIFY === "true" || process.env.NETLIFY === "1";
 
 // Vercel sets VERCEL=1 or VERCEL_ENV during its build.
-const isVercel = process.env.VERCEL === "true" || process.env.VERCEL === "1" || Boolean(process.env.VERCEL_ENV);
+const isVercel =
+  process.env.VERCEL === "true" || process.env.VERCEL === "1" || Boolean(process.env.VERCEL_ENV);
 
 // Pick the appropriate Nitro preset for the target cloud platform.
-const customPreset = process.env.NITRO_PRESET || (isVercel ? "vercel" : isNetlify ? "netlify" : undefined);
+const customPreset =
+  process.env.NITRO_PRESET || (isVercel ? "vercel" : isNetlify ? "netlify" : undefined);
 
 export default defineConfig({
   tanstackStart: {

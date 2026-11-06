@@ -56,7 +56,10 @@ function TermsPage() {
             <h2 className="text-lg font-semibold">Questions about these terms?</h2>
             <p className="mt-2 text-muted-foreground">
               Reach out at{" "}
-              <a href={`mailto:${company.email}`} className="font-medium text-primary hover:underline">
+              <a
+                href={`mailto:${company.email}`}
+                className="font-medium text-primary hover:underline"
+              >
                 {company.email}
               </a>{" "}
               or call{" "}

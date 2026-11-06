@@ -1,7 +1,12 @@
 import type { ReactNode } from "react";
 import { motion } from "motion/react";
 
-import { MaskedText, Reveal, ScrollLift, useSafeReducedMotion } from "@/components/motion/primitives";
+import {
+  MaskedText,
+  Reveal,
+  ScrollLift,
+  useSafeReducedMotion,
+} from "@/components/motion/primitives";
 
 export function Section({
   id,
@@ -35,9 +40,9 @@ export function Section({
           {eyebrow && (
             <Reveal>
               <span
-              className={`text-[0.7rem] font-semibold uppercase tracking-[0.22em] sm:text-xs ${
-                tone === "deep" ? "text-gold" : "text-primary"
-              }`}
+                className={`text-[0.7rem] font-semibold uppercase tracking-[0.22em] sm:text-xs ${
+                  tone === "deep" ? "text-gold" : "text-primary"
+                }`}
               >
                 {eyebrow}
               </span>
@@ -49,9 +54,9 @@ export function Section({
           {intro && (
             <Reveal delay={0.12}>
               <p
-              className={`mt-4 text-pretty text-[0.975rem] leading-relaxed sm:text-base ${
-                tone === "deep" ? "text-primary-foreground/75" : "text-muted-foreground"
-              }`}
+                className={`mt-4 text-pretty text-[0.975rem] leading-relaxed sm:text-base ${
+                  tone === "deep" ? "text-primary-foreground/75" : "text-muted-foreground"
+                }`}
               >
                 {intro}
               </p>

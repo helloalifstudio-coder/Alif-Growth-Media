@@ -348,7 +348,11 @@ export function ScrollStage({
         className={className}
         style={
           active
-            ? { height: `${length * 100}vh`, contentVisibility: "auto", containIntrinsicSize: "1px 1200px" }
+            ? {
+                height: `${length * 100}vh`,
+                contentVisibility: "auto",
+                containIntrinsicSize: "1px 1200px",
+              }
             : undefined
         }
       >
@@ -398,11 +402,7 @@ export function ScrollScene({
 
   const keyframes = fadeOut ? [from, to, to + span * 0.8, to + span * 1.4] : [from, to];
 
-  const yValue = useTransform(
-    p,
-    keyframes,
-    fadeOut ? [y[0], y[1], y[1], y[1] - 40] : [y[0], y[1]],
-  );
+  const yValue = useTransform(p, keyframes, fadeOut ? [y[0], y[1], y[1], y[1] - 40] : [y[0], y[1]]);
   const opacityValue = useTransform(
     p,
     keyframes,
@@ -431,7 +431,12 @@ export function ScrollScene({
   return (
     <motion.div
       className={className}
-      style={{ y: yValue, opacity: opacityValue, scale: scaleValue, willChange: "transform, opacity" }}
+      style={{
+        y: yValue,
+        opacity: opacityValue,
+        scale: scaleValue,
+        willChange: "transform, opacity",
+      }}
     >
       {children}
     </motion.div>
@@ -456,7 +461,9 @@ export function ScrollDrift({
 
   return (
     <div ref={ref} className={`overflow-hidden ${className ?? ""}`}>
-      <motion.div style={fx ? { x: smooth, willChange: "transform" } : undefined}>{children}</motion.div>
+      <motion.div style={fx ? { x: smooth, willChange: "transform" } : undefined}>
+        {children}
+      </motion.div>
     </div>
   );
 }
@@ -516,7 +523,9 @@ export function ScrollLift({
 
   return (
     <div ref={ref} className={className}>
-      <motion.div style={fx ? { y: smooth, willChange: "transform" } : undefined}>{children}</motion.div>
+      <motion.div style={fx ? { y: smooth, willChange: "transform" } : undefined}>
+        {children}
+      </motion.div>
     </div>
   );
 }
@@ -552,7 +561,10 @@ export function MaskedLines({
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.4 }}
-      variants={{ hidden: {}, show: { transition: { staggerChildren: 0.055, delayChildren: delay } } }}
+      variants={{
+        hidden: {},
+        show: { transition: { staggerChildren: 0.055, delayChildren: delay } },
+      }}
     >
       {lines.map((line) => (
         <span key={line} className="block overflow-hidden">

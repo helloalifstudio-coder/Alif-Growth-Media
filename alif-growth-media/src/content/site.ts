@@ -12,7 +12,8 @@ export const company = {
   get phoneE164() {
     return `+91${this.whatsappPhone}`;
   },
-  whatsappMessage: "Hello Alif Growth Media, I want to upgrade my business with your custom software and operating systems.",
+  whatsappMessage:
+    "Hello Alif Growth Media, I want to upgrade my business with your custom software and operating systems.",
   get whatsapp() {
     return `https://wa.me/${this.whatsappPhone}?text=${encodeURIComponent(this.whatsappMessage)}`;
   },
@@ -68,10 +69,22 @@ export const pillars = [
 ];
 
 export const steps = [
-  { t: "Architect", b: "We audit your daily operations, customer touchpoints, and technical bottlenecks." },
-  { t: "Engineer", b: "We build your high-speed website, visual admin editor, and branded business software." },
-  { t: "Integrate", b: "We wire your WhatsApp CRM, automated invoicing receipts, and live inventory." },
-  { t: "Empower", b: "You monitor cashflow, leads, and customer retention from a single mobile dashboard." },
+  {
+    t: "Architect",
+    b: "We audit your daily operations, customer touchpoints, and technical bottlenecks.",
+  },
+  {
+    t: "Engineer",
+    b: "We build your high-speed website, visual admin editor, and branded business software.",
+  },
+  {
+    t: "Integrate",
+    b: "We wire your WhatsApp CRM, automated invoicing receipts, and live inventory.",
+  },
+  {
+    t: "Empower",
+    b: "You monitor cashflow, leads, and customer retention from a single mobile dashboard.",
+  },
 ];
 
 export type Service = {
@@ -93,7 +106,8 @@ export const services: Service[] = [
       "Zero-downtime continuous deployment on Vercel & cloud edge",
       "Instant WhatsApp click-to-chat & automated lead capture buttons",
     ],
-    outcome: "A world-class digital storefront that you own and control completely without developer dependency.",
+    outcome:
+      "A world-class digital storefront that you own and control completely without developer dependency.",
   },
   {
     slug: "custom-crm-whatsapp-automations",
@@ -117,7 +131,8 @@ export const services: Service[] = [
       "Live inventory management with low-stock alerts and SKU monitoring",
       "Exportable financial reports ready for GST and tax compliance",
     ],
-    outcome: "Absolute clarity over daily revenue, outstanding customer dues, and warehouse inventory.",
+    outcome:
+      "Absolute clarity over daily revenue, outstanding customer dues, and warehouse inventory.",
   },
   {
     slug: "owner-bi-dashboard",
@@ -129,7 +144,8 @@ export const services: Service[] = [
       "Comprehensive customer profile history: visits, purchases & dues",
       "Predictive sales analytics and automated growth recommendations",
     ],
-    outcome: "Total real-time visibility into your business health without asking staff or checking registers.",
+    outcome:
+      "Total real-time visibility into your business health without asking staff or checking registers.",
   },
 ];
 
@@ -138,27 +154,51 @@ export const engagements = [
     t: "Tech Architecture Audit",
     price: "Complimentary",
     b: "A structured 45-minute audit of your current digital setup, customer communication channels, and software bottlenecks.",
-    points: ["45-minute working architecture review", "Complete Software & Automation Roadmap", "No obligation to continue"],
+    points: [
+      "45-minute working architecture review",
+      "Complete Software & Automation Roadmap",
+      "No obligation to continue",
+    ],
   },
   {
     t: "Custom Platform Sprint",
     price: "Project based",
     b: "High-speed website, visual admin editor, WhatsApp CRM, and business billing systems engineered and deployed.",
-    points: ["Complete custom website + Visual CMS", "WhatsApp CRM & Lead Capture Engine", "Staff training & full cloud handover"],
+    points: [
+      "Complete custom website + Visual CMS",
+      "WhatsApp CRM & Lead Capture Engine",
+      "Staff training & full cloud handover",
+    ],
     featured: true,
   },
   {
     t: "Embedded IT Partner (Retainer)",
     price: "Monthly Partnership",
     b: "We act as your dedicated IT team and fractional CTO—monitoring, updating, and scaling all your software tools.",
-    points: ["Continuous tool customization & features", "Dashboard maintenance & uptime monitoring", "Monthly operational review & insights"],
+    points: [
+      "Continuous tool customization & features",
+      "Dashboard maintenance & uptime monitoring",
+      "Monthly operational review & insights",
+    ],
   },
 ];
 
 export const results = [
-  { t: "Instant Owner Visibility", s: "100%", b: "real-time clarity on website visits, cashflow, and customer histories." },
-  { t: "Zero Lead Loss", s: "< 2 Mins", b: "average WhatsApp enquiry response time through automated lead routing." },
-  { t: "Zero Developer Dependency", s: "1-Tap", b: "visual content and catalog updates directly by the business owner." },
+  {
+    t: "Instant Owner Visibility",
+    s: "100%",
+    b: "real-time clarity on website visits, cashflow, and customer histories.",
+  },
+  {
+    t: "Zero Lead Loss",
+    s: "< 2 Mins",
+    b: "average WhatsApp enquiry response time through automated lead routing.",
+  },
+  {
+    t: "Zero Developer Dependency",
+    s: "1-Tap",
+    b: "visual content and catalog updates directly by the business owner.",
+  },
 ];
 
 export const collaborations = [
@@ -194,7 +234,15 @@ export type Prototype = {
   tagline: string;
   category: string;
   badge: string;
-  illustrationType: "visual-cms" | "whatsapp-crm" | "invoicing" | "membership" | "store-orders" | "dashboard" | "showcase" | "reports";
+  illustrationType:
+    | "visual-cms"
+    | "whatsapp-crm"
+    | "invoicing"
+    | "membership"
+    | "store-orders"
+    | "dashboard"
+    | "showcase"
+    | "reports";
   summary: string;
   bulletPoints: string[];
   liveUrl: string;
@@ -211,11 +259,13 @@ export const prototypes: Prototype[] = [
   {
     id: "visual-cms",
     title: "Visual Website & Content Editor",
-    tagline: "Update your website anytime directly from your phone — no developers or coding needed.",
+    tagline:
+      "Update your website anytime directly from your phone — no developers or coding needed.",
     category: "Website Management",
     badge: "Live Prototype",
     illustrationType: "visual-cms",
-    summary: "Click any text, photo, or announcement banner to edit it on the spot and hit save. Your live site updates instantly without waiting for a coder.",
+    summary:
+      "Click any text, photo, or announcement banner to edit it on the spot and hit save. Your live site updates instantly without waiting for a coder.",
     bulletPoints: [
       "Change product prices and banner announcements in 1 click",
       "Works on any mobile phone, tablet, or laptop",
@@ -232,7 +282,8 @@ export const prototypes: Prototype[] = [
     category: "Customer & Sales Hub",
     badge: "Live Prototype",
     illustrationType: "whatsapp-crm",
-    summary: "All incoming messages from Google, your website, and Instagram arrive in one organized team inbox with smart instant replies.",
+    summary:
+      "All incoming messages from Google, your website, and Instagram arrive in one organized team inbox with smart instant replies.",
     bulletPoints: [
       "Instant greeting & catalog reply when customers message",
       "Organize new leads, orders, and repeat customers clearly",
@@ -249,7 +300,8 @@ export const prototypes: Prototype[] = [
     category: "Billing & Cashflow",
     badge: "Live Prototype",
     illustrationType: "invoicing",
-    summary: "Stop searching through paper bill books. Create clean digital receipts, track daily Cash vs. UPI collections, and stay tax-ready.",
+    summary:
+      "Stop searching through paper bill books. Create clean digital receipts, track daily Cash vs. UPI collections, and stay tax-ready.",
     bulletPoints: [
       "Send clean PDF receipts straight to customer WhatsApp in 1 tap",
       "Daily cash collection tracker: see today's exact totals instantly",
@@ -266,7 +318,8 @@ export const prototypes: Prototype[] = [
     category: "Membership & Dues",
     badge: "Live Prototype",
     illustrationType: "membership",
-    summary: "Designed for gyms, fitness clubs, academies, and subscription services. Track active plans, expiring passes, and pending dues with zero paperwork.",
+    summary:
+      "Designed for gyms, fitness clubs, academies, and subscription services. Track active plans, expiring passes, and pending dues with zero paperwork.",
     bulletPoints: [
       "Automatic WhatsApp reminder links before memberships expire",
       "Color-coded member attendance and payment status",
@@ -283,7 +336,8 @@ export const prototypes: Prototype[] = [
     category: "Digital Storefront & Orders",
     badge: "Deployed Platform",
     illustrationType: "store-orders",
-    summary: "Ideal for grocery shops, meat stores, and organic suppliers. Customers browse items by category, build a cart, and place orders directly to your WhatsApp.",
+    summary:
+      "Ideal for grocery shops, meat stores, and organic suppliers. Customers browse items by category, build a cart, and place orders directly to your WhatsApp.",
     bulletPoints: [
       "Mobile-first ordering that even elderly customers find effortless",
       "Direct order receipt dispatched to your WhatsApp counter",
@@ -300,7 +354,8 @@ export const prototypes: Prototype[] = [
     category: "Portfolio & Consultations",
     badge: "Deployed Platform",
     illustrationType: "showcase",
-    summary: "Built for interior designers, architects, and custom fabricators. Showcase finished projects with smooth photo galleries and instant estimation requests.",
+    summary:
+      "Built for interior designers, architects, and custom fabricators. Showcase finished projects with smooth photo galleries and instant estimation requests.",
     bulletPoints: [
       "High-definition project galleries organized by style and room",
       "Smart inquiry form that captures room size and budget intent",
@@ -317,7 +372,8 @@ export const prototypes: Prototype[] = [
     category: "Boutique & Retail",
     badge: "Deployed Platform",
     illustrationType: "store-orders",
-    summary: "Perfect for clothing boutiques and jewelry brands. Customers browse seasonal collections, check availability, and inquire about their size in 1 tap.",
+    summary:
+      "Perfect for clothing boutiques and jewelry brands. Customers browse seasonal collections, check availability, and inquire about their size in 1 tap.",
     bulletPoints: [
       "Organized by seasonal collections and product styles",
       "1-tap 'Check Availability on WhatsApp' button on every item",
@@ -334,7 +390,8 @@ export const prototypes: Prototype[] = [
     category: "Owner Reports & Charts",
     badge: "Live Prototype",
     illustrationType: "reports",
-    summary: "Drop in your sales records or customer lists and immediately view clear graphs showing your bestselling days, popular products, and growth patterns.",
+    summary:
+      "Drop in your sales records or customer lists and immediately view clear graphs showing your bestselling days, popular products, and growth patterns.",
     bulletPoints: [
       "Simple visual charts instead of complicated spreadsheets",
       "Runs 100% privately on your device with no data uploaded",
@@ -555,12 +612,14 @@ export const blogPosts: BlogPost[] = [
     keyStats: [
       {
         value: "38% vs 25%",
-        label: "Share of MSMEs crossing ₹1 crore turnover in 2023-24 — digitally integrated firms vs non-integrated firms",
+        label:
+          "Share of MSMEs crossing ₹1 crore turnover in 2023-24 — digitally integrated firms vs non-integrated firms",
         source: "ICRIER, Annual Survey of MSMEs in India (2025)",
       },
       {
         value: "77% vs 64%",
-        label: "Share employing more than 10 workers by 2023-24 — integrated vs non-integrated firms",
+        label:
+          "Share employing more than 10 workers by 2023-24 — integrated vs non-integrated firms",
         source: "ICRIER, Annual Survey of MSMEs in India (2025)",
       },
       {
@@ -612,7 +671,8 @@ export const blogPosts: BlogPost[] = [
     ],
     references: [
       {
-        label: "Annual Survey of Micro, Small and Medium Enterprises in India: The Role of Digitalisation in Enterprise Development",
+        label:
+          "Annual Survey of Micro, Small and Medium Enterprises in India: The Role of Digitalisation in Enterprise Development",
         publisher: "ICRIER (Goyal, Puri & Khanna)",
         year: "March 2025",
         href: "https://icrier.org/pdf/Annual-Survey-MSMEs_India_2025.pdf",
@@ -644,17 +704,20 @@ export const blogPosts: BlogPost[] = [
     keyStats: [
       {
         value: "7x",
-        label: "Higher odds of qualifying a lead when contacted within an hour versus just one hour later",
+        label:
+          "Higher odds of qualifying a lead when contacted within an hour versus just one hour later",
         source: "Harvard Business Review, 'The Short Life of Online Sales Leads'",
       },
       {
         value: "60x",
-        label: "Higher odds of qualifying a lead when contacted within an hour versus 24 hours or more later",
+        label:
+          "Higher odds of qualifying a lead when contacted within an hour versus 24 hours or more later",
         source: "Harvard Business Review, 'The Short Life of Online Sales Leads'",
       },
       {
         value: "21.6%",
-        label: "Increase in progression through lead-generation funnels from a 0.1s improvement in mobile site speed",
+        label:
+          "Increase in progression through lead-generation funnels from a 0.1s improvement in mobile site speed",
         source: "Deloitte & Google, 'Milliseconds Make Millions'",
       },
     ],
@@ -732,17 +795,20 @@ export const blogPosts: BlogPost[] = [
     keyStats: [
       {
         value: "USD 11.05bn",
-        label: "Estimated size of the UAE e-commerce market, with continued growth forecast to 2030",
+        label:
+          "Estimated size of the UAE e-commerce market, with continued growth forecast to 2030",
         source: "Nexdigm, UAE E-Commerce Market Outlook to 2030",
       },
       {
         value: "Vision 2030",
-        label: "Saudi Arabia's national programme continues to be the primary driver of SME digital and SaaS adoption across the GCC",
+        label:
+          "Saudi Arabia's national programme continues to be the primary driver of SME digital and SaaS adoption across the GCC",
         source: "GCC digital transformation market analyses, 2026",
       },
       {
         value: "21.6%",
-        label: "Lead-generation funnel progression gained from a 0.1s mobile speed improvement — decisive in a mobile-first region",
+        label:
+          "Lead-generation funnel progression gained from a 0.1s mobile speed improvement — decisive in a mobile-first region",
         source: "Deloitte & Google, 'Milliseconds Make Millions'",
       },
     ],
@@ -825,7 +891,8 @@ export const blogPosts: BlogPost[] = [
     keyStats: [
       {
         value: "4%",
-        label: "Share of consumers who say they never read online reviews for local businesses — the other 96% do",
+        label:
+          "Share of consumers who say they never read online reviews for local businesses — the other 96% do",
         source: "BrightLocal, Local Consumer Review Survey 2025",
       },
       {
@@ -899,7 +966,8 @@ export const blogPosts: BlogPost[] = [
         href: "https://www.brightlocal.com/research/local-business-discovery-trust-report/",
       },
       {
-        label: "Annual Survey of MSMEs in India: The Role of Digitalisation in Enterprise Development",
+        label:
+          "Annual Survey of MSMEs in India: The Role of Digitalisation in Enterprise Development",
         publisher: "ICRIER",
         year: "March 2025",
         href: "https://icrier.org/pdf/Annual-Survey-MSMEs_India_2025.pdf",
@@ -1058,15 +1126,43 @@ export const evidence = [
 ];
 
 export const standards = [
-  { t: "Live Admin Access", b: "Every web portal includes our Visual CMS so you can update products, copy, and images in 1 click." },
-  { t: "Dedicated Technical Partner", b: "No junior support tickets. Co-founders and senior architects manage your technical roadmap end to end." },
-  { t: "Full Platform Ownership", b: "All code, databases, cloud hosting, and domain assets are registered directly in your business's name." },
-  { t: "Unified Business Intelligence", b: "A real-time mobile dashboard giving you instant visibility into website leads, social inquiries, and cashflow." },
+  {
+    t: "Live Admin Access",
+    b: "Every web portal includes our Visual CMS so you can update products, copy, and images in 1 click.",
+  },
+  {
+    t: "Dedicated Technical Partner",
+    b: "No junior support tickets. Co-founders and senior architects manage your technical roadmap end to end.",
+  },
+  {
+    t: "Full Platform Ownership",
+    b: "All code, databases, cloud hosting, and domain assets are registered directly in your business's name.",
+  },
+  {
+    t: "Unified Business Intelligence",
+    b: "A real-time mobile dashboard giving you instant visibility into website leads, social inquiries, and cashflow.",
+  },
 ];
 
 export const milestones = [
-  { y: "Origin", t: "Custom WhatsApp Engines", b: "Engineered automated WhatsApp response and CRM pipelines for local retailers, converting lost messages into closed revenue." },
-  { y: "Innovation", t: "The Visual CMS Framework", b: "Architected modern web storefronts with embedded visual editors, solving the post-launch maintenance barrier for business owners." },
-  { y: "Ecosystem", t: "Operating Tools Suite", b: "Expanded into custom digital invoicing, cash collection tracking, inventory management, and mobile BI dashboards." },
-  { y: "Scale", t: "India & GCC Expansion", b: "Deploying integrated business software and acting as fractional CTOs for local enterprises across Telangana and the Gulf." },
+  {
+    y: "Origin",
+    t: "Custom WhatsApp Engines",
+    b: "Engineered automated WhatsApp response and CRM pipelines for local retailers, converting lost messages into closed revenue.",
+  },
+  {
+    y: "Innovation",
+    t: "The Visual CMS Framework",
+    b: "Architected modern web storefronts with embedded visual editors, solving the post-launch maintenance barrier for business owners.",
+  },
+  {
+    y: "Ecosystem",
+    t: "Operating Tools Suite",
+    b: "Expanded into custom digital invoicing, cash collection tracking, inventory management, and mobile BI dashboards.",
+  },
+  {
+    y: "Scale",
+    t: "India & GCC Expansion",
+    b: "Deploying integrated business software and acting as fractional CTOs for local enterprises across Telangana and the Gulf.",
+  },
 ];

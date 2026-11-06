@@ -43,8 +43,24 @@ export const Route = createFileRoute("/services")({
               name: s.t,
               description: s.b,
               serviceType: s.t,
-              provider: { "@type": "Organization", name: company.name, url: "https://alif-growth-media.vercel.app" },
-              areaServed: ["Warangal", "Hanamkonda", "Hyderabad", "Telangana", "India", "UAE", "Saudi Arabia", "Qatar", "Kuwait", "Bahrain", "Oman"],
+              provider: {
+                "@type": "Organization",
+                name: company.name,
+                url: "https://alif-growth-media.vercel.app",
+              },
+              areaServed: [
+                "Warangal",
+                "Hanamkonda",
+                "Hyderabad",
+                "Telangana",
+                "India",
+                "UAE",
+                "Saudi Arabia",
+                "Qatar",
+                "Kuwait",
+                "Bahrain",
+                "Oman",
+              ],
             },
           })),
         }),
@@ -55,7 +71,12 @@ export const Route = createFileRoute("/services")({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://alif-growth-media.vercel.app/" },
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: "https://alif-growth-media.vercel.app/",
+            },
             { "@type": "ListItem", position: 2, name: "Services", item: canonical },
           ],
         }),
@@ -78,30 +99,30 @@ function ServicesPage() {
         <div className="mx-auto grid max-w-6xl gap-6">
           {services.map((s, i) => (
             <Reveal key={s.slug} direction={i % 2 === 0 ? "up" : "up"} delay={0.04}>
-            <article
-              id={s.slug}
-              className="surface-card grid scroll-mt-28 gap-6 p-6 transition-shadow sm:p-7 hover:shadow-[var(--shadow-lift)] md:grid-cols-[0.9fr_1.1fr] md:p-9"
-            >
-              <div>
-                <span className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">
-                  0{i + 1} · Service
-                </span>
-                <h2 className="mt-3 text-2xl font-semibold">{s.t}</h2>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.b}</p>
-                <p className="mt-5 rounded-xl bg-secondary/50 p-4 text-sm text-foreground/80">
-                  <strong className="font-semibold text-primary">Outcome: </strong>
-                  {s.outcome}
-                </p>
-              </div>
-              <ul className="grid gap-3 self-center">
-                {s.includes.map((item: string) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </article>
+              <article
+                id={s.slug}
+                className="surface-card grid scroll-mt-28 gap-6 p-6 transition-shadow sm:p-7 hover:shadow-[var(--shadow-lift)] md:grid-cols-[0.9fr_1.1fr] md:p-9"
+              >
+                <div>
+                  <span className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">
+                    0{i + 1} · Service
+                  </span>
+                  <h2 className="mt-3 text-2xl font-semibold">{s.t}</h2>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.b}</p>
+                  <p className="mt-5 rounded-xl bg-secondary/50 p-4 text-sm text-foreground/80">
+                    <strong className="font-semibold text-primary">Outcome: </strong>
+                    {s.outcome}
+                  </p>
+                </div>
+                <ul className="grid gap-3 self-center">
+                  {s.includes.map((item: string) => (
+                    <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </article>
             </Reveal>
           ))}
         </div>
@@ -116,14 +137,15 @@ function ServicesPage() {
           <StaggerItem lift className="surface-card p-6 sm:p-7">
             <h3 className="text-lg font-semibold">India</h3>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Serving {company.areas} with on-the-ground understanding of how local customers search, message and buy.
+              Serving {company.areas} with on-the-ground understanding of how local customers
+              search, message and buy.
             </p>
           </StaggerItem>
           <StaggerItem lift className="surface-card p-6 sm:p-7">
             <h3 className="text-lg font-semibold">Gulf / GCC</h3>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Working with businesses in {company.regions.slice(1).join(", ")} to build trust-first digital presence and
-              customer communication.
+              Working with businesses in {company.regions.slice(1).join(", ")} to build trust-first
+              digital presence and customer communication.
             </p>
           </StaggerItem>
         </Stagger>
@@ -144,7 +166,9 @@ function ServicesPage() {
                 e.featured ? "border-primary/30 bg-secondary/40" : ""
               }`}
             >
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">{e.price}</span>
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+                {e.price}
+              </span>
               <h3 className="mt-3 text-xl font-semibold">{e.t}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{e.b}</p>
               <ul className="mt-5 flex-1 space-y-2 text-sm text-muted-foreground">

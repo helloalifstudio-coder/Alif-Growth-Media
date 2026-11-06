@@ -26,9 +26,9 @@ export const Route = createFileRoute("/blog/$slug")({
         { property: "og:type", content: "article" },
         { property: "og:url", content: canonical },
         { property: "og:image", content: "https://alif-growth-media.vercel.app/og-image.jpg" },
-      { property: "og:locale", content: "en_IN" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: "https://alif-growth-media.vercel.app/og-image.jpg" },
+        { property: "og:locale", content: "en_IN" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:image", content: "https://alif-growth-media.vercel.app/og-image.jpg" },
       ],
       links: [{ rel: "canonical", href: canonical }],
       scripts: post
@@ -63,8 +63,18 @@ export const Route = createFileRoute("/blog/$slug")({
                 "@context": "https://schema.org",
                 "@type": "BreadcrumbList",
                 itemListElement: [
-                  { "@type": "ListItem", position: 1, name: "Home", item: "https://alif-growth-media.vercel.app/" },
-                  { "@type": "ListItem", position: 2, name: "Insights", item: "https://alif-growth-media.vercel.app/blog" },
+                  {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Home",
+                    item: "https://alif-growth-media.vercel.app/",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: "Insights",
+                    item: "https://alif-growth-media.vercel.app/blog",
+                  },
                   { "@type": "ListItem", position: 3, name: post.title, item: canonical },
                 ],
               }),
@@ -91,16 +101,16 @@ function BlogPostPage() {
           </Link>
 
           <Reveal as="div" className="mt-8">
-          <header>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Calendar className="h-4 w-4" />
-              <span>{post.date}</span>
-              <span>·</span>
-              <span>{post.category}</span>
-            </div>
-            <h1 className="mt-4 text-3xl font-bold leading-tight md:text-5xl">{post.title}</h1>
-            <p className="mt-5 text-lg leading-relaxed text-muted-foreground">{post.excerpt}</p>
-          </header>
+            <header>
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Calendar className="h-4 w-4" />
+                <span>{post.date}</span>
+                <span>·</span>
+                <span>{post.category}</span>
+              </div>
+              <h1 className="mt-4 text-3xl font-bold leading-tight md:text-5xl">{post.title}</h1>
+              <p className="mt-5 text-lg leading-relaxed text-muted-foreground">{post.excerpt}</p>
+            </header>
           </Reveal>
 
           <Reveal delay={0.1}>
@@ -109,12 +119,12 @@ function BlogPostPage() {
 
           {post.keyStats && post.keyStats.length > 0 ? (
             <Reveal delay={0.15}>
-              <section aria-label="Key data" className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <section
+                aria-label="Key data"
+                className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+              >
                 {post.keyStats.map((stat: BlogStat, i: number) => (
-                  <div
-                    key={i}
-                    className="rounded-2xl border border-border/70 bg-card/60 p-5"
-                  >
+                  <div key={i} className="rounded-2xl border border-border/70 bg-card/60 p-5">
                     <div className="font-display text-2xl font-semibold text-primary sm:text-3xl">
                       {stat.value}
                     </div>
@@ -165,7 +175,10 @@ function BlogPostPage() {
                         className="inline-flex min-h-6 items-baseline gap-1 font-medium text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
                       >
                         {ref.label}
-                        <ExternalLink className="h-3.5 w-3.5 shrink-0 self-center" aria-hidden="true" />
+                        <ExternalLink
+                          className="h-3.5 w-3.5 shrink-0 self-center"
+                          aria-hidden="true"
+                        />
                       </a>
                       <span className="block text-muted-foreground">
                         {ref.publisher} · {ref.year}
