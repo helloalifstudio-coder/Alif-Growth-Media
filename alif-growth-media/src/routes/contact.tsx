@@ -117,7 +117,7 @@ function ContactPage() {
     const city = String(data.get("city") || "").trim();
 
     if (!name || name.length < 2) next.name = "Please enter your full name.";
-    if (!phone || !/^[+0-9\s\-]{7,20}$/.test(phone)) next.phone = "Please enter a valid phone number.";
+    if (!phone || !/^[+0-9\s-]{7,20}$/.test(phone)) next.phone = "Please enter a valid phone number.";
     if (!business || business.length < 2) next.business = "Please enter your business name.";
     if (!city || city === "") next.city = "Please select a city.";
 
