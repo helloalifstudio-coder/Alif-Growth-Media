@@ -45,3 +45,13 @@ jobs:
       - name: Production build (no deployment)
         if: ${{ always() && steps.install.outcome == 'success' }}
         run: npm run build
+      - name: Verify Nitro Netlify server output (no deployment)
+        if: ${{ always() && steps.install.outcome == 'success' }}
+        env:
+          NETLIFY: "true"
+          NITRO_PRESET: "netlify"
+        run: |
+          npm run build
+          test -d dist
+          test -d .netlify/v1/functions
+          test -f .netlify/v1/config.json
