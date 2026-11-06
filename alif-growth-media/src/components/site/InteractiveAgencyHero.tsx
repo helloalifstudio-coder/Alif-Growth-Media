@@ -40,12 +40,13 @@ type ExperienceId = (typeof experiences)[number]["id"];
 function ExperiencePreview({ active }: { active: ExperienceId }) {
   if (active === "systems") {
     return (
-      <div className="grid gap-2.5 sm:grid-cols-[0.76fr_1fr]" aria-label="Illustrative operations interface">
+      <div
+        className="grid gap-2.5 sm:grid-cols-[0.76fr_1fr]"
+        aria-label="Illustrative operations interface"
+      >
         <div className="rounded-2xl border border-white/10 bg-white/8 p-4">
           <PanelsTopLeft className="h-5 w-5 text-amber-200" aria-hidden="true" />
-          <p className="mt-8 text-[0.65rem] uppercase tracking-[0.16em] text-white/50">
-            Workspace
-          </p>
+          <p className="mt-8 text-[0.65rem] uppercase tracking-[0.16em] text-white/50">Workspace</p>
           <p className="mt-1 text-xl font-semibold tracking-tight text-white">All in one place.</p>
           <div className="mt-5 flex gap-1.5" aria-hidden="true">
             <span className="h-1.5 flex-1 rounded-full bg-amber-200" />
@@ -65,7 +66,10 @@ function ExperiencePreview({ active }: { active: ExperienceId }) {
                   0{index + 1}
                 </span>
                 <span className="text-xs font-medium text-white/85">{item}</span>
-                <span className="ml-auto h-2 w-2 shrink-0 rounded-full bg-emerald-300" aria-hidden="true" />
+                <span
+                  className="ml-auto h-2 w-2 shrink-0 rounded-full bg-emerald-300"
+                  aria-hidden="true"
+                />
               </div>
             ))}
           </div>
@@ -90,7 +94,10 @@ function ExperiencePreview({ active }: { active: ExperienceId }) {
                 <span className="mt-4 text-xs font-semibold text-white">{item.label}</span>
               </div>
               {index < 2 && (
-                <ArrowUpRight className="h-4 w-4 shrink-0 rotate-45 text-teal-200/70 sm:rotate-0" aria-hidden="true" />
+                <ArrowUpRight
+                  className="h-4 w-4 shrink-0 rotate-45 text-teal-200/70 sm:rotate-0"
+                  aria-hidden="true"
+                />
               )}
             </div>
           ))}
@@ -104,21 +111,29 @@ function ExperiencePreview({ active }: { active: ExperienceId }) {
   }
 
   return (
-    <div className="grid gap-2.5 sm:grid-cols-[1.15fr_0.85fr]" aria-label="Illustrative responsive website design">
+    <div
+      className="grid gap-2.5 sm:grid-cols-[1.15fr_0.85fr]"
+      aria-label="Illustrative responsive website design"
+    >
       <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#dbece4] p-4 text-[#133a30]">
         <div className="flex items-center justify-between">
           <span className="text-[0.65rem] font-bold tracking-[0.13em]">STUDIO / 01</span>
           <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
         </div>
         <div className="mt-10 max-w-48 text-[1.65rem] font-semibold leading-[1.05] tracking-tight sm:text-[1.85rem]">
-          Better stories.<br />Bolder brands.
+          Better stories.
+          <br />
+          Bolder brands.
         </div>
         <div className="mt-8 h-2 w-24 rounded-full bg-[#1e6552]/65" aria-hidden="true" />
         <div className="mt-2 h-2 w-16 rounded-full bg-[#1e6552]/30" aria-hidden="true" />
       </div>
       <div className="flex flex-col gap-2.5">
         <div className="relative min-h-32 flex-1 overflow-hidden rounded-2xl border border-white/10 bg-[#bb915e]">
-          <div className="absolute -right-7 -top-8 h-36 w-36 rounded-full border-[24px] border-[#e9c69b]/70" aria-hidden="true" />
+          <div
+            className="absolute -right-7 -top-8 h-36 w-36 rounded-full border-[24px] border-[#e9c69b]/70"
+            aria-hidden="true"
+          />
           <div className="absolute bottom-4 left-4 text-xs font-medium text-[#282719]">
             Crafted with intention
           </div>
@@ -182,7 +197,11 @@ export function InteractiveAgencyHero() {
         </span>
       </div>
 
-      <div className="relative z-10 mt-5 grid grid-cols-3 gap-1 rounded-2xl border border-white/10 bg-white/5 p-1" role="group" aria-label="Choose a concept to explore">
+      <div
+        className="relative z-10 mt-5 grid grid-cols-3 gap-1 rounded-2xl border border-white/10 bg-white/5 p-1"
+        role="group"
+        aria-label="Choose a concept to explore"
+      >
         {experiences.map((item) => (
           <button
             key={item.id}
@@ -201,11 +220,16 @@ export function InteractiveAgencyHero() {
       </div>
 
       <div className="relative z-10 mt-4 rounded-[1.5rem] border border-white/12 bg-white/6 p-2.5 backdrop-blur-md sm:p-3">
-        <div className="flex items-center gap-1.5 border-b border-white/10 px-2 pb-3" aria-hidden="true">
+        <div
+          className="flex items-center gap-1.5 border-b border-white/10 px-2 pb-3"
+          aria-hidden="true"
+        >
           <span className="h-2 w-2 rounded-full bg-rose-200/80" />
           <span className="h-2 w-2 rounded-full bg-amber-200/80" />
           <span className="h-2 w-2 rounded-full bg-emerald-200/80" />
-          <span className="ml-auto text-[0.6rem] tracking-[0.06em] text-white/50">concept / preview</span>
+          <span className="ml-auto text-[0.6rem] tracking-[0.06em] text-white/50">
+            concept / preview
+          </span>
         </div>
         <div className="min-h-[17rem] py-3" aria-live="polite" aria-atomic="true">
           <AnimatePresence mode="wait" initial={false}>
@@ -248,7 +272,10 @@ export function InteractiveAgencyHero() {
       </div>
       <div
         aria-hidden="true"
-        className={"pointer-events-none absolute inset-x-10 bottom-0 h-[2px] bg-gradient-to-r opacity-80 " + selected.accent}
+        className={
+          "pointer-events-none absolute inset-x-10 bottom-0 h-[2px] bg-gradient-to-r opacity-80 " +
+          selected.accent
+        }
       />
     </div>
   );
