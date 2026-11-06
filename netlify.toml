@@ -6,3 +6,8 @@
 
 [build.environment]
   NODE_VERSION = "22"
+
+# Netlify deploy previews are paused by owner request (2026-11-06).
+# Review this branch on Vercel; do not re-enable without explicit approval.
+[context.deploy-preview]
+  ignore = "exit 0"
