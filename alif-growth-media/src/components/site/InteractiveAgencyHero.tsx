@@ -232,7 +232,7 @@ export function InteractiveAgencyHero() {
             concept / preview
           </span>
         </div>
-        <div className="min-h-[17rem] py-3">
+        <div className="min-h-[17rem] py-3" aria-hidden="true">
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={active}
@@ -247,8 +247,11 @@ export function InteractiveAgencyHero() {
         </div>
       </div>
 
+      <p className="sr-only" aria-live="polite" aria-atomic="true">
+        {selected.label}: {selected.headline} {selected.detail}
+      </p>
       <div className="relative z-10 mt-5 flex items-end justify-between gap-3 px-1 pb-1">
-        <div className="max-w-[85%]" aria-live="polite" aria-atomic="true">
+        <div className="max-w-[85%]">
           <p className="text-[0.65rem] font-semibold tracking-[0.16em] text-emerald-200/80">
             {selected.eyebrow}
           </p>
