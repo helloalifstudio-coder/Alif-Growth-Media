@@ -176,6 +176,7 @@ export function InteractiveAgencyHero() {
     <div
       onPointerMove={moveBackdrop}
       onPointerLeave={resetBackdrop}
+      role="region"
       className="relative isolate overflow-hidden rounded-[2rem] border border-emerald-100/15 bg-[#0b2420] p-4 text-white shadow-[0_28px_80px_-32px_rgba(4,35,26,0.65)] sm:p-5"
       aria-label="Explore interactive design concepts by Alif Growth Media"
     >
@@ -210,8 +211,8 @@ export function InteractiveAgencyHero() {
             onClick={() => setActive(item.id)}
             className={
               active === item.id
-                ? "rounded-xl bg-[#e6f3e7] px-2 py-3 text-[0.66rem] font-semibold text-[#143b30] shadow-sm transition-colors sm:text-xs"
-                : "rounded-xl px-2 py-3 text-[0.66rem] font-medium text-white/65 transition-colors hover:bg-white/10 hover:text-white sm:text-xs"
+                ? "min-h-11 rounded-xl bg-[#e6f3e7] px-2 py-3 text-[0.66rem] font-semibold text-[#143b30] shadow-sm transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-200 sm:text-xs"
+                : "min-h-11 rounded-xl px-2 py-3 text-[0.66rem] font-medium text-white/75 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-200 sm:text-xs"
             }
           >
             {item.label}
@@ -231,7 +232,7 @@ export function InteractiveAgencyHero() {
             concept / preview
           </span>
         </div>
-        <div className="min-h-[17rem] py-3" aria-live="polite" aria-atomic="true">
+        <div className="min-h-[17rem] py-3" aria-hidden="true">
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={active}
@@ -246,6 +247,9 @@ export function InteractiveAgencyHero() {
         </div>
       </div>
 
+      <p className="sr-only" aria-live="polite" aria-atomic="true">
+        {selected.label}: {selected.headline} {selected.detail}
+      </p>
       <div className="relative z-10 mt-5 flex items-end justify-between gap-3 px-1 pb-1">
         <div className="max-w-[85%]">
           <p className="text-[0.65rem] font-semibold tracking-[0.16em] text-emerald-200/80">
