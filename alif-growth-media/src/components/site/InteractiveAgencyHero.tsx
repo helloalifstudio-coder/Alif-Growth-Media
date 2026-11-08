@@ -161,8 +161,10 @@ export function InteractiveAgencyHero() {
   const selected = experiences.find((item) => item.id === active) ?? experiences[0];
 
   function moveBackdrop(event: PointerEvent<HTMLDivElement>) {
-    if (!pointerFx) return;
+    // Touch and pen movement should not animate the decorative backdrop.
+    if (!pointerFx || event.pointerType !== "mouse") return;
     const bounds = event.currentTarget.getBoundingClientRect();
+    if (!bounds.width || !bounds.height) return;
     pointerX.set(((event.clientX - bounds.left) / bounds.width - 0.5) * 24);
     pointerY.set(((event.clientY - bounds.top) / bounds.height - 0.5) * 24);
   }
