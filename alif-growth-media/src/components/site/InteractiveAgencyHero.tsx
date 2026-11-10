@@ -162,7 +162,7 @@ export function InteractiveAgencyHero() {
 
   function moveBackdrop(event: PointerEvent<HTMLDivElement>) {
     // Touch and pen movement should not animate the decorative backdrop.
-    if (!pointerFx || event.pointerType !== "mouse") return;
+    if (!pointerFx || reduced || event.pointerType !== "mouse") return;
     const bounds = event.currentTarget.getBoundingClientRect();
     if (!bounds.width || !bounds.height) return;
     pointerX.set(((event.clientX - bounds.left) / bounds.width - 0.5) * 24);
@@ -178,13 +178,14 @@ export function InteractiveAgencyHero() {
     <div
       onPointerMove={moveBackdrop}
       onPointerLeave={resetBackdrop}
+      onPointerCancel={resetBackdrop}
       role="region"
       className="relative isolate overflow-hidden rounded-[2rem] border border-emerald-100/15 bg-[#0b2420] p-4 text-white shadow-[0_28px_80px_-32px_rgba(4,35,26,0.65)] sm:p-5"
       aria-label="Explore interactive design concepts by Alif Growth Media"
     >
       <motion.div
         aria-hidden="true"
-        style={pointerFx ? { x: floatX, y: floatY } : undefined}
+        style={pointerFx && !reduced ? { x: floatX, y: floatY } : undefined}
         className="pointer-events-none absolute -right-20 -top-24 h-80 w-80 rounded-full bg-emerald-300/15 blur-[75px]"
       />
       <div
