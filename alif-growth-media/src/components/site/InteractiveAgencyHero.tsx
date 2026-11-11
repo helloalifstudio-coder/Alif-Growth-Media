@@ -254,7 +254,7 @@ export function InteractiveAgencyHero() {
         {selected.label}: {selected.headline} {selected.detail}
       </p>
       <div className="relative z-10 mt-5 flex items-end justify-between gap-3 px-1 pb-1">
-        <div className="max-w-[85%]">
+        <div className="min-w-0 flex-1">
           <p className="text-[0.65rem] font-semibold tracking-[0.16em] text-emerald-200/80">
             {selected.eyebrow}
           </p>
@@ -273,7 +273,7 @@ export function InteractiveAgencyHero() {
             </motion.div>
           </AnimatePresence>
         </div>
-        <span className="mb-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-full border border-white/20 bg-white/10">
+        <span aria-hidden="true" className="mb-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-full border border-white/20 bg-white/10">
           <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
         </span>
       </div>
