@@ -273,7 +273,10 @@ export function InteractiveAgencyHero() {
             </motion.div>
           </AnimatePresence>
         </div>
-        <span aria-hidden="true" className="mb-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-full border border-white/20 bg-white/10">
+        <span
+          aria-hidden="true"
+          className="mb-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-full border border-white/20 bg-white/10"
+        >
           <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
         </span>
       </div>
