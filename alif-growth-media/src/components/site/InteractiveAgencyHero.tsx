@@ -214,7 +214,7 @@ export function InteractiveAgencyHero() {
             onClick={() => setActive(item.id)}
             className={
               active === item.id
-                ? "min-h-11 min-w-0 rounded-xl bg-[#e6f3e7] px-1.5 py-3 text-[0.7rem] leading-tight font-semibold text-[#143b30] shadow-sm transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-200 sm:text-xs"
+                ? "min-h-11 min-w-0 rounded-xl bg-[#e6f3e7] px-1.5 py-3 text-[0.7rem] leading-tight font-semibold text-[#143b30] shadow-sm transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#143b30] sm:text-xs"
                 : "min-h-11 min-w-0 rounded-xl px-1.5 py-3 text-[0.7rem] leading-tight font-medium text-white/75 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-200 sm:text-xs"
             }
           >
