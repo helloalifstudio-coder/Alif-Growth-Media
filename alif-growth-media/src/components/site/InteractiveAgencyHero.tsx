@@ -161,8 +161,10 @@ export function InteractiveAgencyHero() {
   const selected = experiences.find((item) => item.id === active) ?? experiences[0];
 
   function moveBackdrop(event: PointerEvent<HTMLDivElement>) {
-    if (!pointerFx) return;
+    // Touch and pen movement should not animate the decorative backdrop.
+    if (!pointerFx || reduced || event.pointerType !== "mouse") return;
     const bounds = event.currentTarget.getBoundingClientRect();
+    if (!bounds.width || !bounds.height) return;
     pointerX.set(((event.clientX - bounds.left) / bounds.width - 0.5) * 24);
     pointerY.set(((event.clientY - bounds.top) / bounds.height - 0.5) * 24);
   }
@@ -176,12 +178,14 @@ export function InteractiveAgencyHero() {
     <div
       onPointerMove={moveBackdrop}
       onPointerLeave={resetBackdrop}
+      onPointerCancel={resetBackdrop}
+      role="region"
       className="relative isolate overflow-hidden rounded-[2rem] border border-emerald-100/15 bg-[#0b2420] p-4 text-white shadow-[0_28px_80px_-32px_rgba(4,35,26,0.65)] sm:p-5"
       aria-label="Explore interactive design concepts by Alif Growth Media"
     >
       <motion.div
         aria-hidden="true"
-        style={pointerFx ? { x: floatX, y: floatY } : undefined}
+        style={pointerFx && !reduced ? { x: floatX, y: floatY } : undefined}
         className="pointer-events-none absolute -right-20 -top-24 h-80 w-80 rounded-full bg-emerald-300/15 blur-[75px]"
       />
       <div
@@ -210,8 +214,8 @@ export function InteractiveAgencyHero() {
             onClick={() => setActive(item.id)}
             className={
               active === item.id
-                ? "rounded-xl bg-[#e6f3e7] px-2 py-3 text-[0.66rem] font-semibold text-[#143b30] shadow-sm transition-colors sm:text-xs"
-                : "rounded-xl px-2 py-3 text-[0.66rem] font-medium text-white/65 transition-colors hover:bg-white/10 hover:text-white sm:text-xs"
+                ? "min-h-11 min-w-0 rounded-xl bg-[#e6f3e7] px-1.5 py-3 text-[0.7rem] leading-tight font-semibold text-[#143b30] shadow-sm transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-200 sm:text-xs"
+                : "min-h-11 min-w-0 rounded-xl px-1.5 py-3 text-[0.7rem] leading-tight font-medium text-white/75 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-200 sm:text-xs"
             }
           >
             {item.label}
@@ -231,7 +235,7 @@ export function InteractiveAgencyHero() {
             concept / preview
           </span>
         </div>
-        <div className="min-h-[17rem] py-3" aria-live="polite" aria-atomic="true">
+        <div className="min-h-[17rem] py-3" aria-hidden="true">
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={active}
@@ -246,8 +250,11 @@ export function InteractiveAgencyHero() {
         </div>
       </div>
 
+      <p className="sr-only" aria-live="polite" aria-atomic="true">
+        {selected.label}: {selected.headline} {selected.detail}
+      </p>
       <div className="relative z-10 mt-5 flex items-end justify-between gap-3 px-1 pb-1">
-        <div className="max-w-[85%]">
+        <div className="min-w-0 flex-1">
           <p className="text-[0.65rem] font-semibold tracking-[0.16em] text-emerald-200/80">
             {selected.eyebrow}
           </p>
@@ -262,11 +269,14 @@ export function InteractiveAgencyHero() {
               <p className="mt-2 text-base font-semibold leading-snug text-white sm:text-lg">
                 {selected.headline}
               </p>
-              <p className="mt-1 text-xs leading-relaxed text-white/60">{selected.detail}</p>
+              <p className="mt-1 text-xs leading-relaxed text-white/75">{selected.detail}</p>
             </motion.div>
           </AnimatePresence>
         </div>
-        <span className="mb-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-full border border-white/20 bg-white/10">
+        <span
+          aria-hidden="true"
+          className="mb-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-full border border-white/20 bg-white/10"
+        >
           <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
         </span>
       </div>
