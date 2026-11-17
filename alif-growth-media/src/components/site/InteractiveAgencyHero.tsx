@@ -95,7 +95,7 @@ function ExperiencePreview({ active }: { active: ExperienceId }) {
               </div>
               {index < 2 && (
                 <ArrowUpRight
-                  className="h-4 w-4 shrink-0 rotate-45 text-teal-200/70 sm:rotate-0"
+                  className="h-4 w-4 shrink-0 rotate-[135deg] text-teal-200/70 sm:rotate-0"
                   aria-hidden="true"
                 />
               )}
