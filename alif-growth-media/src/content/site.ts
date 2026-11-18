@@ -185,19 +185,19 @@ export const engagements = [
 
 export const results = [
   {
-    t: "Instant Owner Visibility",
-    s: "100%",
-    b: "real-time clarity on website visits, cashflow, and customer histories.",
+    t: "Owner visibility",
+    s: "Clear view",
+    b: "Bring website enquiries, customer activity and operational records into one view when the selected systems are connected.",
   },
   {
-    t: "Zero Lead Loss",
-    s: "< 2 Mins",
-    b: "average WhatsApp enquiry response time through automated lead routing.",
+    t: "Lead follow-up",
+    s: "Trackable",
+    b: "Give your team a shared place to organize enquiries and next steps; response times still depend on team availability.",
   },
   {
-    t: "Zero Developer Dependency",
-    s: "1-Tap",
-    b: "visual content and catalog updates directly by the business owner.",
+    t: "Content control",
+    s: "Owner-led",
+    b: "Let authorized staff update approved website copy and catalogue content through a visual editor.",
   },
 ];
 
