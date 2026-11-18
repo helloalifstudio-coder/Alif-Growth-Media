@@ -301,9 +301,9 @@ function Index() {
                 Explore four example business workflows
               </h2>
               <p className="mt-3 text-pretty text-sm sm:text-base leading-relaxed text-muted-foreground">
-                Use the interactive sandbox to explore sample workflows. Its actions stay local:
-                it does not publish content, send messages, or process payments. Separate
-                prototype links open independently built experiences.
+                Use the interactive sandbox to explore sample workflows. Its actions stay local: it
+                does not publish content, send messages, or process payments. Separate prototype
+                links open independently built experiences.
               </p>
             </Reveal>
             <Reveal>
@@ -415,13 +415,16 @@ function Index() {
                 From scattered tasks to a connected workflow
               </h2>
               <p className="mt-4 text-pretty text-[0.975rem] leading-relaxed text-muted-foreground sm:text-base">
-                An illustrative view of how connected tools can organize everyday work; the right setup depends on your business.
+                An illustrative view of how connected tools can organize everyday work; the right
+                setup depends on your business.
               </p>
             </Reveal>
             <div className="mt-10 grid gap-4 sm:gap-5 md:grid-cols-2">
               <ScrollScene from={-0.1} to={0.22} y={[36, 0]} scale={[1, 0.97]}>
                 <div className="surface-card h-full p-6 sm:p-7">
-                  <h3 className="text-lg font-semibold text-muted-foreground">Without connected tools</h3>
+                  <h3 className="text-lg font-semibold text-muted-foreground">
+                    Without connected tools
+                  </h3>
                   <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
                     <li>
                       Static website requiring developers or coding just to change prices or photos
@@ -464,7 +467,8 @@ function Index() {
                 What better-connected systems can support
               </h2>
               <p className="mt-4 text-pretty text-[0.975rem] leading-relaxed text-muted-foreground sm:text-base">
-                The right workflow depends on your business, the integrations selected, and how your team uses the system.
+                The right workflow depends on your business, the integrations selected, and how
+                your team uses the system.
               </p>
             </Reveal>
             <Stagger className="mt-10 grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
