@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Check, Quote, ExternalLink, MessageCircle, Sparkles } from "lucide-react";
+import { ArrowRight, Check, ExternalLink, MessageCircle, Sparkles } from "lucide-react";
 import { PrototypeIllustration } from "@/components/site/PrototypeIllustration";
 import { InteractiveDemoSuite } from "@/components/site/InteractiveDemoSuite";
 import { InteractiveAgencyHero } from "@/components/site/InteractiveAgencyHero";
@@ -11,7 +11,6 @@ import { Section, Card } from "@/components/site/Sections";
 import {
   AnimatedStat,
   HoverLift,
-  MaskedLines,
   Reveal,
   ScrollDrift,
   ScrollScene,
@@ -462,10 +461,10 @@ function Index() {
                 Results
               </span>
               <h2 className="mt-3 text-balance text-[clamp(1.65rem,5.2vw,2.6rem)] font-semibold leading-[1.15]">
-                Outcomes local owners can feel
+                What better-connected systems can support
               </h2>
               <p className="mt-4 text-pretty text-[0.975rem] leading-relaxed text-muted-foreground sm:text-base">
-                When the system is clear, the business becomes easier to run and easier to grow.
+                The right workflow depends on your business, the integrations selected, and how your team uses the system.
               </p>
             </Reveal>
             <Stagger className="mt-10 grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
@@ -494,7 +493,11 @@ function Index() {
         </section>
       </div>
 
-      <Section eyebrow="Testimonial" title="What partners say" tone="deep">
+      <Section
+        eyebrow="Our approach"
+        title="Built around the way your business actually runs"
+        tone="deep"
+      >
         <Reveal className="mx-auto mt-10 max-w-3xl text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -502,20 +505,15 @@ function Index() {
             viewport={{ once: true, amount: 0.6 }}
             transition={{ duration: 0.5, ease: EASE }}
           >
-            <Quote className="mx-auto h-10 w-10 text-gold" />
+            <Sparkles className="mx-auto h-10 w-10 text-gold" aria-hidden="true" />
           </motion.div>
-          <blockquote className="mt-6 text-pretty text-[clamp(1.05rem,3.6vw,1.5rem)] font-medium leading-relaxed">
-            <MaskedLines
-              delay={0.15}
-              lines={[
-                `"Alif Growth Media helped us turn scattered enquiries`,
-                `into a clear system. Our customers now get faster`,
-                `replies and we can finally see what is working."`,
-              ]}
-            />
-          </blockquote>
+          <p className="mt-6 text-pretty text-[clamp(1.05rem,3.6vw,1.5rem)] font-medium leading-relaxed">
+            We start by understanding how customers discover you, how enquiries move through your
+            team, and where everyday work gets stuck. Then we recommend a practical mix of brand,
+            website and operating tools, scoped to your needs.
+          </p>
           <footer className="mt-6 text-sm text-primary-foreground/75">
-            — Partner at a Telangana retail brand
+            Alif Growth Media · Discovery before delivery
           </footer>
         </Reveal>
       </Section>
