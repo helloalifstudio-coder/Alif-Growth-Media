@@ -1089,8 +1089,8 @@ export const ideology = [
   },
   {
     n: "06",
-    t: "100% Client Ownership & Freedom",
-    b: "You own every line of code, cloud database, Vercel deployment, and domain name from day one. We earn our partnership through continuous excellence, never by trapping clients.",
+    t: "Clear Client Ownership & Handover",
+    b: "We document who owns each account, asset and deliverable in the project agreement. Custom deliverables transfer after full payment, in line with our Terms of Service.",
   },
 ];
 
