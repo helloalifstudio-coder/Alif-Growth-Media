@@ -188,8 +188,10 @@ export function InteractiveDemoSuite() {
           return (
             <button
               key={tool.id}
+              type="button"
+              aria-pressed={isActive}
               onClick={() => setActiveTab(tool.id)}
-              className={`flex flex-col items-start text-left p-3.5 rounded-2xl border transition-all ${
+              className={`flex flex-col items-start text-left p-3.5 rounded-2xl border transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${
                 isActive
                   ? "border-primary bg-primary/10 shadow-sm"
                   : "border-border/60 bg-secondary/30 hover:bg-secondary/60 text-muted-foreground"
@@ -239,6 +241,7 @@ export function InteractiveDemoSuite() {
                     <Check className="w-3 h-3" /> {previewUpdated ? "Local preview updated" : hasLocalEdits ? "Local edits" : "Sample preview"}
                   </span>
                   <button
+                    type="button"
                     onClick={() => {
                       setHasLocalEdits(false);
                       setPreviewUpdated(true);
@@ -261,6 +264,7 @@ export function InteractiveDemoSuite() {
                   <div className="max-w-xl mx-auto space-y-2">
                     <input
                       type="text"
+                      aria-label="Sample store announcement"
                       value={headlineText}
                       onChange={(e) => {
                         setHeadlineText(e.target.value);
@@ -271,6 +275,7 @@ export function InteractiveDemoSuite() {
                       autoFocus
                     />
                     <button
+                      type="button"
                       onClick={() => setIsEditingHeadline(false)}
                       className="text-xs bg-primary text-primary-foreground px-3 py-1 rounded-md font-semibold"
                     >
@@ -359,7 +364,7 @@ export function InteractiveDemoSuite() {
                   placeholder="Write a sample customer message..."
                   value={inputMsg}
                   onChange={(e) => setInputMsg(e.target.value)}
-                  className="flex-1 bg-card border border-border rounded-xl px-4 py-2.5 text-xs text-foreground focus:outline-none focus:border-emerald-500"
+                  className="flex-1 bg-card border border-border rounded-xl px-4 py-2.5 text-xs text-foreground focus:outline-none focus:border-emerald-500 focus-visible:ring-2 focus-visible:ring-emerald-500"
                 />
                 <button
                   type="submit"
@@ -386,7 +391,7 @@ export function InteractiveDemoSuite() {
                 <div className="flex items-center justify-between border-b border-border/70 pb-3">
                   <div>
                     <span className="text-[10px] uppercase font-bold tracking-widest text-gold">
-                      Alif Digital Invoice
+                      Sample digital invoice
                     </span>
                     <h4 className="text-base font-bold text-foreground">Sample invoice · AGM-2026-084</h4>
                   </div>
@@ -397,10 +402,11 @@ export function InteractiveDemoSuite() {
 
                 <div className="grid grid-cols-2 gap-3 text-xs">
                   <div>
-                    <label className="text-[10px] text-muted-foreground block mb-1">
+                    <label htmlFor="sample-invoice-customer" className="text-[10px] text-muted-foreground block mb-1">
                       Customer Name
                     </label>
                     <input
+                      id="sample-invoice-customer"
                       type="text"
                       value={invoiceCustomer}
                       onChange={(e) => {
@@ -411,10 +417,11 @@ export function InteractiveDemoSuite() {
                     />
                   </div>
                   <div>
-                    <label className="text-[10px] text-muted-foreground block mb-1">
+                    <label htmlFor="sample-invoice-amount" className="text-[10px] text-muted-foreground block mb-1">
                       Total Bill (₹)
                     </label>
                     <input
+                      id="sample-invoice-amount"
                       type="number"
                       value={invoiceAmount}
                       onChange={(e) => {
@@ -434,6 +441,7 @@ export function InteractiveDemoSuite() {
                     </span>
                   </div>
                   <button
+                    type="button"
                     onClick={() => setInvoicePreviewed(true)}
                     className="inline-flex items-center gap-1.5 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-4 py-2 rounded-xl text-xs shadow transition-all"
                   >
@@ -501,6 +509,7 @@ export function InteractiveDemoSuite() {
 
                       <div className="mt-1">
                         <button
+                          type="button"
                           onClick={() => setReminderPreviewFor(m.name)}
                           className="text-[10px] font-semibold text-primary hover:underline flex items-center gap-1 justify-end ml-auto"
                         >
