@@ -467,8 +467,8 @@ function Index() {
                 What better-connected systems can support
               </h2>
               <p className="mt-4 text-pretty text-[0.975rem] leading-relaxed text-muted-foreground sm:text-base">
-                The right workflow depends on your business, the integrations selected, and how
-                your team uses the system.
+                The right workflow depends on your business, the integrations selected, and how your
+                team uses the system.
               </p>
             </Reveal>
             <Stagger className="mt-10 grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
