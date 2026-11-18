@@ -110,7 +110,7 @@ export function InteractiveDemoSuite() {
 
   // State for interactive Invoicing simulator
   const [invoiceAmount, setInvoiceAmount] = useState(4850);
-  const [invoiceCustomer, setInvoiceCustomer] = useState("K. Ramesh (Warangal)");
+  const [invoiceCustomer, setInvoiceCustomer] = useState("Sample customer");
   const [invoicePreviewed, setInvoicePreviewed] = useState(false);
 
   // State for Membership simulator
@@ -119,7 +119,7 @@ export function InteractiveDemoSuite() {
     { name: "Member B", plan: "Quarterly Pass · sample", daysLeft: 28 },
     { name: "Member C", plan: "Monthly Plan · sample", daysLeft: 0 },
   ]);
-  const [reminderSentFor, setReminderSentFor] = useState<string | null>(null);
+  const [reminderPreviewFor, setReminderPreviewFor] = useState<string | null>(null);
 
   const activeTool = TOOLS.find((t) => t.id === activeTab) || TOOLS[0];
 
@@ -450,7 +450,7 @@ export function InteractiveDemoSuite() {
                   >
                     <Check className="w-4 h-4 text-emerald-400 shrink-0" />
                     <span>
-                      Preview state updated for {invoiceCustomer}. No PDF was created, payment processed, or WhatsApp message sent.
+                      Preview state updated for {invoiceCustomer}. No PDF was created, no payment was processed, and no WhatsApp message was sent.
                     </span>
                   </motion.div>
                 )}
@@ -501,12 +501,12 @@ export function InteractiveDemoSuite() {
 
                       <div className="mt-1">
                         <button
-                          onClick={() => setReminderSentFor(m.name)}
+                          onClick={() => setReminderPreviewFor(m.name)}
                           className="text-[10px] font-semibold text-primary hover:underline flex items-center gap-1 justify-end ml-auto"
                         >
                           <MessageCircle className="w-2.5 h-2.5" />
                           <span>
-                            {reminderSentFor === m.name ? "Preview ready" : "Preview reminder"}
+                            {reminderPreviewFor === m.name ? "Preview ready" : "Preview reminder"}
                           </span>
                         </button>
                       </div>
