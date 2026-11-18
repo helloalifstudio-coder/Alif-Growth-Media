@@ -153,7 +153,8 @@ export function InteractiveDemoSuite() {
             Explore Four Business Workflows
           </h3>
           <p className="text-sm sm:text-base text-muted-foreground mt-1 max-w-2xl">
-            This in-page sandbox uses sample data and local state only. It does not publish content, send messages, process payments or contact customers.
+            This in-page sandbox uses sample data and local state only. It does not publish content,
+            send messages, process payments or contact customers.
           </p>
         </div>
 
@@ -484,8 +485,8 @@ export function InteractiveDemoSuite() {
                   >
                     <Check className="w-4 h-4 text-emerald-400 shrink-0" />
                     <span>
-                      Preview state updated for {invoiceCustomer}. No PDF was created, no
-                      payment was processed, and no WhatsApp message was sent.
+                      Preview state updated for {invoiceCustomer}. No PDF was created, no payment
+                      was processed, and no WhatsApp message was sent.
                     </span>
                   </motion.div>
                 )}
