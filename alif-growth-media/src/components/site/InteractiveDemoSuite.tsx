@@ -153,8 +153,7 @@ export function InteractiveDemoSuite() {
             Explore Four Business Workflows
           </h3>
           <p className="text-sm sm:text-base text-muted-foreground mt-1 max-w-2xl">
-            This in-page sandbox uses sample data and local state only. It does not publish
-            content, send messages, process payments or contact customers.
+            This in-page sandbox uses sample data and local state only. It does not publish content, send messages, process payments or contact customers.
           </p>
         </div>
 
@@ -236,9 +235,20 @@ export function InteractiveDemoSuite() {
                 </div>
                 <div className="flex items-center gap-2">
                   <span
-                    className={`inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-0.5 rounded-full ${previewUpdated ? "bg-emerald-500/10 text-emerald-500" : hasLocalEdits ? "bg-amber-500/10 text-amber-500" : "bg-secondary text-muted-foreground"}`}
+                    className={`inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-0.5 rounded-full ${
+                      previewUpdated
+                        ? "bg-emerald-500/10 text-emerald-500"
+                        : hasLocalEdits
+                          ? "bg-amber-500/10 text-amber-500"
+                          : "bg-secondary text-muted-foreground"
+                    }`}
                   >
-                    <Check className="w-3 h-3" /> {previewUpdated ? "Local preview updated" : hasLocalEdits ? "Local edits" : "Sample preview"}
+                    <Check className="w-3 h-3" />{" "}
+                    {previewUpdated
+                      ? "Local preview updated"
+                      : hasLocalEdits
+                        ? "Local edits"
+                        : "Sample preview"}
                   </span>
                   <button
                     type="button"
@@ -299,7 +309,8 @@ export function InteractiveDemoSuite() {
                 )}
 
                 <p className="text-xs text-muted-foreground max-w-md mx-auto">
-                  Changes stay in this local sample preview; no live website is updated or published.
+                  Changes stay in this local sample preview; no live website is updated or
+                  published.
                 </p>
               </div>
             </motion.div>
@@ -322,7 +333,9 @@ export function InteractiveDemoSuite() {
                     <MessageCircle className="w-4 h-4" />
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-foreground">Example customer conversation</h4>
+                    <h4 className="text-sm font-bold text-foreground">
+                      Example customer conversation
+                    </h4>
                     <p className="text-[10px] text-emerald-400 font-semibold">
                       ● Simulated reply · local only
                     </p>
@@ -334,7 +347,12 @@ export function InteractiveDemoSuite() {
               </div>
 
               {/* Chat Thread */}
-              <div role="log" aria-live="polite" aria-label="Sample customer conversation" className="space-y-2.5 max-h-56 overflow-y-auto p-3 rounded-xl bg-secondary/30 border border-border/50">
+              <div
+                role="log"
+                aria-live="polite"
+                aria-label="Sample customer conversation"
+                className="space-y-2.5 max-h-56 overflow-y-auto p-3 rounded-xl bg-secondary/30 border border-border/50"
+              >
                 {chatMessages.map((msg, i) => (
                   <div
                     key={i}
@@ -393,7 +411,9 @@ export function InteractiveDemoSuite() {
                     <span className="text-[10px] uppercase font-bold tracking-widest text-gold">
                       Sample digital invoice
                     </span>
-                    <h4 className="text-base font-bold text-foreground">Sample invoice · AGM-2026-084</h4>
+                    <h4 className="text-base font-bold text-foreground">
+                      Sample invoice · AGM-2026-084
+                    </h4>
                   </div>
                   <span className="text-xs font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full">
                     Preview only
@@ -402,7 +422,10 @@ export function InteractiveDemoSuite() {
 
                 <div className="grid grid-cols-2 gap-3 text-xs">
                   <div>
-                    <label htmlFor="sample-invoice-customer" className="text-[10px] text-muted-foreground block mb-1">
+                    <label
+                      htmlFor="sample-invoice-customer"
+                      className="text-[10px] text-muted-foreground block mb-1"
+                    >
                       Customer Name
                     </label>
                     <input
@@ -417,7 +440,10 @@ export function InteractiveDemoSuite() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="sample-invoice-amount" className="text-[10px] text-muted-foreground block mb-1">
+                    <label
+                      htmlFor="sample-invoice-amount"
+                      className="text-[10px] text-muted-foreground block mb-1"
+                    >
                       Total Bill (₹)
                     </label>
                     <input
@@ -458,7 +484,8 @@ export function InteractiveDemoSuite() {
                   >
                     <Check className="w-4 h-4 text-emerald-400 shrink-0" />
                     <span>
-                      Preview state updated for {invoiceCustomer}. No PDF was created, no payment was processed, and no WhatsApp message was sent.
+                      Preview state updated for {invoiceCustomer}. No PDF was created, no
+                      payment was processed, and no WhatsApp message was sent.
                     </span>
                   </motion.div>
                 )}
@@ -477,10 +504,10 @@ export function InteractiveDemoSuite() {
               className="space-y-4 max-w-2xl mx-auto"
             >
               <div className="flex items-center justify-between pb-2 border-b border-border/60">
-                <span className="text-xs font-bold text-foreground">
-                  Sample member roster
+                <span className="text-xs font-bold text-foreground">Sample member roster</span>
+                <span className="text-[11px] text-muted-foreground">
+                  3 example records · preview only
                 </span>
-                <span className="text-[11px] text-muted-foreground">3 example records · preview only</span>
               </div>
 
               <div className="space-y-2.5">
