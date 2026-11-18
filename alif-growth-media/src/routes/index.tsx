@@ -296,14 +296,15 @@ function Index() {
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
             <Reveal className="max-w-2xl">
               <span className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-gold sm:text-xs">
-                Live Working Prototypes
+                Interactive Business System Previews
               </span>
               <h2 className="mt-2 text-balance text-[clamp(1.65rem,5.2vw,2.6rem)] font-bold leading-[1.15]">
-                Test our working software before you customize
+                Explore four example business workflows
               </h2>
               <p className="mt-3 text-pretty text-sm sm:text-base leading-relaxed text-muted-foreground">
-                We don't just talk about software—we build it. Click "Quick View" to test any
-                working tool live right now, or tap "Customize" to adapt it to your workflow.
+                Use the interactive sandbox to explore sample workflows. Its actions stay local:
+                no content is published, messages are sent, or payments are processed. Separate
+                prototype links open independently built experiences.
               </p>
             </Reveal>
             <Reveal>
@@ -316,14 +317,14 @@ function Index() {
             </Reveal>
           </div>
 
-          {/* Live Interactive In-Browser Demo Sandbox */}
+          {/* Local interactive demo sandbox */}
           <div className="mb-14">
             <InteractiveDemoSuite />
           </div>
 
           <div className="my-10 flex items-center justify-center">
             <span className="text-xs font-semibold uppercase tracking-widest text-muted-foreground bg-muted/60 px-4 py-1.5 rounded-full border border-border">
-              Or Explore Standalone Production Prototypes
+              Explore Separate Prototype Builds
             </span>
           </div>
 
