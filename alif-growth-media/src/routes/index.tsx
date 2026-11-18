@@ -303,7 +303,7 @@ function Index() {
               </h2>
               <p className="mt-3 text-pretty text-sm sm:text-base leading-relaxed text-muted-foreground">
                 Use the interactive sandbox to explore sample workflows. Its actions stay local:
-                no content is published, messages are sent, or payments are processed. Separate
+                it does not publish content, send messages, or process payments. Separate
                 prototype links open independently built experiences.
               </p>
             </Reveal>
