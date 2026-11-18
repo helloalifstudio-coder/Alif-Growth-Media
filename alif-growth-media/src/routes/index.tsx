@@ -409,19 +409,19 @@ function Index() {
           <div className="mx-auto w-full max-w-6xl">
             <Reveal className="max-w-2xl">
               <span className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-primary sm:text-xs">
-                Transformation
+                Illustrative workflow
               </span>
               <h2 className="mt-3 text-balance text-[clamp(1.65rem,5.2vw,2.6rem)] font-semibold leading-[1.15]">
-                Before and after working with Alif
+                From scattered tasks to a connected workflow
               </h2>
               <p className="mt-4 text-pretty text-[0.975rem] leading-relaxed text-muted-foreground sm:text-base">
-                A realistic view of how a local business changes once the system is in place.
+                An illustrative view of how connected tools can organize everyday work; the right setup depends on your business.
               </p>
             </Reveal>
             <div className="mt-10 grid gap-4 sm:gap-5 md:grid-cols-2">
               <ScrollScene from={-0.1} to={0.22} y={[36, 0]} scale={[1, 0.97]}>
                 <div className="surface-card h-full p-6 sm:p-7">
-                  <h3 className="text-lg font-semibold text-muted-foreground">Before</h3>
+                  <h3 className="text-lg font-semibold text-muted-foreground">Without connected tools</h3>
                   <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
                     <li>
                       Static website requiring developers or coding just to change prices or photos
@@ -435,7 +435,7 @@ function Index() {
               </ScrollScene>
               <ScrollScene from={0.28} to={0.56} y={[64, 0]} scale={[0.94, 1]} delay={0.12}>
                 <div className="surface-card h-full border-primary/25 bg-secondary/40 p-6 sm:p-7">
-                  <h3 className="text-lg font-semibold text-primary">After (Powered by Alif)</h3>
+                  <h3 className="text-lg font-semibold text-primary">With a tailored system</h3>
                   <ul className="mt-4 space-y-3 text-sm text-foreground/80">
                     <li>
                       Embedded Visual Admin: update your site and catalog in seconds without code
@@ -458,7 +458,7 @@ function Index() {
           <div className="mx-auto w-full max-w-6xl">
             <Reveal className="max-w-2xl">
               <span className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-primary sm:text-xs">
-                Results
+                Capabilities
               </span>
               <h2 className="mt-3 text-balance text-[clamp(1.65rem,5.2vw,2.6rem)] font-semibold leading-[1.15]">
                 What better-connected systems can support
