@@ -1127,20 +1127,20 @@ export const evidence = [
 
 export const standards = [
   {
-    t: "Live Admin Access",
-    b: "Every web portal includes our Visual CMS so you can update products, copy, and images in 1 click.",
+    t: "Scoped Content Editing",
+    b: "When a visual CMS is included, the proposal records which pages, fields, and user roles the owner can update.",
   },
   {
-    t: "Dedicated Technical Partner",
-    b: "No junior support tickets. Co-founders and senior architects manage your technical roadmap end to end.",
+    t: "A Clear Support Path",
+    b: "Each engagement identifies its primary contact, support channel, response expectations, and any included maintenance.",
   },
   {
-    t: "Full Platform Ownership",
-    b: "All code, databases, cloud hosting, and domain assets are registered directly in your business's name.",
+    t: "Documented Account Ownership",
+    b: "We agree who owns the domain, hosting, source code, data, and third-party accounts, then record handover terms in the project agreement.",
   },
   {
-    t: "Unified Business Intelligence",
-    b: "A real-time mobile dashboard giving you instant visibility into website leads, social inquiries, and cashflow.",
+    t: "Reporting That Matches the Setup",
+    b: "Dashboards show the data sources connected and validated for the project; availability and refresh timing are documented.",
   },
 ];
 
