@@ -221,8 +221,8 @@ function AboutPage() {
       {/* Standards */}
       <Section
         eyebrow="Our standards"
-        title="What every client is promised in writing"
-        intro="Commitments we hold ourselves to on every engagement, regardless of budget size."
+        title="What we clarify before work begins"
+        intro="Each proposal records the access, support, ownership, and reporting arrangements that apply to that engagement."
       >
         <Stagger className="mt-10 grid gap-4 sm:gap-5 md:grid-cols-2">
           {standards.map((s) => (
