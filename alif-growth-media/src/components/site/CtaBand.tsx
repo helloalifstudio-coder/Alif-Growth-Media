@@ -6,8 +6,8 @@ import { company } from "@/content/site";
 import { Reveal, HoverLift, useSafeReducedMotion } from "@/components/motion/primitives";
 
 export function CtaBand({
-  title = "Zero Upfront Fees. Zero Service Charges.",
-  body = "We don't charge anything until you succeed and gain extra profit. A clear, one-time owning charge is applied only if you want a complete professional setup for your business.",
+  title = "Clear Scope. Transparent Pricing.",
+  body = "We agree deliverables, timelines and fees in writing before work begins. Your proposal explains what is included, any recurring costs, and the ownership terms for project assets.",
 }: {
   title?: string;
   body?: string;
@@ -34,7 +34,7 @@ export function CtaBand({
         <Reveal className="max-w-2xl">
           <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-3.5 py-1 text-xs font-semibold text-gold mb-3">
             <ShieldCheck className="w-3.5 h-3.5 text-gold" />
-            <span>Success-First Partnership Guarantee</span>
+            <span>Straightforward Project Terms</span>
           </div>
           <h2 className="text-balance text-[clamp(1.5rem,4.6vw,2.2rem)] font-bold leading-tight">
             {title}
@@ -46,15 +46,15 @@ export function CtaBand({
           <div className="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs text-primary-foreground/90">
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-gold shrink-0" />
-              <span>₹0 Upfront Investment</span>
+              <span>Written scope & milestones</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-gold shrink-0" />
-              <span>₹0 Recurring Service Cut</span>
+              <span>Fees agreed before work begins</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-gold shrink-0" />
-              <span>100% Full Client Ownership</span>
+              <span>Ownership terms documented</span>
             </div>
           </div>
         </Reveal>
@@ -69,7 +69,7 @@ export function CtaBand({
               to="/contact"
               className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold px-7 py-3.5 text-sm font-semibold text-gold-foreground shadow-lg transition-transform sm:w-auto hover:brightness-105"
             >
-              Claim Your Free Growth Setup <ArrowRight className="h-4 w-4" />
+              Request a project proposal <ArrowRight className="h-4 w-4" />
             </Link>
           </HoverLift>
           <HoverLift className="w-full sm:w-auto">
