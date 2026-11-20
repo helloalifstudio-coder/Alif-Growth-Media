@@ -162,10 +162,10 @@ function Index() {
               className="mt-7 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground"
             >
               {[
-                "Live Visual CMS",
-                "Custom WhatsApp CRM",
-                "Mobile BI Dashboard",
-                "Full Client Ownership",
+                "Scoped CMS & content editing",
+                "Enquiry & CRM workflows",
+                "Inventory & operations tools",
+                "Documented ownership & handover",
               ].map((p) => (
                 <span key={p} className="inline-flex items-center gap-2">
                   <Check className="h-4 w-4 shrink-0 text-primary" /> {p}
