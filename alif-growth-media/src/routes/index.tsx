@@ -31,9 +31,9 @@ import {
   getPrototypeWhatsappUrl,
 } from "@/content/site";
 
-const title = "Alif Growth Media | Custom Business Software, Visual CMS & Operating Systems";
+const title = "Alif Growth Media | Branding, Websites & Business Systems";
 const description =
-  "Alif Growth Media acts as the dedicated IT team and fractional CTO for local businesses—engineering scalable websites with live visual editors, custom WhatsApp CRMs, digital invoicing, and unified mobile BI dashboards.";
+  "Branding, responsive websites and practical business systems for local businesses. Each project sets out its deliverables, integrations, support and handover before work begins.";
 const canonical = "https://alif-growth-media.vercel.app/";
 
 export const Route = createFileRoute("/")({
@@ -127,9 +127,9 @@ function Index() {
               transition={{ duration: 0.6, delay: 0.5, ease: EASE }}
               className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:mt-6 sm:text-lg"
             >
-              We engineer scalable websites with live visual admin editors, custom WhatsApp CRMs,
-              tailored invoicing, and live inventory—all controlled through a unified mobile
-              dashboard. Never depend on external developers again.
+              We design and build clear digital experiences for growing businesses—brand identities,
+              responsive websites and, where the project calls for it, content editors, enquiry
+              workflows and operations tools. Integrations and ongoing responsibilities are agreed up front.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 16 }}

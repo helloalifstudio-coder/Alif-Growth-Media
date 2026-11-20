@@ -18,9 +18,9 @@ import {
   milestones,
 } from "@/content/site";
 
-const title = "About Alif Growth Media | Our Idea, Ideology & Founder";
+const title = "About Alif Growth Media | Our Approach & Founder";
 const description =
-  "Why Alif Growth Media exists: the meaning behind the name, the ideology we build on, the research we trust, and the standards every client engagement is held to across India and the Gulf.";
+  "Learn how Alif Growth Media approaches branding, websites and business systems, with project scope, integrations, support and ownership documented before work begins.";
 const canonical = "https://alif-growth-media.vercel.app/about";
 
 export const Route = createFileRoute("/about")({
@@ -58,7 +58,7 @@ function AboutPage() {
       <PageHero
         eyebrow="About us"
         title="Alif — the first stroke of a business that scales"
-        intro="Alif Growth Media is an embedded technical partner and business software studio in Warangal, Telangana. We partner with local service and retail businesses in India and the Gulf to build scalable web platforms, visual CMS editors, custom WhatsApp CRMs, and executive dashboards that put owners in complete control."
+        intro="Alif Growth Media is a digital design and business systems studio based in Warangal, Telangana. We help local businesses plan and build practical digital experiences—from brand and website work to scoped customer and operations tools. Each proposal sets out the deliverables, integrations, support and handover that apply."
       />
 
       {/* Origin story + facts */}
@@ -153,7 +153,7 @@ function AboutPage() {
       </Section>
 
       {/* Journey */}
-      <Section eyebrow="How we got here" title="From one reply flow to a growth system" tone="deep">
+      <Section eyebrow="How we work" title="How a project takes shape" tone="deep">
         <Stagger className="mt-10 grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4">
           {milestones.map((m) => (
             <StaggerItem
