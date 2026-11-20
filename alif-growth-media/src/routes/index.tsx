@@ -129,8 +129,8 @@ function Index() {
             >
               We design and build clear digital experiences for growing businesses—brand identities,
               responsive websites and, where the project calls for it, content editors, enquiry
-              workflows and operations tools.
-              Integrations and ongoing responsibilities are agreed up front.
+              workflows and operations tools. Integrations and ongoing responsibilities are agreed
+              up front.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 16 }}
