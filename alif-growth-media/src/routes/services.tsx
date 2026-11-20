@@ -8,9 +8,9 @@ import { Section, Card } from "@/components/site/Sections";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/primitives";
 import { services, engagements, steps, company } from "@/content/site";
 
-const title = "Custom Business Software, Visual CMS & Tools — Alif Growth Media";
+const title = "Branding, Websites & Business Systems — Alif Growth Media";
 const description =
-  "Custom web engineering with live visual CMS, tailored WhatsApp CRMs, digital invoicing, live inventory, and mobile BI dashboards for local businesses in Telangana and the Gulf.";
+  "Explore scoped website, content management, customer workflow, invoicing, inventory and reporting services from Alif Growth Media. Integrations, support and deliverables are agreed per project.";
 const canonical = "https://alif-growth-media.vercel.app/services";
 
 export const Route = createFileRoute("/services")({
@@ -90,9 +90,9 @@ function ServicesPage() {
   return (
     <SiteLayout>
       <PageHero
-        eyebrow="Software Suite"
-        title="Custom business software, engineered for complete owner control"
-        intro="We build scalable web platforms with live visual admin editors, custom WhatsApp CRMs, tailored invoicing, and unified mobile executive dashboards—operating as your embedded IT team across India and the Gulf."
+        eyebrow="Services"
+        title="Digital experiences and business tools, scoped to your needs"
+        intro="From brand and website work to customer and operations workflows, we design the pieces that fit your business. Each proposal explains which features, integrations, hosting, support and handover are included."
       />
 
       <section className="bg-background/75 px-5 pb-16 sm:px-6 sm:pb-20 lg:px-8 md:pb-28">
