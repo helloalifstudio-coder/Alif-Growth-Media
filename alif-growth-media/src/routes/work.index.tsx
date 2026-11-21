@@ -68,8 +68,7 @@ function WorkPage() {
               <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
                 Open an example to review its current experience. A hosted prototype or existing
                 platform is not automatically ready for your business; customization, data
-                migration, integrations, hosting and support depend on a separate written
-                scope.
+                migration, integrations, hosting and support depend on a separate written scope.
               </p>
             </div>
             <a
