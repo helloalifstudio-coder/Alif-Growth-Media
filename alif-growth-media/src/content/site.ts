@@ -548,27 +548,27 @@ export const team = [
 export const faqs = [
   {
     q: "Can I edit my website content without knowing how to code?",
-    a: "Yes! Every website we build includes our custom Visual Admin Editor. You can change text, banners, product prices, and photos with a few clicks from any device, and your live site updates instantly without redeploying code.",
+    a: "When a content-management workflow is included in your project, authorized team members can update the agreed text, images, or catalogue fields. Editing permissions, review steps, and publishing behavior are documented before handover.",
   },
   {
-    q: "How does the WhatsApp CRM help my business?",
-    a: "Instead of losing customer messages across personal phones, all inquiries from Google, your website, and social channels flow into one organized WhatsApp pipeline. It automatically greets customers, answers common questions, and tracks every lead to closure.",
+    q: "How can customer enquiry and WhatsApp workflows help my business?",
+    a: "We can plan enquiry capture, assignment, status tracking, and follow-up around the channels your team uses. WhatsApp automation or connections to Google, Instagram, and other providers are included only when their APIs, account permissions, and the project scope support them.",
   },
   {
-    q: "Can you build custom invoicing and inventory tools for my specific business?",
-    a: "Absolutely. We build custom-branded billing software and inventory trackers specifically tailored to how your shop, warehouse, or service works—complete with WhatsApp receipt dispatch and low-stock alerts.",
+    q: "Can you build custom invoicing and inventory tools for my business?",
+    a: "Yes, when the requirements and integrations are suitable. We agree the invoice fields, stock rules, exports, receipt delivery, and any payment-provider connections before development. A message or payment is not treated as verified unless a supported integration confirms it.",
   },
   {
-    q: "What does the Mobile Owner Dashboard show me?",
-    a: "It gives you a complete, real-time command center on your phone: today's cash vs. UPI collections, website visitors and lead conversions, social media message volume, and comprehensive customer purchase histories.",
+    q: "What can an owner dashboard show?",
+    a: "A dashboard can summarize selected, connected information such as enquiries, billing, stock, or website analytics. Data sources, refresh timing, access, and metrics depend on the systems integrated and validated for the project.",
   },
   {
-    q: "Are we trapped or dependent on your agency?",
-    a: "Never. All software, code, Supabase databases, Vercel deployments, and domain accounts are created in your business's name with full administrative ownership handed over to you.",
+    q: "Will I own my website and software?",
+    a: "Ownership and administrative access are documented in the proposal and handover. Where possible, accounts are created in your business's name; third-party services, licences, subscriptions, hosting, domains, and code transfer follow the agreed terms and provider rules.",
   },
   {
     q: "Do you support businesses across Telangana and the Gulf?",
-    a: "Yes. We work closely with local enterprises across Warangal, Hanamkonda, Hyderabad, and GCC markets (UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, and Oman).",
+    a: "We are based in Warangal and can discuss projects in Warangal, Hanamkonda, Hyderabad, and the listed Gulf markets. Availability, delivery, and ongoing support arrangements are agreed per project.",
   },
 ];
 
