@@ -66,9 +66,10 @@ function WorkPage() {
                 Explore Business Tools & Client Platforms
               </h2>
               <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-                Open an example to review its current experience. A hosted prototype or existing platform is not
-                automatically ready for your business; customization, data migration, integrations, hosting
-                and support depend on a separate written scope.
+                Open an example to review its current experience. A hosted prototype or existing
+                platform is not automatically ready for your business; customization, data
+                migration, integrations, hosting and support depend on a separate written
+                scope.
               </p>
             </div>
             <a
@@ -158,12 +159,11 @@ function WorkPage() {
             <span className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">
               Selected Client Platforms
             </span>
-            <h2 className="mt-2 text-2xl font-bold sm:text-3xl">
-              Selected Projects & Platforms
-            </h2>
+            <h2 className="mt-2 text-2xl font-bold sm:text-3xl">Selected Projects & Platforms</h2>
             <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-              A selection of public-facing platforms developed for client projects. Visit each current deployment
-              to review its experience; availability and ongoing maintenance arrangements may vary.
+              A selection of public-facing platforms developed for client projects. Visit each
+              current deployment to review its experience; availability and ongoing maintenance
+              arrangements may vary.
             </p>
           </Reveal>
 
