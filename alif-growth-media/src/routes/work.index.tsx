@@ -21,9 +21,9 @@ import {
   getPrototypeWhatsappUrl,
 } from "@/content/site";
 
-const title = "Working Prototypes & Client Platforms | Alif Growth Media";
+const title = "Selected Client Work & Reference Prototypes | Alif Growth Media";
 const description =
-  "Explore live working software prototypes built by Alif Growth Media for local businesses — visual website builders, WhatsApp CRMs, 1-tap invoicing, and store ordering systems. Click to test live or request customization.";
+  "Explore selected client platform examples and hosted software prototypes by Alif Growth Media. Current availability, features, integrations and customization are reviewed and agreed per project.";
 const canonical = "https://alif-growth-media.vercel.app/work";
 
 export const Route = createFileRoute("/work/")({
@@ -49,25 +49,26 @@ function WorkPage() {
   return (
     <SiteLayout>
       <PageHero
-        eyebrow="Interactive Prototypes & Platforms"
-        title="Explore our working tools & client systems"
-        intro="Test our live, working business prototypes below. Every tool is engineered to solve everyday business bottlenecks and can be custom-tailored with your business identity and branding."
+        eyebrow="Selected Work & Reference Prototypes"
+        title="Explore selected platforms and business-tool concepts"
+        intro="See a selection of client-facing platforms and hosted software concepts. Each link opens its current public example; availability, features, integrations, hosting and ongoing support are confirmed separately before a project is scoped."
       />
 
-      {/* Working Prototypes Grid */}
+      {/* Selected platform examples */}
       <section className="bg-background/75 px-5 pb-16 sm:px-6 sm:pb-20 lg:px-8 md:pb-24">
         <div className="mx-auto max-w-6xl">
           <div className="mb-10 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
             <div>
               <span className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">
-                Live Reference Prototypes
+                Hosted Prototypes & Client Examples
               </span>
               <h2 className="mt-2 text-2xl font-bold sm:text-3xl">
-                Ready-to-Deploy Software for Your Business
+                Explore Business Tools & Client Platforms
               </h2>
               <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-                No complex tech talk or waiting months. Click "Quick View" to test any working tool
-                live, or tap "Customize for My Business" to adapt it to your workflow.
+                Open an example to review its current experience. A hosted prototype or existing platform is not
+                automatically ready for your business; customization, data migration, integrations, hosting
+                and support depend on a separate written scope.
               </p>
             </div>
             <a
@@ -77,7 +78,7 @@ function WorkPage() {
               className="inline-flex items-center gap-2 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2.5 text-xs font-semibold shadow-sm transition-colors whitespace-nowrap"
             >
               <MessageCircle className="w-4 h-4" />
-              Discuss Custom Build
+              Discuss a Scoped Build
             </a>
           </div>
 
@@ -129,7 +130,7 @@ function WorkPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary text-primary-foreground px-4 py-2.5 text-xs font-semibold shadow transition-all hover:opacity-90"
                     >
-                      <span>Quick View Prototype</span>
+                      <span>Open Current Example</span>
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
 
@@ -150,19 +151,19 @@ function WorkPage() {
         </div>
       </section>
 
-      {/* Deployed Client Platforms Section */}
+      {/* Selected client platform examples */}
       <section className="border-t border-border bg-secondary/20 px-5 py-16 sm:px-6 sm:py-20 lg:px-8 md:py-24">
         <div className="mx-auto max-w-6xl">
           <Reveal className="mb-10">
             <span className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">
-              Live Client Deployments
+              Selected Client Platforms
             </span>
             <h2 className="mt-2 text-2xl font-bold sm:text-3xl">
-              Brand Partners Operating on Our Systems
+              Selected Projects & Platforms
             </h2>
             <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-              Real businesses actively using custom platforms engineered and maintained by Alif
-              Growth Media.
+              A selection of public-facing platforms developed for client projects. Visit each current deployment
+              to review its experience; availability and ongoing maintenance arrangements may vary.
             </p>
           </Reveal>
 
@@ -218,11 +219,11 @@ function WorkPage() {
         </div>
       </section>
 
-      {/* Results Section */}
+      {/* Potential outcomes section */}
       <Section
-        eyebrow="Results"
-        title="Outcomes business owners feel immediately"
-        intro="When your business operations and customer communications run on custom software, running your business becomes smoother and faster."
+        eyebrow="Potential Outcomes"
+        title="What well-scoped systems can improve"
+        intro="Connected workflows can help teams organize information, follow up consistently and reduce avoidable handoffs. The practical impact depends on adoption, data quality and the systems included in each project."
         tone="muted"
       >
         <Stagger className="mt-10 grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
@@ -241,7 +242,7 @@ function WorkPage() {
         </Stagger>
       </Section>
 
-      <CtaBand title="Want a custom working tool for your business?" />
+      <CtaBand title="Planning a digital tool for your business?" />
     </SiteLayout>
   );
 }
