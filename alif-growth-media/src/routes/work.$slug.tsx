@@ -21,7 +21,7 @@ export const Route = createFileRoute("/work/$slug")({
       : "Selected Project | Alif Growth Media";
     const description = study
       ? `Selected project overview for ${study.name}, covering its context, approach, stated scope and intended outcomes.`
-      : "Alif Growth Media case study.";
+      : "Selected project overview from Alif Growth Media.";
     const canonical = `https://alif-growth-media.vercel.app/work/${study?.slug ?? ""}`;
     return {
       meta: [
@@ -182,7 +182,10 @@ function CaseStudyPage() {
 
               <Reveal className="rounded-2xl bg-primary p-7 text-primary-foreground">
                 <h2 className="text-xl font-semibold">Intended outcomes</h2>
-                <p className="mt-3 text-sm leading-relaxed text-primary-foreground/75">These points describe intended benefits of the documented project scope. They are not quantified or independently verified performance results.</p>
+                <p className="mt-3 text-sm leading-relaxed text-primary-foreground/75">
+                  These points describe intended benefits of the documented project scope. They are
+                  not quantified or independently verified performance results.
+                </p>
                 <ul className="mt-4 space-y-3">
                   {study.outcomes.map((item: string) => (
                     <li key={item} className="flex items-start gap-3">
