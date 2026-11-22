@@ -16,7 +16,6 @@ import { PrototypeIllustration } from "@/components/site/PrototypeIllustration";
 import {
   collaborations,
   results,
-  caseStudies,
   prototypes,
   getPrototypeWhatsappUrl,
 } from "@/content/site";
