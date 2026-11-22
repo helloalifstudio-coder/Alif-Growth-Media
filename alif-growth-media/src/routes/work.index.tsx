@@ -51,7 +51,7 @@ function WorkPage() {
       <PageHero
         eyebrow="Selected Work & Reference Prototypes"
         title="Explore selected platforms and business-tool concepts"
-        intro="See a selection of client-facing platforms and hosted software concepts. Each link opens its current public example; availability, features, integrations, hosting and ongoing support are confirmed separately before a project is scoped."
+        intro="Explore selected client platforms and hosted reference examples. Use sample information only: do not submit customer, payment or confidential business data unless the destination has been separately reviewed and approved for that purpose. Features, integrations, hosting and support are confirmed per project."
       />
 
       {/* Selected platform examples */}
@@ -130,7 +130,7 @@ function WorkPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary text-primary-foreground px-4 py-2.5 text-xs font-semibold shadow transition-all hover:opacity-90"
                     >
-                      <span>Open Current Example</span>
+                      <span>Open Hosted Example</span>
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
 
@@ -141,7 +141,7 @@ function WorkPage() {
                       className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-emerald-500/30 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 px-4 py-2.5 text-xs font-semibold transition-colors"
                     >
                       <MessageCircle className="w-3.5 h-3.5" />
-                      <span>Customize for My Business</span>
+                      <span>Discuss a Scoped Version</span>
                     </a>
                   </div>
                 </div>
@@ -196,10 +196,10 @@ function WorkPage() {
                   <div className="mt-6 flex items-center justify-between pt-4 border-t border-border">
                     <Link
                       to="/work/$slug"
-                      params={{ slug: caseStudies[i].slug }}
+                      params={{ slug: c.slug }}
                       className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary transition-all hover:gap-2.5"
                     >
-                      Read Case Study{" "}
+                      View Project Overview{" "}
                       <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
                     </Link>
                     <a
