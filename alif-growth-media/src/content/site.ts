@@ -255,7 +255,7 @@ export type Prototype = {
 };
 
 export function getPrototypeWhatsappUrl(title: string): string {
-  const msg = `Hello Alif Growth Media, I checked your "${title}" prototype and would like to discuss customizing it for my business.`;
+  const msg = `Hello Alif Growth Media, I viewed the hosted example for "${title}" and would like to discuss a scoped version for my business.`;
   return `https://wa.me/${company.whatsappPhone}?text=${encodeURIComponent(msg)}`;
 }
 
