@@ -13,12 +13,7 @@ import {
   Reveal,
 } from "@/components/motion/primitives";
 import { PrototypeIllustration } from "@/components/site/PrototypeIllustration";
-import {
-  collaborations,
-  results,
-  prototypes,
-  getPrototypeWhatsappUrl,
-} from "@/content/site";
+import { collaborations, results, prototypes, getPrototypeWhatsappUrl } from "@/content/site";
 
 const title = "Selected Client Work & Reference Prototypes | Alif Growth Media";
 const description =
