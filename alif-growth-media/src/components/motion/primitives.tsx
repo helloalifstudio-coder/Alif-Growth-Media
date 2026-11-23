@@ -228,8 +228,6 @@ export function AnimatedStat({ value, className }: { value: string; className?: 
   const reduced = useSafeReducedMotion();
   const match = value.match(/\d+(\.\d+)?/);
   const [display, setDisplay] = useState(match && !reduced ? value.replace(match[0], "0") : value);
-  const mv = useMotionValue(0);
-
   useEffect(() => {
     if (!inView || !match || reduced) {
       setDisplay(value);
@@ -253,11 +251,11 @@ export function AnimatedStat({ value, className }: { value: string; className?: 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inView, value, reduced]);
 
-  void mv;
 
   return (
     <p ref={ref} className={className}>
-      {display}
+      <span aria-hidden="true">{display}</span>
+      <span className="sr-only">{value}</span>
     </p>
   );
 }
