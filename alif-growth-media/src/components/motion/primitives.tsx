@@ -251,7 +251,6 @@ export function AnimatedStat({ value, className }: { value: string; className?: 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inView, value, reduced]);
 
-
   return (
     <p ref={ref} className={className}>
       <span aria-hidden="true">{display}</span>
