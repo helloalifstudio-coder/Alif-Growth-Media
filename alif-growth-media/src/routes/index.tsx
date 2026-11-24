@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Check, Quote, ExternalLink, MessageCircle, Sparkles } from "lucide-react";
+import { ArrowRight, Check, ExternalLink, MessageCircle, Sparkles } from "lucide-react";
 import { PrototypeIllustration } from "@/components/site/PrototypeIllustration";
 import { InteractiveDemoSuite } from "@/components/site/InteractiveDemoSuite";
 import { InteractiveAgencyHero } from "@/components/site/InteractiveAgencyHero";
@@ -11,7 +11,6 @@ import { Section, Card } from "@/components/site/Sections";
 import {
   AnimatedStat,
   HoverLift,
-  MaskedLines,
   Reveal,
   ScrollDrift,
   ScrollScene,
@@ -32,9 +31,9 @@ import {
   getPrototypeWhatsappUrl,
 } from "@/content/site";
 
-const title = "Alif Growth Media | Custom Business Software, Visual CMS & Operating Systems";
+const title = "Alif Growth Media | Branding, Websites & Business Systems";
 const description =
-  "Alif Growth Media acts as the dedicated IT team and fractional CTO for local businesses—engineering scalable websites with live visual editors, custom WhatsApp CRMs, digital invoicing, and unified mobile BI dashboards.";
+  "Branding, responsive websites and practical business systems for local businesses. Each project sets out its deliverables, integrations, support and handover before work begins.";
 const canonical = "https://alif-growth-media.vercel.app/";
 
 export const Route = createFileRoute("/")({
@@ -128,9 +127,10 @@ function Index() {
               transition={{ duration: 0.6, delay: 0.5, ease: EASE }}
               className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:mt-6 sm:text-lg"
             >
-              We engineer scalable websites with live visual admin editors, custom WhatsApp CRMs,
-              tailored invoicing, and live inventory—all controlled through a unified mobile
-              dashboard. Never depend on external developers again.
+              We design and build clear digital experiences for growing businesses—brand identities,
+              responsive websites and, where the project calls for it, content editors, enquiry
+              workflows and operations tools. Integrations and ongoing responsibilities are agreed
+              up front.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -162,10 +162,10 @@ function Index() {
               className="mt-7 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground"
             >
               {[
-                "Live Visual CMS",
-                "Custom WhatsApp CRM",
-                "Mobile BI Dashboard",
-                "Full Client Ownership",
+                "Scoped CMS & content editing",
+                "Enquiry & CRM workflows",
+                "Inventory & operations tools",
+                "Documented ownership & handover",
               ].map((p) => (
                 <span key={p} className="inline-flex items-center gap-2">
                   <Check className="h-4 w-4 shrink-0 text-primary" /> {p}
@@ -296,14 +296,15 @@ function Index() {
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
             <Reveal className="max-w-2xl">
               <span className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-gold sm:text-xs">
-                Live Working Prototypes
+                Interactive Business System Previews
               </span>
               <h2 className="mt-2 text-balance text-[clamp(1.65rem,5.2vw,2.6rem)] font-bold leading-[1.15]">
-                Test our working software before you customize
+                Explore four example business workflows
               </h2>
               <p className="mt-3 text-pretty text-sm sm:text-base leading-relaxed text-muted-foreground">
-                We don't just talk about software—we build it. Click "Quick View" to test any
-                working tool live right now, or tap "Customize" to adapt it to your workflow.
+                Use the interactive sandbox to explore sample workflows. Its actions stay local: it
+                does not publish content, send messages, or process payments. Separate prototype
+                links open independently built experiences.
               </p>
             </Reveal>
             <Reveal>
@@ -316,14 +317,14 @@ function Index() {
             </Reveal>
           </div>
 
-          {/* Live Interactive In-Browser Demo Sandbox */}
+          {/* Local interactive demo sandbox */}
           <div className="mb-14">
             <InteractiveDemoSuite />
           </div>
 
           <div className="my-10 flex items-center justify-center">
             <span className="text-xs font-semibold uppercase tracking-widest text-muted-foreground bg-muted/60 px-4 py-1.5 rounded-full border border-border">
-              Or Explore Standalone Production Prototypes
+              Explore Separate Prototype Builds
             </span>
           </div>
 
@@ -409,19 +410,22 @@ function Index() {
           <div className="mx-auto w-full max-w-6xl">
             <Reveal className="max-w-2xl">
               <span className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-primary sm:text-xs">
-                Transformation
+                Illustrative workflow
               </span>
               <h2 className="mt-3 text-balance text-[clamp(1.65rem,5.2vw,2.6rem)] font-semibold leading-[1.15]">
-                Before and after working with Alif
+                From scattered tasks to a connected workflow
               </h2>
               <p className="mt-4 text-pretty text-[0.975rem] leading-relaxed text-muted-foreground sm:text-base">
-                A realistic view of how a local business changes once the system is in place.
+                An illustrative view of how connected tools can organize everyday work; the right
+                setup depends on your business.
               </p>
             </Reveal>
             <div className="mt-10 grid gap-4 sm:gap-5 md:grid-cols-2">
               <ScrollScene from={-0.1} to={0.22} y={[36, 0]} scale={[1, 0.97]}>
                 <div className="surface-card h-full p-6 sm:p-7">
-                  <h3 className="text-lg font-semibold text-muted-foreground">Before</h3>
+                  <h3 className="text-lg font-semibold text-muted-foreground">
+                    Without connected tools
+                  </h3>
                   <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
                     <li>
                       Static website requiring developers or coding just to change prices or photos
@@ -435,7 +439,7 @@ function Index() {
               </ScrollScene>
               <ScrollScene from={0.28} to={0.56} y={[64, 0]} scale={[0.94, 1]} delay={0.12}>
                 <div className="surface-card h-full border-primary/25 bg-secondary/40 p-6 sm:p-7">
-                  <h3 className="text-lg font-semibold text-primary">After (Powered by Alif)</h3>
+                  <h3 className="text-lg font-semibold text-primary">With a tailored system</h3>
                   <ul className="mt-4 space-y-3 text-sm text-foreground/80">
                     <li>
                       Embedded Visual Admin: update your site and catalog in seconds without code
@@ -458,13 +462,14 @@ function Index() {
           <div className="mx-auto w-full max-w-6xl">
             <Reveal className="max-w-2xl">
               <span className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-primary sm:text-xs">
-                Results
+                Capabilities
               </span>
               <h2 className="mt-3 text-balance text-[clamp(1.65rem,5.2vw,2.6rem)] font-semibold leading-[1.15]">
-                Outcomes local owners can feel
+                What better-connected systems can support
               </h2>
               <p className="mt-4 text-pretty text-[0.975rem] leading-relaxed text-muted-foreground sm:text-base">
-                When the system is clear, the business becomes easier to run and easier to grow.
+                The right workflow depends on your business, the integrations selected, and how your
+                team uses the system.
               </p>
             </Reveal>
             <Stagger className="mt-10 grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
@@ -493,7 +498,11 @@ function Index() {
         </section>
       </div>
 
-      <Section eyebrow="Testimonial" title="What partners say" tone="deep">
+      <Section
+        eyebrow="Our approach"
+        title="Built around the way your business actually runs"
+        tone="deep"
+      >
         <Reveal className="mx-auto mt-10 max-w-3xl text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -501,20 +510,15 @@ function Index() {
             viewport={{ once: true, amount: 0.6 }}
             transition={{ duration: 0.5, ease: EASE }}
           >
-            <Quote className="mx-auto h-10 w-10 text-gold" />
+            <Sparkles className="mx-auto h-10 w-10 text-gold" aria-hidden="true" />
           </motion.div>
-          <blockquote className="mt-6 text-pretty text-[clamp(1.05rem,3.6vw,1.5rem)] font-medium leading-relaxed">
-            <MaskedLines
-              delay={0.15}
-              lines={[
-                `"Alif Growth Media helped us turn scattered enquiries`,
-                `into a clear system. Our customers now get faster`,
-                `replies and we can finally see what is working."`,
-              ]}
-            />
-          </blockquote>
+          <p className="mt-6 text-pretty text-[clamp(1.05rem,3.6vw,1.5rem)] font-medium leading-relaxed">
+            We start by understanding how customers discover you, how enquiries move through your
+            team, and where everyday work gets stuck. Then we recommend a practical mix of brand,
+            website and operating tools, scoped to your needs.
+          </p>
           <footer className="mt-6 text-sm text-primary-foreground/75">
-            — Partner at a Telangana retail brand
+            Alif Growth Media · Discovery before delivery
           </footer>
         </Reveal>
       </Section>

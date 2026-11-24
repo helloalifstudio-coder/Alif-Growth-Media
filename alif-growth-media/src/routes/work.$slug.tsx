@@ -17,11 +17,11 @@ export const Route = createFileRoute("/work/$slug")({
   head: ({ loaderData }) => {
     const study = loaderData?.study;
     const title = study
-      ? `${study.name} Case Study | Alif Growth Media`
-      : "Case Study | Alif Growth Media";
+      ? `${study.name} Project Overview | Alif Growth Media`
+      : "Selected Project | Alif Growth Media";
     const description = study
-      ? `How Alif Growth Media helped ${study.name} strengthen their digital presence, customer communication and growth.`
-      : "Alif Growth Media case study.";
+      ? `Selected project overview for ${study.name}, covering its context, approach, stated scope and intended outcomes.`
+      : "Selected project overview from Alif Growth Media.";
     const canonical = `https://alif-growth-media.vercel.app/work/${study?.slug ?? ""}`;
     return {
       meta: [
@@ -44,7 +44,7 @@ export const Route = createFileRoute("/work/$slug")({
               children: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "Article",
-                headline: `${study.name} case study`,
+                headline: `${study.name} project overview`,
                 description,
                 image: "https://alif-growth-media.vercel.app/og-image.jpg",
                 mainEntityOfPage: canonical,
@@ -95,7 +95,7 @@ function CaseStudyPage() {
   return (
     <SiteLayout>
       <PageHero
-        eyebrow="Case Study"
+        eyebrow="Selected Project"
         title={study.name}
         intro={`${study.industry} · ${study.location}`}
       />
@@ -150,7 +150,7 @@ function CaseStudyPage() {
 
             <div className="space-y-10">
               <Reveal>
-                <h2 className="text-2xl font-semibold">The challenge</h2>
+                <h2 className="text-2xl font-semibold">Project context</h2>
                 <p className="mt-4 leading-relaxed text-muted-foreground">{study.challenge}</p>
               </Reveal>
 
@@ -167,7 +167,7 @@ function CaseStudyPage() {
               </Reveal>
 
               <div>
-                <h2 className="text-2xl font-semibold">What we delivered</h2>
+                <h2 className="text-2xl font-semibold">Project scope</h2>
                 <Stagger className="mt-4 grid gap-3 sm:grid-cols-2">
                   {study.deliverables.map((item: string) => (
                     <StaggerItem
@@ -181,7 +181,11 @@ function CaseStudyPage() {
               </div>
 
               <Reveal className="rounded-2xl bg-primary p-7 text-primary-foreground">
-                <h2 className="text-xl font-semibold">The outcome</h2>
+                <h2 className="text-xl font-semibold">Intended outcomes</h2>
+                <p className="mt-3 text-sm leading-relaxed text-primary-foreground/75">
+                  These points describe intended benefits of the documented project scope. They are
+                  not quantified or independently verified performance results.
+                </p>
                 <ul className="mt-4 space-y-3">
                   {study.outcomes.map((item: string) => (
                     <li key={item} className="flex items-start gap-3">
@@ -206,7 +210,7 @@ function CaseStudyPage() {
       </section>
 
       {otherStudies.length > 0 && (
-        <Section eyebrow="More work" title="Explore other brand partners" tone="muted">
+        <Section eyebrow="More work" title="Explore other selected projects" tone="muted">
           <Stagger className="mt-10 grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
             {otherStudies.map((c) => (
               <StaggerItem key={c.slug} lift className="h-full">
@@ -235,7 +239,7 @@ function CaseStudyPage() {
         </Section>
       )}
 
-      <CtaBand title="Want a case study like this for your business?" />
+      <CtaBand title="Planning a similar project for your business?" />
     </SiteLayout>
   );
 }

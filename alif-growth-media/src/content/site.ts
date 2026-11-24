@@ -4,7 +4,7 @@ import sumeraLogo from "@/assets/sumera-collections.png";
 
 export const company = {
   name: "Alif Growth Media",
-  tagline: "Custom Business Software, Visual CMS & Operating Systems for Local Enterprises",
+  tagline: "Digital Experiences, Branding & Business Systems",
   email: "hello.alifstudio@gmail.com",
   phone: "+91 91218 09212",
   phoneHref: "tel:+919121809212",
@@ -13,7 +13,7 @@ export const company = {
     return `+91${this.whatsappPhone}`;
   },
   whatsappMessage:
-    "Hello Alif Growth Media, I want to upgrade my business with your custom software and operating systems.",
+    "Hello Alif Growth Media, I would like to discuss a digital project for my business.",
   get whatsapp() {
     return `https://wa.me/${this.whatsappPhone}?text=${encodeURIComponent(this.whatsappMessage)}`;
   },
@@ -35,55 +35,55 @@ export const navLinks = [
 export const problems = [
   {
     i: "1",
-    t: "No Control After Website Launch",
-    b: "AI and freelancers build static sites, but you cannot edit products, prices, or banners without paying a developer or recoding from scratch.",
+    t: "Website Updates Need Too Many Handoffs",
+    b: "When a site has no suitable editing workflow, routine changes to prices, images or service details can depend on an outside developer.",
   },
   {
     i: "2",
-    t: "Missing Enterprise Tools & Visibility",
-    b: "Local businesses miss out on CRMs, automated cashflow ledgers, and live inventory tools simply because big tech builds only for giant corporations.",
+    t: "Business Tools Do Not Always Fit the Team",
+    b: "Software designed for larger operations can feel too complex or costly for a small team. A simpler, well-scoped workflow may be a better fit.",
   },
   {
     i: "3",
-    t: "Disconnected Business Operations",
-    b: "Your website visitors, social media leads, cash register, and customer histories are scattered across notebooks and separate apps without one central screen.",
+    t: "Customer and Operations Data Gets Scattered",
+    b: "Enquiries, billing, stock records and follow-ups can live in separate tools, making it harder for a team to see what needs attention next.",
   },
 ];
 
 export const pillars = [
   {
-    k: "Self-Serve CMS",
-    t: "Scalable Sites with Live Visual Admin",
-    b: "High-performance Next.js/Vercel websites with our built-in visual editor so business owners can edit content and images on the fly with zero technical knowledge.",
+    k: "Brand & Web",
+    t: "A clear, responsive digital presence",
+    b: "Build a useful home for your brand, products and services. Content editing can be included for the pages and fields your team needs to manage.",
   },
   {
-    k: "Operating Tools",
-    t: "Custom CRM, Invoicing & Inventory",
-    b: "Tailor-made software built in your brand's name: WhatsApp-integrated customer pipeline, 1-tap invoice generator, and daily stock tracking.",
+    k: "Customer & Operations",
+    t: "Workflows sized to the team",
+    b: "Plan enquiry, invoicing or inventory tools around daily work. Channels, automation and third-party integrations are included only when supported and agreed.",
   },
   {
-    k: "Executive View",
-    t: "Mobile Owner Intelligence Dashboard",
-    b: "A single mobile dashboard showing today's collections, website lead conversions, social media inquiries, and customer purchase histories in real time.",
+    k: "Reporting",
+    t: "A useful view of connected information",
+    b: "Bring selected, validated data into a clear owner view. Coverage, access and refresh timing depend on the systems connected to the project.",
   },
 ];
 
 export const steps = [
   {
-    t: "Architect",
-    b: "We audit your daily operations, customer touchpoints, and technical bottlenecks.",
+    t: "Discover",
+    b: "Understand the audience, current tools, customer journey and day-to-day constraints.",
   },
   {
-    t: "Engineer",
-    b: "We build your high-speed website, visual admin editor, and branded business software.",
+    t: "Scope",
+    b: "Agree the deliverables, responsibilities, milestones, costs and any recurring services in writing.",
   },
   {
-    t: "Integrate",
-    b: "We wire your WhatsApp CRM, automated invoicing receipts, and live inventory.",
+    t: "Build",
+    b: "Design and implement the agreed experience, with review points for the important user journeys.",
   },
   {
-    t: "Empower",
-    b: "You monitor cashflow, leads, and customer retention from a single mobile dashboard.",
+    t: "Handover",
+    b: "Document account access, ownership, support arrangements and any ongoing third-party costs.",
   },
 ];
 
@@ -98,87 +98,88 @@ export type Service = {
 export const services: Service[] = [
   {
     slug: "visual-cms-web-engineering",
-    t: "Scalable Web Engineering & Live Visual CMS",
-    b: "We build ultra-fast, modern web applications that give business owners a private visual admin editor. Update text, banners, and product catalogs instantly without writing a single line of code or waiting on developers.",
+    t: "Website Design & Content Management",
+    b: "We design responsive websites around your audience, products and service journey. When self-service editing is part of the scope, a CMS can let authorized team members update agreed content without changing code.",
     includes: [
-      "Production-grade Next.js / React storefronts and web portals",
-      "Embedded Visual Page Editor & Content Management System (CMS)",
-      "Zero-downtime continuous deployment on Vercel & cloud edge",
-      "Instant WhatsApp click-to-chat & automated lead capture buttons",
+      "Responsive page layouts and clear navigation",
+      "A CMS for agreed text, images or catalogue fields, where required",
+      "Domain, hosting and deployment setup as listed in the proposal",
+      "Contact, enquiry or analytics integrations where supported and approved",
     ],
     outcome:
-      "A world-class digital storefront that you own and control completely without developer dependency.",
+      "A clear, maintainable digital presence with documented editing and handover responsibilities.",
   },
   {
     slug: "custom-crm-whatsapp-automations",
-    t: "Custom WhatsApp CRM & Lead Engines",
-    b: "Local customers communicate on WhatsApp. We engineer custom-tailored CRM systems that capture every inquiry across Google, Instagram, and web, routing them directly into a shared WhatsApp pipeline.",
+    t: "Customer Enquiry & CRM Workflows",
+    b: "Plan an enquiry workflow around the channels your business uses. Capture, assignment, message templates and automation depend on provider APIs, account permissions and the agreed project scope.",
     includes: [
-      "Custom WhatsApp CRM with multi-agent inbox and sales pipelines",
-      "Automated instant replies, greetings, and digital product catalogs",
-      "Lead scoring, stage tracking, and automated customer follow-ups",
-      "Full integration with your central business database (Supabase)",
+      "Enquiry capture from the channels listed in the proposal",
+      "A shared pipeline, status tracking or team assignment where required",
+      "Message templates or automated replies only when supported by approved integrations",
+      "Customer-data access and retention expectations documented for the project",
     ],
-    outcome: "Never lose a customer inquiry again, even during peak store hours or late nights.",
+    outcome:
+      "A more consistent way to organize and follow up enquiries; no channel is connected unless it is included in the agreed scope.",
   },
   {
     slug: "invoicing-cashflow-inventory",
-    t: "Custom Invoicing, Cash Ledgers & Inventory",
-    b: "Eliminate manual bookkeeping and lost receipts. We deploy tailored billing software and stock-tracking systems configured specifically for your business workflow.",
+    t: "Invoicing, Records & Inventory Tools",
+    b: "Design billing and stock workflows around the records your business needs. Calculations, exports, payment connections and tax fields are agreed before implementation.",
     includes: [
-      "One-tap digital invoice and receipt generator with WhatsApp delivery",
-      "Daily cash vs. UPI collection tracking with instant payment status",
-      "Live inventory management with low-stock alerts and SKU monitoring",
-      "Exportable financial reports ready for GST and tax compliance",
+      "Invoice and receipt templates configured for agreed fields",
+      "Cash or UPI recording where required; payment verification only through supported integrations",
+      "Stock, SKU and low-stock views when included in the project",
+      "Exports for review by your accountant; software is not a substitute for tax or accounting advice",
     ],
     outcome:
-      "Absolute clarity over daily revenue, outstanding customer dues, and warehouse inventory.",
+      "Clearer day-to-day records, with accounting and compliance responsibilities kept explicit.",
   },
   {
     slug: "owner-bi-dashboard",
-    t: "Unified Mobile Owner Intelligence Dashboard",
-    b: "Operate your entire business from your phone. Our unified executive dashboard aggregates website traffic, social media leads, customer lifetime value, and daily collections into one glanceable screen.",
+    t: "Owner Dashboards & Reporting",
+    b: "Create an owner view from data sources that are actually connected and validated. Coverage, access and refresh timing are documented for each project.",
     includes: [
-      "Live overview of website visitors and conversion rates",
-      "Omnichannel social media inquiry tracking in one feed",
-      "Comprehensive customer profile history: visits, purchases & dues",
-      "Predictive sales analytics and automated growth recommendations",
+      "Selected website or enquiry metrics where analytics are connected",
+      "Operational summaries from approved systems and available data",
+      "Role-based access and refresh expectations as scoped",
+      "Forecasting only when suitable data and a validated method are separately agreed",
     ],
     outcome:
-      "Total real-time visibility into your business health without asking staff or checking registers.",
+      "A useful view of connected information—not an automatic feed from every app or business channel.",
   },
 ];
 
 export const engagements = [
   {
-    t: "Tech Architecture Audit",
+    t: "Growth & Technology Consultation",
     price: "Complimentary",
-    b: "A structured 45-minute audit of your current digital setup, customer communication channels, and software bottlenecks.",
+    b: "A no-obligation conversation about your current digital setup, customer journey and operational bottlenecks. A technical audit or written roadmap can be scoped separately if needed.",
     points: [
-      "45-minute working architecture review",
-      "Complete Software & Automation Roadmap",
+      "45-minute discovery conversation",
+      "Initial opportunities and constraints",
       "No obligation to continue",
     ],
   },
   {
     t: "Custom Platform Sprint",
     price: "Project based",
-    b: "High-speed website, visual admin editor, WhatsApp CRM, and business billing systems engineered and deployed.",
+    b: "A defined delivery phase for the website, workflow or software components listed in your project proposal.",
     points: [
-      "Complete custom website + Visual CMS",
-      "WhatsApp CRM & Lead Capture Engine",
-      "Staff training & full cloud handover",
+      "Agreed build scope and milestones",
+      "Review checkpoints and acceptance criteria",
+      "Handover notes and training where included",
     ],
     featured: true,
   },
   {
-    t: "Embedded IT Partner (Retainer)",
+    t: "Ongoing Support Partnership",
     price: "Monthly Partnership",
-    b: "We act as your dedicated IT team and fractional CTO—monitoring, updating, and scaling all your software tools.",
+    b: "Optional ongoing support for the systems and responsibilities listed in a separate monthly agreement.",
     points: [
-      "Continuous tool customization & features",
-      "Dashboard maintenance & uptime monitoring",
-      "Monthly operational review & insights",
+      "Defined support hours and response targets",
+      "Maintenance only for agreed services",
+      "Periodic review against agreed priorities",
     ],
   },
 ];
@@ -204,6 +205,7 @@ export const results = [
 export const collaborations = [
   {
     name: "SAFA Fresh",
+    slug: "safa-fresh",
     industry: "Fresh Foods & Retail",
     desc: "Clean full-stack ordering platform and inventory management for a premier fresh-foods business.",
     scope: "Next.js Storefront · .NET Backend · PostgreSQL · WhatsApp Order Flow",
@@ -212,6 +214,7 @@ export const collaborations = [
   },
   {
     name: "DT Interiors",
+    slug: "dt-interiors",
     industry: "Luxury Interior Design",
     desc: "Bespoke digital architecture showcasing luxury craftsmanship with embedded AI consultation tools.",
     scope: "Ultra-Fast Web Portal · AI Project Assistant · Lead Capture Pipeline",
@@ -220,6 +223,7 @@ export const collaborations = [
   },
   {
     name: "Sumera Collections",
+    slug: "sumera-collections",
     industry: "Fashion & Retail",
     desc: "Modern women's ethnic wear digital storefront backed by Firebase and automated WhatsApp catalogue browsing.",
     scope: "Cloud Storefront · Firebase Database · WhatsApp Catalogue Integration",
@@ -251,7 +255,7 @@ export type Prototype = {
 };
 
 export function getPrototypeWhatsappUrl(title: string): string {
-  const msg = `Hello Alif Growth Media, I checked your "${title}" prototype and would like to discuss customizing it for my business.`;
+  const msg = `Hello Alif Growth Media, I viewed the hosted example for "${title}" and would like to discuss a scoped version for my business.`;
   return `https://wa.me/${company.whatsappPhone}?text=${encodeURIComponent(msg)}`;
 }
 
@@ -259,147 +263,146 @@ export const prototypes: Prototype[] = [
   {
     id: "visual-cms",
     title: "Visual Website & Content Editor",
-    tagline:
-      "Update your website anytime directly from your phone — no developers or coding needed.",
+    tagline: "A reference flow for editing common website content.",
     category: "Website Management",
-    badge: "Live Prototype",
+    badge: "Hosted Example",
     illustrationType: "visual-cms",
     summary:
-      "Click any text, photo, or announcement banner to edit it on the spot and hit save. Your live site updates instantly without waiting for a coder.",
+      "Explore a sample editor for copy, images and announcements. Actual editing, permissions, publishing and supported devices depend on the CMS connected to a specific project.",
     bulletPoints: [
-      "Change product prices and banner announcements in 1 click",
-      "Works on any mobile phone, tablet, or laptop",
-      "Never pay or wait for a web developer for simple updates",
+      "Preview common content fields and media controls",
+      "Illustrates a mobile-friendly editing journey",
+      "CMS access and publishing are configured per project",
     ],
     liveUrl: "https://safar-studio-snm.vercel.app",
     repoName: "crm-invoicing-hub",
-    readyTime: "Ready to Customize",
+    readyTime: "Availability to confirm",
   },
   {
     id: "whatsapp-crm",
     title: "WhatsApp Customer Hub & CRM",
-    tagline: "Turn missed WhatsApp chats into organized paying customers with automated greetings.",
+    tagline: "A reference workflow for organizing customer enquiries.",
     category: "Customer & Sales Hub",
-    badge: "Live Prototype",
+    badge: "Hosted Example",
     illustrationType: "whatsapp-crm",
     summary:
-      "All incoming messages from Google, your website, and Instagram arrive in one organized team inbox with smart instant replies.",
+      "Explore sample lead stages and follow-up views. WhatsApp, website, Google or Instagram connections require approved provider APIs, account permissions and separate integration work.",
     bulletPoints: [
-      "Instant greeting & catalog reply when customers message",
-      "Organize new leads, orders, and repeat customers clearly",
-      "Never lose an inquiry when your shop or staff is busy",
+      "Illustrates lead stages and team ownership",
+      "Message templates need an approved channel connection",
+      "Automation and delivery depend on provider access and scope",
     ],
     liveUrl: "https://safar-crm-theta.vercel.app",
     repoName: "safar-crm",
-    readyTime: "Ready to Customize",
+    readyTime: "Availability to confirm",
   },
   {
     id: "invoicing",
     title: "1-Tap Digital Invoicing & Daily Cash Tracker",
-    tagline: "Generate professional bills in seconds and send them directly to customer WhatsApps.",
+    tagline: "A sample workflow for invoices and collection records.",
     category: "Billing & Cashflow",
-    badge: "Live Prototype",
+    badge: "Hosted Example",
     illustrationType: "invoicing",
     summary:
-      "Stop searching through paper bill books. Create clean digital receipts, track daily Cash vs. UPI collections, and stay tax-ready.",
+      "Review example invoice and cash/UPI recording screens. Payment verification, tax calculations, customer messaging and accounting integrations must be validated and scoped separately.",
     bulletPoints: [
-      "Send clean PDF receipts straight to customer WhatsApp in 1 tap",
-      "Daily cash collection tracker: see today's exact totals instantly",
-      "Customer payment history: know who paid and who has dues",
+      "Sample invoice and receipt layouts",
+      "Cash and UPI entries are records, not payment verification",
+      "Tax and accounting setup requires qualified review",
     ],
     liveUrl: "https://invofy-kappa.vercel.app",
     repoName: "invofy",
-    readyTime: "Ready to Customize",
+    readyTime: "Availability to confirm",
   },
   {
     id: "membership",
     title: "Member Records & Fee Renewal Manager",
-    tagline: "Automate monthly fee collections and send friendly WhatsApp payment reminders.",
+    tagline: "A reference workflow for member records and renewals.",
     category: "Membership & Dues",
-    badge: "Live Prototype",
+    badge: "Hosted Example",
     illustrationType: "membership",
     summary:
-      "Designed for gyms, fitness clubs, academies, and subscription services. Track active plans, expiring passes, and pending dues with zero paperwork.",
+      "Illustrates sample plans, renewal dates and member records. Live messaging, attendance devices, payment verification and reminders are not implied by this public example.",
     bulletPoints: [
-      "Automatic WhatsApp reminder links before memberships expire",
-      "Color-coded member attendance and payment status",
-      "Instant receipt generation and renewal tracking",
+      "Sample membership and renewal records",
+      "Reminder links need an approved messaging channel",
+      "Billing and attendance integrations are scoped separately",
     ],
     liveUrl: "https://e-repcount-gym-payment-manager.vercel.app",
     repoName: "e-repcount-gym-payment-manager",
-    readyTime: "Ready to Customize",
+    readyTime: "Availability to confirm",
   },
   {
     id: "store-orders",
     title: "Household Grocery & Fresh Store Platform",
-    tagline: "A clean mobile catalog for customers to place weekly orders easily.",
+    tagline: "A reference storefront for product discovery and order enquiries.",
     category: "Digital Storefront & Orders",
-    badge: "Deployed Platform",
+    badge: "Hosted Example",
     illustrationType: "store-orders",
     summary:
-      "Ideal for grocery shops, meat stores, and organic suppliers. Customers browse items by category, build a cart, and place orders directly to your WhatsApp.",
+      "Explore a sample catalogue and order-enquiry journey. Inventory synchronization, fulfilment, delivery and WhatsApp dispatch depend on connected systems and the agreed setup.",
     bulletPoints: [
-      "Mobile-first ordering that even elderly customers find effortless",
-      "Direct order receipt dispatched to your WhatsApp counter",
-      "Easy item availability and price adjustment",
+      "Product discovery by category",
+      "Order handoff where configured",
+      "Availability and prices depend on maintained source records",
     ],
     liveUrl: "https://safa-foods-xuac.vercel.app",
     repoName: "Safa-Foods",
-    readyTime: "Production Ready",
+    readyTime: "Availability to confirm",
   },
   {
     id: "showcase",
     title: "Luxury Interior & Craftsmanship Showcase",
-    tagline: "Present premium craftsmanship with elegant galleries and fast inquiry booking.",
+    tagline: "A reference portfolio for project galleries and consultations.",
     category: "Portfolio & Consultations",
-    badge: "Deployed Platform",
+    badge: "Hosted Example",
     illustrationType: "showcase",
     summary:
-      "Built for interior designers, architects, and custom fabricators. Showcase finished projects with smooth photo galleries and instant estimation requests.",
+      "Explore a visual portfolio and enquiry path. Gallery content, enquiry routing, estimates and CRM links depend on the published configuration.",
     bulletPoints: [
-      "High-definition project galleries organized by style and room",
-      "Smart inquiry form that captures room size and budget intent",
-      "Fast, lightweight loading that looks stunning on mobile",
+      "Project gallery presentation",
+      "Sample consultation and enquiry flow",
+      "Estimates and lead workflows require project-specific setup",
     ],
     liveUrl: "https://dt-interiors.vercel.app",
     repoName: "Dt-interiors",
-    readyTime: "Production Ready",
+    readyTime: "Availability to confirm",
   },
   {
     id: "boutique",
     title: "Boutique Fashion & Ethnic Wear Storefront",
-    tagline: "Turn Instagram visitors into buyers with a browsable digital collection.",
+    tagline: "A collection-led retail storefront reference.",
     category: "Boutique & Retail",
-    badge: "Deployed Platform",
+    badge: "Hosted Example",
     illustrationType: "store-orders",
     summary:
-      "Perfect for clothing boutiques and jewelry brands. Customers browse seasonal collections, check availability, and inquire about their size in 1 tap.",
+      "See a sample product discovery and enquiry experience. Stock, size availability, checkout, payment and WhatsApp connections are not guaranteed by this example.",
     bulletPoints: [
-      "Organized by seasonal collections and product styles",
-      "1-tap 'Check Availability on WhatsApp' button on every item",
-      "Modern look that elevates your brand reputation",
+      "Collection and product discovery",
+      "Availability enquiry pattern",
+      "Inventory and checkout integrations are scoped separately",
     ],
     liveUrl: "https://sumeeracollections.vercel.app",
     repoName: "sumera_collections",
-    readyTime: "Production Ready",
+    readyTime: "Availability to confirm",
   },
   {
     id: "reports",
     title: "Business Insight & Visual Reporting Studio",
-    tagline: "Turn complex spreadsheets into simple visual charts that show how sales are moving.",
+    tagline: "A reference dashboard for exploring operational data.",
     category: "Owner Reports & Charts",
-    badge: "Live Prototype",
+    badge: "Hosted Example",
     illustrationType: "reports",
     summary:
-      "Drop in your sales records or customer lists and immediately view clear graphs showing your bestselling days, popular products, and growth patterns.",
+      "Illustrates how selected records can appear in charts. Do not upload real or confidential customer data unless the destination's privacy, storage and processing have been independently verified for that use.",
     bulletPoints: [
-      "Simple visual charts instead of complicated spreadsheets",
-      "Runs 100% privately on your device with no data uploaded",
-      "Identify peak selling hours and customer trends in seconds",
+      "Sample charts and reporting layouts",
+      "Use synthetic or non-sensitive data until privacy is verified",
+      "Metrics depend on complete, validated source records",
     ],
     liveUrl: "https://data-automation-studio-orpin.vercel.app",
     repoName: "data-automation-studio",
-    readyTime: "Ready to Customize",
+    readyTime: "Availability to confirm",
   },
 ];
 
@@ -547,27 +550,27 @@ export const team = [
 export const faqs = [
   {
     q: "Can I edit my website content without knowing how to code?",
-    a: "Yes! Every website we build includes our custom Visual Admin Editor. You can change text, banners, product prices, and photos with a few clicks from any device, and your live site updates instantly without redeploying code.",
+    a: "When a content-management workflow is included in your project, authorized team members can update the agreed text, images, or catalogue fields. Editing permissions, review steps, and publishing behavior are documented before handover.",
   },
   {
-    q: "How does the WhatsApp CRM help my business?",
-    a: "Instead of losing customer messages across personal phones, all inquiries from Google, your website, and social channels flow into one organized WhatsApp pipeline. It automatically greets customers, answers common questions, and tracks every lead to closure.",
+    q: "How can customer enquiry and WhatsApp workflows help my business?",
+    a: "We can plan enquiry capture, assignment, status tracking, and follow-up around the channels your team uses. WhatsApp automation or connections to Google, Instagram, and other providers are included only when their APIs, account permissions, and the project scope support them.",
   },
   {
-    q: "Can you build custom invoicing and inventory tools for my specific business?",
-    a: "Absolutely. We build custom-branded billing software and inventory trackers specifically tailored to how your shop, warehouse, or service works—complete with WhatsApp receipt dispatch and low-stock alerts.",
+    q: "Can you build custom invoicing and inventory tools for my business?",
+    a: "Yes, when the requirements and integrations are suitable. We agree the invoice fields, stock rules, exports, receipt delivery, and any payment-provider connections before development. A message or payment is not treated as verified unless a supported integration confirms it.",
   },
   {
-    q: "What does the Mobile Owner Dashboard show me?",
-    a: "It gives you a complete, real-time command center on your phone: today's cash vs. UPI collections, website visitors and lead conversions, social media message volume, and comprehensive customer purchase histories.",
+    q: "What can an owner dashboard show?",
+    a: "A dashboard can summarize selected, connected information such as enquiries, billing, stock, or website analytics. Data sources, refresh timing, access, and metrics depend on the systems integrated and validated for the project.",
   },
   {
-    q: "Are we trapped or dependent on your agency?",
-    a: "Never. All software, code, Supabase databases, Vercel deployments, and domain accounts are created in your business's name with full administrative ownership handed over to you.",
+    q: "Will I own my website and software?",
+    a: "Ownership and administrative access are documented in the proposal and handover. Where possible, accounts are created in your business's name; third-party services, licences, subscriptions, hosting, domains, and code transfer follow the agreed terms and provider rules.",
   },
   {
     q: "Do you support businesses across Telangana and the Gulf?",
-    a: "Yes. We work closely with local enterprises across Warangal, Hanamkonda, Hyderabad, and GCC markets (UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, and Oman).",
+    a: "We are based in Warangal and can discuss projects in Warangal, Hanamkonda, Hyderabad, and the listed Gulf markets. Availability, delivery, and ongoing support arrangements are agreed per project.",
   },
 ];
 
@@ -1049,120 +1052,120 @@ export const termsContent = {
 export const originStory = [
   {
     h: "The name is the idea",
-    b: "Alif is the first letter — the initial stroke before words, systems, and stories become possible. We chose it because local businesses don't need another generic marketing campaign; they need a solid technical foundation. A scalable website, an admin editor they can control without coding, an automated WhatsApp pipeline, and clean business software. Everything else compounds from there.",
+    b: "Alif is the first letter — the initial stroke before words, systems and stories become possible. We chose it as a reminder that meaningful growth starts with a clear foundation. For each business, that foundation may include a strong brand, a useful website, clearer customer communication or tools that make everyday work easier.",
   },
   {
-    h: "Where it started",
-    b: "We started by sitting inside shops, showrooms, and studios watching owners struggle. Non-technical owners were building websites with AI or freelancers, only to find that changing a price or updating a photo required hiring a developer or recoding from scratch. Meanwhile, enterprise CRMs and inventory tools were too complex or overpriced. We stepped in to act as their internal IT team—building custom, reliable software that works seamlessly in the background.",
+    h: "The problem we focus on",
+    b: "Routine digital updates—changing a price, replacing a photo or following up an enquiry—can become harder than they should be when a business has no suitable workflow. Other tools can feel too complex for the way a small team works. Our approach starts with the actual need, then scopes a practical solution the team can understand and maintain.",
   },
   {
-    h: "What we built from it",
-    b: "Alif Growth Media builds modern, scalable web platforms with embedded visual CMS editors, custom WhatsApp CRMs, digital invoicing tools, and unified mobile owner dashboards. We partner closely with local enterprises across India and the Gulf to run their entire online and software operations.",
+    h: "What we can bring together",
+    b: "Depending on the brief, Alif Growth Media can help with brand identity, website design and development, content editing, enquiry workflows, invoicing, inventory or reporting. Integrations, hosting, support and handover are agreed for each project rather than assumed.",
   },
 ];
 
 export const ideology = [
   {
     n: "01",
-    t: "No-Code Control for Code-Grade Apps",
-    b: "We build on enterprise frameworks (Next.js, React, Supabase, Vercel), but provide an intuitive visual admin editor so business owners can change text, photos, and prices in seconds with zero coding.",
+    t: "Useful Control, Not Unnecessary Complexity",
+    b: "When a project includes a CMS or admin area, we define which content and permissions the team can manage, then make common updates clear and accessible.",
   },
   {
     n: "02",
-    t: "Local Businesses Deserve Enterprise Software",
-    b: "Automated WhatsApp CRMs, one-tap digital invoicing, and live inventory tracking shouldn't be luxuries reserved for venture-backed startups. We bring enterprise engineering to local businesses.",
+    t: "Tools Sized to the Business",
+    b: "We choose a practical combination of website, workflow and software features for the team's needs. A custom system is an option when existing tools do not fit.",
   },
   {
     n: "03",
-    t: "Build Software, Not Just Campaigns",
-    b: "A marketing ad campaign stops the moment your budget runs out. A custom-built website, CRM, and automated invoicing system run 24/7/365, compounding efficiency and protecting your business.",
+    t: "Digital Foundations and Marketing Work Together",
+    b: "Campaigns can bring attention; a clear website and consistent follow-up help people take the next step. We plan these pieces together when they are part of the brief.",
   },
   {
     n: "04",
-    t: "Mobile-First Owner Intelligence",
-    b: "An owner should never have to ask staff how much was collected today or how many inquiries came in. Every metric—cashflow, web visits, leads, and customer retention—belongs on a single mobile screen.",
+    t: "Reporting With Visible Sources",
+    b: "A dashboard is useful only when its data sources are connected and understood. We document what is included, how often it updates and what remains outside the setup.",
   },
   {
     n: "05",
-    t: "Your Brand, Powered by Alif",
-    b: "We operate as your dedicated IT division. All client-facing tools and portals carry your business's proud name and branding, backed by the technical horsepower of Alif Growth Media.",
+    t: "The Business Stays Recognizable",
+    b: "Where a project includes customer-facing tools, we align the experience with the client's brand. Account access, third-party subscriptions and ongoing responsibilities are agreed before launch.",
   },
   {
     n: "06",
-    t: "100% Client Ownership & Freedom",
-    b: "You own every line of code, cloud database, Vercel deployment, and domain name from day one. We earn our partnership through continuous excellence, never by trapping clients.",
+    t: "Clear Client Ownership & Handover",
+    b: "We document who owns each account, asset and deliverable in the project agreement. Custom deliverables transfer after full payment, in line with our Terms of Service.",
   },
 ];
 
 export const evidence = [
   {
-    stat: "13 points",
-    label: "turnover growth gap",
-    body: "Indian MSMEs with integrated digital software and sales operations reported turnover growth roughly 13 percentage points ahead of offline peers.",
-    source: "ICRIER MSME Digitalisation Study, 2025",
-    href: "https://icrier.org/",
+    stat: "13% vs 8.5%",
+    label: "average turnover growth",
+    body: "ICRIER's 2025 survey of 2,365 Udyam-registered MSMEs estimated average turnover growth of 13% for e-commerce-integrated firms and 8.5% for non-integrated firms from 2022–23 to 2023–24. This is an observed sample comparison, not a promised outcome.",
+    source: "ICRIER, Annual MSME Survey, 2025",
+    href: "https://icrier.org/pdf/Annual-Survey-MSMEs_India_2025.pdf",
   },
   {
-    stat: "98%",
-    label: "of consumers read reviews",
-    body: "Local reputation and digital presence is the first sales conversation — and buyers verify modern credibility before contacting a business.",
-    source: "BrightLocal Local Consumer Review Survey, 2025",
-    href: "https://www.brightlocal.com/research/local-consumer-review-survey/",
+    stat: "74%",
+    label: "check 2+ review sites",
+    body: "In BrightLocal's 2025 survey of 1,026 US adults, 74% said they use two or more websites when researching local-business reviews. This is US consumer research, not an India-specific estimate.",
+    source: "BrightLocal, Local Consumer Review Survey 2025",
+    href: "https://www.brightlocal.com/research/local-consumer-review-survey-2025/",
   },
   {
-    stat: "7×",
-    label: "higher qualification odds",
-    body: "Responding to an enquiry within an hour makes it about seven times more likely to convert than replying later in the day.",
-    source: "Harvard Business Review, Lead Response Management research",
+    stat: "Nearly 7×",
+    label: "lead qualification association",
+    body: "A 2011 US study reported that firms attempting contact within an hour were nearly seven times as likely to qualify a lead as firms trying an hour later. Qualification meant a meaningful conversation with a decision-maker, not a completed sale; the finding is historical and observational.",
+    source: "Harvard Business Review, 2011",
     href: "https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
   },
   {
-    stat: "USD 11bn+",
-    label: "Gulf e-commerce runway",
-    body: "UAE online commerce and Saudi Vision 2030 are driving unprecedented digital software and SaaS adoption across GCC local enterprises.",
-    source: "Industry market outlooks, 2025",
-    href: "https://www.vision2030.gov.sa/",
+    stat: "USD 11.5bn",
+    label: "UAE e-commerce market in 2025",
+    body: "The UAE e-commerce market reached AED 42.2 billion (USD 11.5 billion) in 2025, according to the annual report by EZDubai and Euromonitor International. This is a UAE market figure, not a measure of the wider GCC.",
+    source: "EZDubai / Euromonitor, reported September 2026",
+    href: "https://en.aletihad.ae/news/business/4695011/uae-e-commerce-market-size-reaches-dh42-2-billion-in-2025",
   },
 ];
 
 export const standards = [
   {
-    t: "Live Admin Access",
-    b: "Every web portal includes our Visual CMS so you can update products, copy, and images in 1 click.",
+    t: "Scoped Content Editing",
+    b: "When a visual CMS is included, the proposal records which pages, fields, and user roles the owner can update.",
   },
   {
-    t: "Dedicated Technical Partner",
-    b: "No junior support tickets. Co-founders and senior architects manage your technical roadmap end to end.",
+    t: "A Clear Support Path",
+    b: "Each engagement identifies its primary contact, support channel, response expectations, and any included maintenance.",
   },
   {
-    t: "Full Platform Ownership",
-    b: "All code, databases, cloud hosting, and domain assets are registered directly in your business's name.",
+    t: "Documented Account Ownership",
+    b: "We agree who owns the domain, hosting, source code, data, and third-party accounts, then record handover terms in the project agreement.",
   },
   {
-    t: "Unified Business Intelligence",
-    b: "A real-time mobile dashboard giving you instant visibility into website leads, social inquiries, and cashflow.",
+    t: "Reporting That Matches the Setup",
+    b: "Dashboards show the data sources connected and validated for the project; availability and refresh timing are documented.",
   },
 ];
 
 export const milestones = [
   {
-    y: "Origin",
-    t: "Custom WhatsApp Engines",
-    b: "Engineered automated WhatsApp response and CRM pipelines for local retailers, converting lost messages into closed revenue.",
+    y: "Discover",
+    t: "Understand the workflow",
+    b: "Map the audience, current tools, customer journey and recurring tasks before recommending a solution.",
   },
   {
-    y: "Innovation",
-    t: "The Visual CMS Framework",
-    b: "Architected modern web storefronts with embedded visual editors, solving the post-launch maintenance barrier for business owners.",
+    y: "Plan",
+    t: "Agree the scope",
+    b: "Record deliverables, responsibilities, milestones, fees and any recurring services in the project proposal.",
   },
   {
-    y: "Ecosystem",
-    t: "Operating Tools Suite",
-    b: "Expanded into custom digital invoicing, cash collection tracking, inventory management, and mobile BI dashboards.",
+    y: "Build",
+    t: "Create and validate",
+    b: "Design and implement the agreed experience, review key journeys with the client and test the requirements in scope.",
   },
   {
-    y: "Scale",
-    t: "India & GCC Expansion",
-    b: "Deploying integrated business software and acting as fractional CTOs for local enterprises across Telangana and the Gulf.",
+    y: "Handover",
+    t: "Document what's next",
+    b: "Explain account ownership, access, support arrangements and any maintenance or third-party costs that apply.",
   },
 ];
